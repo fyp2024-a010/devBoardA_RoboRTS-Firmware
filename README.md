@@ -1,3 +1,14 @@
+# RoboMasterDevBoard
+- Benjamin Teh Jhen Hing
+- NTU AY23/24
+- FYP A010 Super compact mobile robot development: Mechatronics design
+- Professor Chen I-Ming
+
+## Contents
+## References
+## Dependencies
+## Useful Links
+
 RoboMaster 开发板例程
 ====================
 
