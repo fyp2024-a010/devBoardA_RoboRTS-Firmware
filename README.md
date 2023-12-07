@@ -2,12 +2,17 @@
 - Benjamin Teh Jhen Hing
 - NTU AY23/24
 - FYP A010 Super compact mobile robot development: Mechatronics design
-- Professor Chen I-Ming
+- Professor Chen I-Ming  
+- Repo mirrored from https://github.com/RoboMaster/DevelopmentBoard-Examples.git
 
 ## Contents
+## About the Board
+- STM32F427IIH6
 ## References
 ## Dependencies
 ## Useful Links
+- [RM-NA Forum, Deploy Code on Board A](https://forums.robomasterna.com/t/how-to-write-and-deploy-code-to-the-development-board-type-a/91/2)
+- 
 
 RoboMaster 开发板例程
 ====================
