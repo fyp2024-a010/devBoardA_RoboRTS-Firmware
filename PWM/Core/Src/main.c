@@ -17,9 +17,9 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
-#include "tim.h"
-#include "gpio.h"
+#include "../Inc/main.h"
+#include "../Inc/tim.h"
+#include "../Inc/gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */

@@ -18,7 +18,7 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include "sdio.h"
+#include "../Inc/sdio.h"
 
 /* USER CODE BEGIN 0 */
 

@@ -18,7 +18,7 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include "can.h"
+#include "../Inc/can.h"
 
 /* USER CODE BEGIN 0 */
 
