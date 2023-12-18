@@ -369,3 +369,6 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-15 14:14:04.264
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 0 2023-12-18 10:10:50.808
+!MESSAGE STM32CubeMx project generation failure

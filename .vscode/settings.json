@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "gpio.h": "c",
+        "main.h": "c",
+        "spi.h": "c",
+        "stm32f4xx_it.h": "c",
+        "stm32f4xx.h": "c",
+        "errno.h": "c",
+        "usart.h": "c"
+    }
+}

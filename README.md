@@ -8,7 +8,11 @@
 ## Contents
 ## About the Board
 - STM32F427IIH6 ([datasheet](https://www.st.com/en/microcontrollers-microprocessors/stm32f427ii.html))
-- IST8310 3D Magnanometer ([datasheet](https://intofpv.com/attachment.php?aid=8104))
+### IMU
+- IST8310 3D Magnetometer ([datasheet](https://intofpv.com/attachment.php?aid=8104))
+- MPU6500 6-Axis (Gyro + Accelerometer) ([datasheet](https://invensense.tdk.com/download-pdf/mpu-6500-datasheet/))
+## 
+
 
 ## References
 ## Dependencies
