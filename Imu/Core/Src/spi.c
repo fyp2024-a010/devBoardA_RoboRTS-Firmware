@@ -1,21 +1,21 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file    spi.c
-  * @brief   This file provides code for the configuration
-  *          of the SPI instances.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2023 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file    spi.c
+ * @brief   This file provides code for the configuration
+ *          of the SPI instances.
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2023 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "../Inc/spi.h"
@@ -56,18 +56,17 @@ void MX_SPI5_Init(void)
   /* USER CODE BEGIN SPI5_Init 2 */
 
   /* USER CODE END SPI5_Init 2 */
-
 }
 
-void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
+void HAL_SPI_MspInit(SPI_HandleTypeDef *spiHandle)
 {
 
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-  if(spiHandle->Instance==SPI5)
+  if (spiHandle->Instance == SPI5)
   {
-  /* USER CODE BEGIN SPI5_MspInit 0 */
+    /* USER CODE BEGIN SPI5_MspInit 0 */
 
-  /* USER CODE END SPI5_MspInit 0 */
+    /* USER CODE END SPI5_MspInit 0 */
     /* SPI5 clock enable */
     __HAL_RCC_SPI5_CLK_ENABLE();
 
@@ -77,27 +76,27 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
     PF9     ------> SPI5_MOSI
     PF8     ------> SPI5_MISO
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_7|GPIO_PIN_9|GPIO_PIN_8;
+    GPIO_InitStruct.Pin = GPIO_PIN_7 | GPIO_PIN_9 | GPIO_PIN_8;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = GPIO_AF5_SPI5;
     HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
 
-  /* USER CODE BEGIN SPI5_MspInit 1 */
+    /* USER CODE BEGIN SPI5_MspInit 1 */
 
-  /* USER CODE END SPI5_MspInit 1 */
+    /* USER CODE END SPI5_MspInit 1 */
   }
 }
 
-void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
+void HAL_SPI_MspDeInit(SPI_HandleTypeDef *spiHandle)
 {
 
-  if(spiHandle->Instance==SPI5)
+  if (spiHandle->Instance == SPI5)
   {
-  /* USER CODE BEGIN SPI5_MspDeInit 0 */
+    /* USER CODE BEGIN SPI5_MspDeInit 0 */
 
-  /* USER CODE END SPI5_MspDeInit 0 */
+    /* USER CODE END SPI5_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_SPI5_CLK_DISABLE();
 
@@ -106,11 +105,11 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
     PF9     ------> SPI5_MOSI
     PF8     ------> SPI5_MISO
     */
-    HAL_GPIO_DeInit(GPIOF, GPIO_PIN_7|GPIO_PIN_9|GPIO_PIN_8);
+    HAL_GPIO_DeInit(GPIOF, GPIO_PIN_7 | GPIO_PIN_9 | GPIO_PIN_8);
 
-  /* USER CODE BEGIN SPI5_MspDeInit 1 */
+    /* USER CODE BEGIN SPI5_MspDeInit 1 */
 
-  /* USER CODE END SPI5_MspDeInit 1 */
+    /* USER CODE END SPI5_MspDeInit 1 */
   }
 }
 

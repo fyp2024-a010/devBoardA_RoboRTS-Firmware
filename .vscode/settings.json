@@ -1,13 +1,19 @@
 {
-    "files.associations": {
-        "gpio.h": "c",
-        "main.h": "c",
-        "spi.h": "c",
-        "stm32f4xx_it.h": "c",
-        "stm32f4xx.h": "c",
-        "errno.h": "c",
-        "usart.h": "c",
-        "can.h": "c",
-        "tim.h": "c"
-    }
+  "files.associations": {
+    "gpio.h": "c",
+    "main.h": "c",
+    "spi.h": "c",
+    "stm32f4xx_it.h": "c",
+    "stm32f4xx.h": "c",
+    "errno.h": "c",
+    "usart.h": "c",
+    "can.h": "c",
+    "tim.h": "c",
+    "bsp_imu.h": "c",
+    "mytype.h": "c",
+    "stdarg.h": "c",
+    "stm32f4xx_hal.h": "c",
+    "stm32f4xx_hal_conf.h": "c",
+    "myiic.h": "c"
+  }
 }
