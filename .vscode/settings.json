@@ -14,6 +14,7 @@
     "stdarg.h": "c",
     "stm32f4xx_hal.h": "c",
     "stm32f4xx_hal_conf.h": "c",
-    "myiic.h": "c"
+    "myiic.h": "c",
+    "usbd_conf.h": "c"
   }
 }

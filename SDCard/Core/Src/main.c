@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "../Inc/main.h"
-#include "../Inc/fatfs.h"
+#include "fatfs.h"
 #include "../Inc/sdio.h"
 #include "../Inc/usart.h"
 #include "../Inc/gpio.h"
