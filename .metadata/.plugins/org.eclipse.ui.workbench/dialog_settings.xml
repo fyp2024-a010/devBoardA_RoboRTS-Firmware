@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+<<<<<<< HEAD
 	<section name="NewWizardAction">
 	</section>
 	<section name="ImportExportAction">
@@ -7,5 +8,8 @@
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
 		</list>
+=======
+	<section name="ImportExportAction">
+>>>>>>> origin/main
 	</section>
 </section>
