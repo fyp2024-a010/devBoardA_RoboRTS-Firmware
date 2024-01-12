@@ -15,11 +15,24 @@
 
 
 ## References
+- [GitHub, Motor Controller](https://github.com/RoboGrinder-ECE/Motor_Control.git)
+- [GitHub, DevBoard Examples](https://github.com/RoboMaster/DevelopmentBoard-Examples.git)
+- []()
 ## Dependencies
 ## Useful Links
 - [RM-NA Forum, Deploy Code on Board A](https://forums.robomasterna.com/t/how-to-write-and-deploy-code-to-the-development-board-type-a/91/2)
 - 
 
+STM32CUBEIDE
+- v 1.28
+
+
+Setup
+1. Create new STM32 Project
+2. Select STM32F427IIH6
+3. Configure pins and features:
+- CAN
+1. 
 RoboMaster 开发板例程
 ====================
 
