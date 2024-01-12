@@ -1,4 +1,0 @@
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c:117:19:HAL_DMAEx_MultiBufferStart	4
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c:171:19:HAL_DMAEx_MultiBufferStart_IT	264
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c:256:19:HAL_DMAEx_ChangeMemory	2
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c:293:13:DMA_MultiBufferSetConfig	2
