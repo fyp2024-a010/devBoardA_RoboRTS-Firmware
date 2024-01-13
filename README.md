@@ -11,8 +11,18 @@
 ### IMU
 - IST8310 3D Magnetometer ([datasheet](https://intofpv.com/attachment.php?aid=8104))
 - MPU6500 6-Axis (Gyro + Accelerometer) ([datasheet](https://invensense.tdk.com/download-pdf/mpu-6500-datasheet/))
-## 
+### PWM
+- PWM
+- CAN
+### Remote Control
+### RoboMaster OLED
+### SD Card Reader
+### USB Port
+### RoboMaster UWB Positioning System
+### Custom LED
 
+### Project Scope
+The project is to setup the dev board to send data to the main computer via USB so that the data can be processed by ROS. The data sent can either be raw data or filtered data depending on some trigger or parameter i.e. applying a jumper on a pin. The data to be sent to ROS is the IMU data, and odometry data. 
 
 ## References
 - [GitHub, Motor Controller](https://github.com/RoboGrinder-ECE/Motor_Control.git)
@@ -32,18 +42,3 @@ Setup
 2. Select STM32F427IIH6
 3. Configure pins and features:
 - CAN
-1. 
-RoboMaster 开发板例程
-====================
-
-
-目前配套例程中包含以下内容：
--------------------------
-
-* [IMU 陀螺仪数据读取](https://github.com/RoboMaster/DevelopmentBoard-Examples/tree/master/Imu)
-* [PWM PWM输出](https://github.com/RoboMaster/DevelopmentBoard-Examples/tree/master/PWM)
-* [RemoteControl RoboMaster遥控器接收机解码](https://github.com/RoboMaster/DevelopmentBoard-Examples/tree/master/RemoteControl)
-* [RM_OLED 开发板OLED演示](https://github.com/RoboMaster/DevelopmentBoard-Examples/tree/master/RM_OLED)
-* [SDCard SD卡读写(包含文件系统)](https://github.com/RoboMaster/DevelopmentBoard-Examples/tree/master/SDCard)
-* [USB  USB通信演示(实现虚拟串口功能)](https://github.com/RoboMaster/DevelopmentBoard-Examples/tree/master/USB)
-* [UWB  RoboMaster UWB 模块数据读取](https://github.com/RoboMaster/DevelopmentBoard-Examples/tree/master/UWB)
