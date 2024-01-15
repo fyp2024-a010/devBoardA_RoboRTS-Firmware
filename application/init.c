@@ -26,11 +26,11 @@
 #include "gimbal.h"
 #include "shoot.h"
 
-#include "chassis_task.h"
-#include "gimbal_task.h"
+// #include "chassis_task.h"
+// #include "gimbal_task.h"
 #include "timer_task.h"
 #include "shoot_task.h"
-#include "communicate.h"
+// #include "communicate.h"
 #include "infantry_cmd.h"
 #include "init.h"
 
@@ -68,20 +68,20 @@ void hw_init(void)
   ulog_init();
   ulog_console_backend_init();
   
-  referee_param_init();
+  // referee_param_init();
   usart3_rx_callback_register(referee_uart_rx_data_handle);
   referee_send_data_register(usart3_transmit);
 
   if(glb_sys_cfg == CHASSIS_APP)
   {
-    rc_device_register(&rc_dev, "uart_rc", 0);
+    // rc_device_register(&rc_dev, "uart_rc", 0);
     dr16_forword_callback_register(rc_data_forword_by_can);
     chassis_pid_register(&chassis, "chassis", DEVICE_CAN1);
     chassis_disable(&chassis);
   }
   else
   {
-    rc_device_register(&rc_dev, "can_rc", 0);
+    // rc_device_register(&rc_dev, "can_rc", 0);
     gimbal_cascade_register(&gimbal, "gimbal", DEVICE_CAN1);
 
     shoot_pid_register(&shoot, "shoot", DEVICE_CAN1);
@@ -115,17 +115,18 @@ void task_init(void)
   osThreadDef(CMD_TASK, infantry_cmd_task, osPriorityNormal, 0, 4096);
   cmd_task_t = osThreadCreate(osThread(CMD_TASK), NULL);
   
-  if (app == CHASSIS_APP)
+  // if (app == CHASSIS_APP)
+  if (1)
   {
     osThreadDef(CHASSIS_TASK, chassis_task, osPriorityRealtime, 0, 512);
     chassis_task_t = osThreadCreate(osThread(CHASSIS_TASK), NULL);
   }
-  else
-  {
-    osThreadDef(GIMBAL_TASK, gimbal_task, osPriorityRealtime, 0, 512);
-    gimbal_task_t = osThreadCreate(osThread(GIMBAL_TASK), NULL);
+  // else
+  // {
+  //   osThreadDef(GIMBAL_TASK, gimbal_task, osPriorityRealtime, 0, 512);
+  //   gimbal_task_t = osThreadCreate(osThread(GIMBAL_TASK), NULL);
 
-    osThreadDef(SHOOT_TASK, shoot_task, osPriorityNormal, 0, 512);
-    shoot_task_t = osThreadCreate(osThread(SHOOT_TASK), NULL);
-  }
+  //   osThreadDef(SHOOT_TASK, shoot_task, osPriorityNormal, 0, 512);
+  //   shoot_task_t = osThreadCreate(osThread(SHOOT_TASK), NULL);
+  // }
 }

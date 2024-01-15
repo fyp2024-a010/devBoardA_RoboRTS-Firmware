@@ -1,0 +1,5 @@
+{
+    "files.associations": {
+        "dbus.h": "c"
+    }
+}

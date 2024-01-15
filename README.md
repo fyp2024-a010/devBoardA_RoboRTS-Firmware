@@ -1,9 +1,10 @@
 # RoboMasterDevBoard
-- Benjamin Teh Jhen Hing
+- Student: Benjamin Teh Jhen Hing
 - NTU AY23/24
 - FYP A010 Super compact mobile robot development: Mechatronics design
+- Supervisor: Hendral Suratno
 - Professor Chen I-Ming  
-- Repo mirrored from https://github.com/RoboMaster/DevelopmentBoard-Examples.git
+- Repo mirrored from [RoboMaster/RoboRTS-Firmware](https://github.com/RoboMaster/DevelopmentBoard-Examples.git)
 
 ## Contents
 ## About the Board
@@ -15,19 +16,18 @@
 - PWM (Open loop)
 - CAN (Closed loop) [C620 BLDCMotorSpeed Controller](./DataSheet/RBMC620BLDCMotorSpeedController.pdf)
 ### Remote Control
-### RoboMaster OLED
 ### SD Card Reader
 ### USB Port
-### RoboMaster UWB Positioning System
 ### Custom LED
 
 ### Objectives
-1. Closed loop control on the BLDC motors
-2. Configurable parameters without reprogramming the board i.e. PID values, raw data or filtered data, seletion of filtered data, activation or deactivation of features. 
-3. Error feedback via the LED
-4. IMU raw data
-5. Filterd IMU
-6. Odometry calculations for mecanum and skid steer. 
+1. Good documentation of how to use the code. 
+2. Closed loop control on the BLDC motors
+3. Configurable parameters without reprogramming the board i.e. PID values, raw data or filtered data, seletion of filtered data, activation or deactivation of features. 
+4. Error feedback via the LED
+5. IMU raw data
+6. Filterd IMU
+7. Odometry calculations for mecanum and skid steer. 
 
 ## Scope
 The project is to setup the dev board to send data to the main computer via USB so that the data can be processed by ROS. The data sent can either be raw data or filtered data depending on some trigger or parameter i.e. applying a jumper on a pin. The data to be sent to ROS is the IMU data, and odometry data, rotary data. The parameters of the system should be readable from a SD Card. The rotary data from the motors will be used in a closed loop control for the motors. 
