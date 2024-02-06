@@ -1,0 +1,10 @@
+03:04:03 **** Incremental Build of configuration Debug for project ROBOT_DEV ****
+make -j7 all 
+arm-none-eabi-size  ROBOT_DEV.elf 
+   text	   data	    bss	    dec	    hex	filename
+  42860	    344	  28176	  71380	  116d4	ROBOT_DEV.elf
+Finished building: default.size.stdout
+ 
+
+03:04:04 Build Finished. 0 errors, 0 warnings. (took 516ms)
+

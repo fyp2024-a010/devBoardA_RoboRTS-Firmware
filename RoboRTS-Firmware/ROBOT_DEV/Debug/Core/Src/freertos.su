@@ -1,0 +1,6 @@
+../Core/Src/freertos.c:105:6:MX_FREERTOS_Init	8	static
+../Core/Src/freertos.c:159:6:StartDefaultTask	16	static
+../Core/Src/freertos.c:179:6:Blink_LED_A_t	16	static
+../Core/Src/freertos.c:197:6:Blink_LED_B_t	16	static
+../Core/Src/freertos.c:215:6:Blink_LED_C_t	16	static
+../Core/Src/freertos.c:233:6:StartTask05	16	static
