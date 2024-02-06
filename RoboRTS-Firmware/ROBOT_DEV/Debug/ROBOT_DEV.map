@@ -6270,10 +6270,146 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x20f ./USB_DEVICE/Target/usbd_conf.o
  .debug_macro   0x0000000000000000       0x95 ./USB_DEVICE/Target/usbd_conf.o
  .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
+ .group         0x0000000000000000        0xc ./applications/init.o
  .text          0x0000000000000000        0x0 ./applications/init.o
  .data          0x0000000000000000        0x0 ./applications/init.o
  .bss           0x0000000000000000        0x0 ./applications/init.o
  .debug_macro   0x0000000000000000      0xaa8 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x174 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x22 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x8e ./applications/init.o
+ .debug_macro   0x0000000000000000       0x51 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x103 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x6a ./applications/init.o
+ .debug_macro   0x0000000000000000      0x1df ./applications/init.o
+ .debug_macro   0x0000000000000000      0x16f ./applications/init.o
+ .debug_macro   0x0000000000000000      0x15a ./applications/init.o
+ .debug_macro   0x0000000000000000       0xc9 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x1c ./applications/init.o
+ .debug_macro   0x0000000000000000       0x26 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x61 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x2a ./applications/init.o
+ .debug_macro   0x0000000000000000       0x43 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x34 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x16 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x43 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x34 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x10 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x58 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x8e ./applications/init.o
+ .debug_macro   0x0000000000000000       0x1c ./applications/init.o
+ .debug_macro   0x0000000000000000      0x177 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x10 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x35 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x4bf ./applications/init.o
+ .debug_macro   0x0000000000000000       0xb5 ./applications/init.o
+ .debug_macro   0x0000000000000000       0xaa ./applications/init.o
+ .debug_macro   0x0000000000000000       0x66 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x10 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x74 ./applications/init.o
+ .debug_macro   0x0000000000000000       0xdd ./applications/init.o
+ .debug_macro   0x0000000000000000      0x2a7 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x2e ./applications/init.o
+ .debug_macro   0x0000000000000000       0x28 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x1c ./applications/init.o
+ .debug_macro   0x0000000000000000       0x22 ./applications/init.o
+ .debug_macro   0x0000000000000000       0xf5 ./applications/init.o
+ .debug_macro   0x0000000000000000     0x1011 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x11f ./applications/init.o
+ .debug_macro   0x0000000000000000    0x178b5 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x6d ./applications/init.o
+ .debug_macro   0x0000000000000000     0x3703 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x5c ./applications/init.o
+ .debug_macro   0x0000000000000000      0xc82 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x9e9 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x115 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x16f ./applications/init.o
+ .debug_macro   0x0000000000000000       0xa5 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x182 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x287 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x5f ./applications/init.o
+ .debug_macro   0x0000000000000000      0x236 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x40f ./applications/init.o
+ .debug_macro   0x0000000000000000      0x132 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x41d ./applications/init.o
+ .debug_macro   0x0000000000000000       0x2e ./applications/init.o
+ .debug_macro   0x0000000000000000      0x127 ./applications/init.o
+ .debug_macro   0x0000000000000000       0xe2 ./applications/init.o
+ .debug_macro   0x0000000000000000       0x89 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x225 ./applications/init.o
+ .debug_macro   0x0000000000000000      0x8ed ./applications/init.o
+ .debug_macro   0x0000000000000000       0x4d ./applications/init.o
+ .debug_macro   0x0000000000000000      0x293 ./applications/init.o
+ .debug_macro   0x0000000000000000       0xba ./applications/init.o
+ .debug_macro   0x0000000000000000      0x134 ./applications/init.o
+ .debug_macro   0x0000000000000000       0xd0 ./applications/init.o
  .group         0x0000000000000000        0xc ./motors/Src/motors.o
  .group         0x0000000000000000        0xc ./motors/Src/motors.o
  .group         0x0000000000000000        0xc ./motors/Src/motors.o
@@ -8160,7 +8296,7 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .comment       0x0000000000000043       0x44 ./applications/init.o
  .comment       0x0000000000000043       0x44 ./motors/Src/motors.o
 
-.debug_info     0x0000000000000000    0x21e41
+.debug_info     0x0000000000000000    0x21e75
  .debug_info    0x0000000000000000      0x866 ./Core/Src/can.o
  .debug_info    0x0000000000000866      0x4a6 ./Core/Src/freertos.o
  .debug_info    0x0000000000000d0c      0x459 ./Core/Src/gpio.o
@@ -8197,10 +8333,10 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_info    0x000000000001ef7c      0x8fa ./USB_DEVICE/App/usbd_cdc_if.o
  .debug_info    0x000000000001f876      0x458 ./USB_DEVICE/App/usbd_desc.o
  .debug_info    0x000000000001fcce     0x1caf ./USB_DEVICE/Target/usbd_conf.o
- .debug_info    0x000000000002197d       0x65 ./applications/init.o
- .debug_info    0x00000000000219e2      0x45f ./motors/Src/motors.o
+ .debug_info    0x000000000002197d       0x99 ./applications/init.o
+ .debug_info    0x0000000000021a16      0x45f ./motors/Src/motors.o
 
-.debug_abbrev   0x0000000000000000     0x5441
+.debug_abbrev   0x0000000000000000     0x5432
  .debug_abbrev  0x0000000000000000      0x200 ./Core/Src/can.o
  .debug_abbrev  0x0000000000000200      0x142 ./Core/Src/freertos.o
  .debug_abbrev  0x0000000000000342      0x152 ./Core/Src/gpio.o
@@ -8237,8 +8373,8 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_abbrev  0x0000000000004a7f      0x29d ./USB_DEVICE/App/usbd_cdc_if.o
  .debug_abbrev  0x0000000000004d1c      0x1e1 ./USB_DEVICE/App/usbd_desc.o
  .debug_abbrev  0x0000000000004efd      0x33f ./USB_DEVICE/Target/usbd_conf.o
- .debug_abbrev  0x000000000000523c       0x67 ./applications/init.o
- .debug_abbrev  0x00000000000052a3      0x19e ./motors/Src/motors.o
+ .debug_abbrev  0x000000000000523c       0x58 ./applications/init.o
+ .debug_abbrev  0x0000000000005294      0x19e ./motors/Src/motors.o
 
 .debug_aranges  0x0000000000000000     0x1cd8
  .debug_aranges
@@ -8397,7 +8533,7 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_rnglists
                 0x00000000000015d8       0x19 ./motors/Src/motors.o
 
-.debug_macro    0x0000000000000000    0x29436
+.debug_macro    0x0000000000000000    0x29770
  .debug_macro   0x0000000000000000      0x215 ./Core/Src/can.o
  .debug_macro   0x0000000000000215      0xaa8 ./Core/Src/can.o
  .debug_macro   0x0000000000000cbd      0x2a7 ./Core/Src/can.o
@@ -8539,10 +8675,10 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_macro   0x0000000000028966      0x3c4 ./USB_DEVICE/App/usbd_desc.o
  .debug_macro   0x0000000000028d2a       0x1c ./USB_DEVICE/App/usbd_desc.o
  .debug_macro   0x0000000000028d46      0x39e ./USB_DEVICE/Target/usbd_conf.o
- .debug_macro   0x00000000000290e4       0x11 ./applications/init.o
- .debug_macro   0x00000000000290f5      0x341 ./motors/Src/motors.o
+ .debug_macro   0x00000000000290e4      0x34b ./applications/init.o
+ .debug_macro   0x000000000002942f      0x341 ./motors/Src/motors.o
 
-.debug_line     0x0000000000000000    0x227e3
+.debug_line     0x0000000000000000    0x2317f
  .debug_line    0x0000000000000000      0x7ae ./Core/Src/can.o
  .debug_line    0x00000000000007ae      0xa64 ./Core/Src/freertos.o
  .debug_line    0x0000000000001212      0x774 ./Core/Src/gpio.o
@@ -8579,8 +8715,8 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_line    0x000000000001fa34      0xa7d ./USB_DEVICE/App/usbd_cdc_if.o
  .debug_line    0x00000000000204b1      0xae3 ./USB_DEVICE/App/usbd_desc.o
  .debug_line    0x0000000000020f94      0xe00 ./USB_DEVICE/Target/usbd_conf.o
- .debug_line    0x0000000000021d94       0x4c ./applications/init.o
- .debug_line    0x0000000000021de0      0xa03 ./motors/Src/motors.o
+ .debug_line    0x0000000000021d94      0x9e8 ./applications/init.o
+ .debug_line    0x000000000002277c      0xa03 ./motors/Src/motors.o
 
 .debug_str      0x0000000000000000    0xe87c7
  .debug_str     0x0000000000000000    0xd3763 ./Core/Src/can.o
@@ -8656,7 +8792,7 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_str     0x00000000000e86de       0x73 ./USB_DEVICE/Target/usbd_conf.o
                                       0xd8ffd (size before relaxing)
  .debug_str     0x00000000000e8751       0x23 ./applications/init.o
-                                       0x2dec (size before relaxing)
+                                      0xd9a5e (size before relaxing)
  .debug_str     0x00000000000e8774       0x53 ./motors/Src/motors.o
                                       0xd9ff7 (size before relaxing)
 

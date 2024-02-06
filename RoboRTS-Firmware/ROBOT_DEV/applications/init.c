@@ -5,6 +5,7 @@
  *      Author: bentjh01
  */
 
+#include "init.h"
 
 void init(void){
 	motors_init();
