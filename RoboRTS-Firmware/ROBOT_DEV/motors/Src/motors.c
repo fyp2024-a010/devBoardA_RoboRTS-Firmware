@@ -28,7 +28,7 @@ CAN_RxHeaderTypeDef rxHeader;
 uint8_t txData[8];
 uint8_t rxData[8];
 uint32_t txMailbox;
-moto_measure_t moto1;
+motor_measure_t moto1;
 int16_t current = 0;
 
 txData[0] = 0;

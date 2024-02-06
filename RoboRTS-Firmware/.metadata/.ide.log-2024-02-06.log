@@ -1343,3 +1343,443 @@ java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()"
 2024-02-07 03:32:14,947 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 7999mS.
 2024-02-07 03:32:14,960 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 2mS.
 2024-02-07 03:32:14,969 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-02-07 04:26:37,300 [INFO] MainUpdater:2873 - connection check result : 10
+2024-02-07 04:26:37,312 [INFO] MainUpdater:2873 - connection check result : 10
+2024-02-07 04:26:38,408 [INFO] MicroXplorer:468 - Change Database Path : 
+2024-02-07 04:26:38,408 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.100
+2024-02-07 04:26:38,541 [ERROR] ProjectManagerView:394 - 
+java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()" because the return value of "java.util.List.get(int)" is null
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab$10.caretUpdate(ProjectChoiceTab.java:2493) ~[filemanager.jar:?]
+	at javax.swing.text.JTextComponent.fireCaretUpdate(JTextComponent.java:412) ~[?:?]
+	at javax.swing.text.JTextComponent$MutableCaretEvent.fire(JTextComponent.java:4491) ~[?:?]
+	at javax.swing.text.JTextComponent$MutableCaretEvent.stateChanged(JTextComponent.java:4513) ~[?:?]
+	at javax.swing.text.DefaultCaret.fireStateChanged(DefaultCaret.java:842) ~[?:?]
+	at javax.swing.text.DefaultCaret.changeCaretPosition(DefaultCaret.java:1313) ~[?:?]
+	at javax.swing.text.DefaultCaret.handleSetDot(DefaultCaret.java:1212) ~[?:?]
+	at javax.swing.text.DefaultCaret.setDot(DefaultCaret.java:1193) ~[?:?]
+	at javax.swing.text.DefaultCaret$Handler.insertUpdate(DefaultCaret.java:1789) ~[?:?]
+	at javax.swing.text.AbstractDocument.fireInsertUpdate(AbstractDocument.java:226) ~[?:?]
+	at javax.swing.text.AbstractDocument.handleInsertString(AbstractDocument.java:780) ~[?:?]
+	at javax.swing.text.AbstractDocument.insertString(AbstractDocument.java:739) ~[?:?]
+	at javax.swing.text.PlainDocument.insertString(PlainDocument.java:131) ~[?:?]
+	at javax.swing.text.AbstractDocument.replace(AbstractDocument.java:698) ~[?:?]
+	at javax.swing.text.JTextComponent.setText(JTextComponent.java:1729) ~[?:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.createHeapStackFields(ProjectChoiceTab.java:933) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.buildLinkSettingsPanel(ProjectChoiceTab.java:3426) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.defineWindowsFields(ProjectChoiceTab.java:1813) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.updateSettings(ProjectChoiceTab.java:533) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectSettingsPanel.UpdateDialog(ProjectSettingsPanel.java:244) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.ProjectManagerView.propertyChange(ProjectManagerView.java:391) ~[filemanager.jar:?]
+	at java.beans.PropertyChangeSupport.fire(PropertyChangeSupport.java:343) ~[?:?]
+	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:335) ~[?:?]
+	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:268) ~[?:?]
+	at com.st.microxplorer.util.MXPropertyChangeSupport.firePropertyChange(MXPropertyChangeSupport.java:54) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.mxsystem.MxSystem.closeConfig(MxSystem.java:900) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.maingui.MainPanel.closeConfig(MainPanel.java:776) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.OpenFileManager.loadConfigurationFile(OpenFileManager.java:245) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:290) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.FileManagerView.getSpecificTask(FileManagerView.java:247) ~[filemanager.jar:?]
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor.getMxTabbedPaneInstance(CubeMxEditor.java:1184) ~[com.st.stm32cube.common.mx_6.10.0.202311202037/:?]
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor$12$1.createSwingComponent(CubeMxEditor.java:1065) ~[com.st.stm32cube.common.mx_6.10.0.202311202037/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite.doComponentCreation(EmbeddedSwingComposite.java:492) ~[com.st.stm32cube.common.mx.oss_6.10.0.202311202037/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite$4.run(EmbeddedSwingComposite.java:291) ~[com.st.stm32cube.common.mx.oss_6.10.0.202311202037/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.AwtEnvironment$2.run(AwtEnvironment.java:166) ~[com.st.stm32cube.common.mx.oss_6.10.0.202311202037/:?]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+2024-02-07 04:26:38,551 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
+2024-02-07 04:26:38,551 [INFO] ThirdParty:873 - entering critical section [close project]
+2024-02-07 04:26:38,554 [INFO] ThirdParty:883 - exiting critical section [close project]
+2024-02-07 04:26:38,570 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2024-02-07 04:26:38,753 [WARN] IpParametersView:151 - Warning: This peripheral hasn't parameters
+2024-02-07 04:26:38,799 [WARN] MainPanel:272 - <html><b><center>Warning: This peripheral has no parameters to be configured<br></b></html>
+2024-02-07 04:26:38,828 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 429678416 Bytes (1073741824)
+2024-02-07 04:26:38,830 [INFO] MicroXplorer:468 - Change Database Path : 
+2024-02-07 04:26:38,831 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.100
+2024-02-07 04:26:38,831 [INFO] OpenFileManager:312 - Change cursor
+2024-02-07 04:26:38,908 [INFO] RulesReader:64 - Compatibility file has been processed (297 Rules)
+2024-02-07 04:26:38,925 [INFO] Mcu:2016 - Initializing MCU STM32F427I(G-I)Hx STM32F427IIHx STM32F427IIH6
+2024-02-07 04:26:42,414 [INFO] Context:659 - Trying to add GPIOservice into a context  which must be forbidden
+2024-02-07 04:26:43,421 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2024-02-07 04:26:43,421 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2024-02-07 04:26:43,421 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2024-02-07 04:26:43,422 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2024-02-07 04:26:43,422 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2024-02-07 04:26:43,428 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,428 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,428 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,428 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,429 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,430 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-02-07 04:26:43,532 [INFO] ThirdPartyModel:298 - Start build external matchings
+2024-02-07 04:26:43,816 [INFO] ThirdPartyModel:316 - End build external matchings
+2024-02-07 04:26:43,830 [INFO] RtosManager:919 - Current active RTOS is FREERTOS [Cortex-M4NS]
+2024-02-07 04:26:43,856 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2024-02-07 04:26:43,859 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCO2PinFreq_Value) has invalid value (168000000)
+2024-02-07 04:26:43,861 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Parameter (RTCHSEDivFreq_Value) has invalid value (6000000)
+2024-02-07 04:26:43,864 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:26:43,864 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:26:43,864 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:26:44,211 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 791675968 Bytes (1073741824)
+2024-02-07 04:26:44,418 [INFO] MicroXplorer:468 - Change Database Path : 
+2024-02-07 04:26:44,423 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.100
+2024-02-07 04:26:44,424 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2024-02-07 04:26:44,424 [INFO] ThirdParty:835 - entering critical section [change project]
+2024-02-07 04:26:44,424 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2024-02-07 04:26:44,424 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2024-02-07 04:26:44,424 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2024-02-07 04:26:44,424 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2024-02-07 04:26:44,424 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2024-02-07 04:26:44,424 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2024-02-07 04:26:44,424 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2024-02-07 04:26:44,424 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
+2024-02-07 04:26:44,424 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.6.6
+2024-02-07 04:26:44,425 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.23.0
+2024-02-07 04:26:44,425 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2024-02-07 04:26:44,425 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
+2024-02-07 04:26:44,425 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2024-02-07 04:26:44,425 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 4.2.0
+2024-02-07 04:26:44,425 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.8.0
+2024-02-07 04:26:44,425 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.2
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.5.1
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 3.0.0
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2024-02-07 04:26:44,426 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.3.1
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 2.0.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.1.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.3.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 10.0.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.1.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.0.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.1.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.2.0
+2024-02-07 04:26:44,427 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2024-02-07 04:26:44,428 [INFO] ThirdParty:841 - exiting critical section [change project]
+2024-02-07 04:26:45,043 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2024-02-07 04:26:45,049 [INFO] PinOutPanel:1499 - setPackage(STM32F427IIHx,UFBGA176)
+2024-02-07 04:26:46,179 [INFO] UtilMem:75 - Before build in PCC Used Memory: 425240240 Bytes (1073741824)
+2024-02-07 04:26:46,630 [INFO] UtilMem:75 - After build in PCC Used Memory: 472948400 Bytes (1073741824)
+2024-02-07 04:26:46,662 [INFO] ApiDbMcu:508 - Load IP Config File for FREERTOS
+2024-02-07 04:26:46,679 [INFO] ApiDbMcu:508 - Load IP Config File for USB_DEVICE
+2024-02-07 04:26:46,809 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,810 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,811 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,811 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,811 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,811 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,812 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,813 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,813 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,814 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,815 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,815 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,816 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,817 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,818 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,819 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,819 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,819 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,820 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,821 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,822 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,822 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,823 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,823 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,823 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,824 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,824 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,825 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,826 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,826 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,826 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,826 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,827 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,827 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,827 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,828 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,828 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,828 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,828 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,828 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,829 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,829 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,829 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,829 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,829 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,830 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,830 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,831 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,831 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,831 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,832 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,833 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,833 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,834 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,835 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,835 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,836 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,837 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,838 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,847 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,849 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,850 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,851 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-02-07 04:26:46,862 [INFO] ApiDbMcu:508 - Load IP Config File for PDM2PCM
+2024-02-07 04:26:46,893 [INFO] Can:71 - Can Add PropertyChangeListener com.st.microxplorer.plugins.ip.can.Can@2fb4c532
+2024-02-07 04:26:46,937 [WARN] FreeRTOS:1023 - Null or empty value: should not occur! (nothing added to the table)
+2024-02-07 04:26:47,382 [INFO] CADModel:165 - CPN selected for project levelSTM32F427IIH6
+2024-02-07 04:26:47,385 [INFO] CADModel:114 - Register for checkConnection events
+2024-02-07 04:26:47,400 [INFO] RtosManager:697 - Active RTOS found at IOC load: FREERTOS [Cortex-M4NS]
+2024-02-07 04:26:47,487 [INFO] OpenFileManager:343 - Restore cursor
+2024-02-07 04:26:48,123 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:26:48,125 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:26:48,125 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:26:48,128 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:26:48,128 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:26:48,128 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:25,719 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:25,744 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:25,744 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:25,750 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:25,750 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:25,750 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:26,348 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:26,356 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:26,356 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:26,451 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:26,451 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:26,451 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:55,723 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:55,733 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:55,733 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:55,734 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:55,734 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:55,735 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:55,824 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:55,824 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:55,824 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:55,886 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:55,886 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:29:55,886 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:22,518 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:22,524 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:22,525 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:22,526 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:22,526 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:22,526 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:22,604 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:22,604 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:22,604 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:22,667 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:22,667 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:22,667 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:39,688 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:39,695 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:39,695 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:39,698 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:39,700 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:39,701 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:39,826 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:39,826 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:39,826 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:39,938 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:39,938 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:30:39,938 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:31:10,639 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 874224856 Bytes (1042284544)
+2024-02-07 04:31:12,838 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 911973592 Bytes (1042284544)
+2024-02-07 04:31:17,443 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 452805480 Bytes (1042284544)
+2024-02-07 04:31:18,070 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-02-07 04:31:18,071 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FREERTOS
+2024-02-07 04:31:18,071 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: CAN
+2024-02-07 04:31:18,071 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_DEVICE
+2024-02-07 04:31:18,071 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-02-07 04:31:18,071 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-02-07 04:31:18,072 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-02-07 04:31:18,072 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-02-07 04:31:18,072 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-02-07 04:31:18,074 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-02-07 04:31:18,137 [WARN] IP:2119 - DEVICE_SERIAL0_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:31:18,137 [WARN] IP:2119 - DEVICE_SERIAL1_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:31:18,137 [WARN] IP:2119 - DEVICE_SERIAL2_CDC_FS not found: check if there is a RefParameter without a condition.
+2024-02-07 04:31:18,581 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/license.tmp_save
+2024-02-07 04:31:19,089 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/license.tmp
+2024-02-07 04:31:19,398 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/gpio.c_save
+2024-02-07 04:31:19,757 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/gpio.c
+2024-02-07 04:31:19,774 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/gpio.h_save
+2024-02-07 04:31:19,965 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/gpio.h
+2024-02-07 04:31:20,426 [WARN] IPConfigManager:2946 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-02-07 04:31:20,482 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/usb_otg_fs_vars.tmp_save
+2024-02-07 04:31:20,698 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/usb_otg_fs_vars.tmp
+2024-02-07 04:31:20,702 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/usb_otg_fs_inc.tmp_save
+2024-02-07 04:31:20,841 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/usb_otg_fs_inc.tmp
+2024-02-07 04:31:20,845 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/usb_otg_fs_HalInit.tmp_save
+2024-02-07 04:31:21,299 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/usb_otg_fs_HalInit.tmp
+2024-02-07 04:31:21,307 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/usb_otg_fs_Msp.tmp_save
+2024-02-07 04:31:21,507 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/usb_otg_fs_Msp.tmp
+2024-02-07 04:31:23,253 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-02-07 04:31:23,317 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_inc.tmp_save
+2024-02-07 04:31:23,520 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_inc.tmp
+2024-02-07 04:31:23,523 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_kernelInit.tmp_save
+2024-02-07 04:31:23,632 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_kernelInit.tmp
+2024-02-07 04:31:23,634 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_kernelStart.tmp_save
+2024-02-07 04:31:23,717 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_kernelStart.tmp
+2024-02-07 04:31:23,721 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_typedefs.tmp_save
+2024-02-07 04:31:23,814 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_typedefs.tmp
+2024-02-07 04:31:23,818 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_vars.tmp_save
+2024-02-07 04:31:23,903 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_vars.tmp
+2024-02-07 04:31:23,906 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_pfp.tmp_save
+2024-02-07 04:31:23,984 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_pfp.tmp
+2024-02-07 04:31:23,987 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_obj_creat.tmp_save
+2024-02-07 04:31:24,069 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_obj_creat.tmp
+2024-02-07 04:31:24,072 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_default_thread.tmp_save
+2024-02-07 04:31:24,155 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_default_thread.tmp
+2024-02-07 04:31:24,157 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_threads.tmp_save
+2024-02-07 04:31:24,235 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_threads.tmp
+2024-02-07 04:31:24,262 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-02-07 04:31:24,271 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-02-07 04:31:24,275 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_inc.tmp_save
+2024-02-07 04:31:24,352 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_inc.tmp
+2024-02-07 04:31:24,355 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_kernelInit.tmp_save
+2024-02-07 04:31:24,439 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_kernelInit.tmp
+2024-02-07 04:31:24,441 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_kernelStart.tmp_save
+2024-02-07 04:31:24,522 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_kernelStart.tmp
+2024-02-07 04:31:24,524 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_typedefs.tmp_save
+2024-02-07 04:31:24,613 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_typedefs.tmp
+2024-02-07 04:31:24,618 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_vars.tmp_save
+2024-02-07 04:31:24,705 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_vars.tmp
+2024-02-07 04:31:24,710 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_pfp.tmp_save
+2024-02-07 04:31:24,812 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_pfp.tmp
+2024-02-07 04:31:24,837 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_obj_creat.tmp_save
+2024-02-07 04:31:24,962 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_obj_creat.tmp
+2024-02-07 04:31:24,978 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_default_thread.tmp_save
+2024-02-07 04:31:25,077 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_default_thread.tmp
+2024-02-07 04:31:25,087 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_threads.tmp_save
+2024-02-07 04:31:25,177 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/rtos_threads.tmp
+2024-02-07 04:31:25,183 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/FreeRTOSConfig.h_save
+2024-02-07 04:31:25,312 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/FreeRTOSConfig.h
+2024-02-07 04:31:25,315 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/freertos.c_save
+2024-02-07 04:31:25,408 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/freertos.c
+2024-02-07 04:31:25,425 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/can.c_save
+2024-02-07 04:31:25,558 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/can.c
+2024-02-07 04:31:25,561 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/can.h_save
+2024-02-07 04:31:25,647 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/can.h
+2024-02-07 04:31:25,652 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/spi.c_save
+2024-02-07 04:31:25,766 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/spi.c
+2024-02-07 04:31:25,769 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/spi.h_save
+2024-02-07 04:31:25,847 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/spi.h
+2024-02-07 04:31:25,863 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-02-07 04:31:25,886 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/App/usb_device.c_save
+2024-02-07 04:31:26,111 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/App/usb_device.c
+2024-02-07 04:31:26,116 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/App/usb_device.h_save
+2024-02-07 04:31:26,214 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/App/usb_device.h
+2024-02-07 04:31:26,216 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/Target/usbd_conf.h_save
+2024-02-07 04:31:26,308 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/Target/usbd_conf.h
+2024-02-07 04:31:26,311 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/Target/usbd_conf.c_save
+2024-02-07 04:31:26,415 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/Target/usbd_conf.c
+2024-02-07 04:31:26,428 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/App/usbd_desc.h_save
+2024-02-07 04:31:26,518 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/App/usbd_desc.h
+2024-02-07 04:31:26,520 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/App/usbd_desc.c_save
+2024-02-07 04:31:26,680 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/App/usbd_desc.c
+2024-02-07 04:31:26,687 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/App/usbd_cdc_if.h_save
+2024-02-07 04:31:26,846 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/App/usbd_cdc_if.h
+2024-02-07 04:31:26,875 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/App/usbd_cdc_if.c_save
+2024-02-07 04:31:26,995 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/USB_DEVICE/App/usbd_cdc_if.c
+2024-02-07 04:31:27,060 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/stm32f4xx_it.c_save
+2024-02-07 04:31:27,632 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/stm32f4xx_it.c
+2024-02-07 04:31:27,639 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/stm32f4xx_it.h_save
+2024-02-07 04:31:27,755 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/stm32f4xx_it.h
+2024-02-07 04:31:27,791 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/stm32f4xx_hal_msp.c_save
+2024-02-07 04:31:27,972 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/stm32f4xx_hal_msp.c
+2024-02-07 04:31:27,977 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/system.tmp_save
+2024-02-07 04:31:28,086 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/MXTmpFiles/system.tmp
+2024-02-07 04:31:28,089 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/stm32f4xx_hal_timebase_tim.c_save
+2024-02-07 04:31:28,304 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/stm32f4xx_hal_timebase_tim.c
+2024-02-07 04:31:28,318 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/stm32f4xx_hal_conf.h_save
+2024-02-07 04:31:28,568 [INFO] CodeEngine:335 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/stm32f4xx_hal_conf.h
+2024-02-07 04:31:29,281 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/main.h_save
+2024-02-07 04:31:29,487 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Inc/main.h
+2024-02-07 04:31:29,491 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/main.c_save
+2024-02-07 04:31:29,628 [INFO] CodeEngine:279 - Generated code: /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/Core/Src/main.c
+2024-02-07 04:31:30,565 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 183mS.
+2024-02-07 04:31:30,577 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-02-07 04:31:30,886 [INFO] ConfigFileManager:1495 - The Die is : DIE419
+2024-02-07 04:31:30,897 [INFO] ApiDbMcu:508 - Load IP Config File for FATFS
+2024-02-07 04:31:30,901 [INFO] ApiDbMcu:508 - Load IP Config File for LIBJPEG
+2024-02-07 04:31:30,910 [INFO] ApiDbMcu:508 - Load IP Config File for LWIP
+2024-02-07 04:31:30,916 [INFO] ApiDbMcu:508 - Load IP Config File for MBEDTLS
+2024-02-07 04:31:30,923 [INFO] ApiDbMcu:508 - Load IP Config File for USB_HOST
+2024-02-07 04:31:35,810 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 5221mS.
+2024-02-07 04:31:35,846 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 8mS.
+2024-02-07 04:31:35,863 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
