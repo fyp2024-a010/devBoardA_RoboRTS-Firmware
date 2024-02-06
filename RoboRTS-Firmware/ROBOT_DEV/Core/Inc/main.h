@@ -65,8 +65,16 @@ void Error_Handler(void);
 #define PIN_V_GPIO_Port GPIOI
 #define PIN_Z_Pin GPIO_PIN_2
 #define PIN_Z_GPIO_Port GPIOI
+#define POWER_OUT1_Pin GPIO_PIN_2
+#define POWER_OUT1_GPIO_Port GPIOH
+#define POWER_OUT2_Pin GPIO_PIN_3
+#define POWER_OUT2_GPIO_Port GPIOH
+#define POWER_OUT3_Pin GPIO_PIN_4
+#define POWER_OUT3_GPIO_Port GPIOH
 #define LED_A_Pin GPIO_PIN_8
 #define LED_A_GPIO_Port GPIOG
+#define POWER_OUT4_Pin GPIO_PIN_5
+#define POWER_OUT4_GPIO_Port GPIOH
 #define LED_B_Pin GPIO_PIN_7
 #define LED_B_GPIO_Port GPIOG
 #define LED_C_Pin GPIO_PIN_6
