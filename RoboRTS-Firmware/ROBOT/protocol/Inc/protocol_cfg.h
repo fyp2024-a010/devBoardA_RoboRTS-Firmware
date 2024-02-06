@@ -20,27 +20,27 @@
 
 #include "sys.h"
 
-#define PROTOCOL_VERSION                (0)                 /*协议版本*/
+#define PROTOCOL_VERSION                (0)                 /* Protocol version */
 
-#define PROTOCOL_CMD_MAX_NUM            (50)
+#define PROTOCOL_CMD_MAX_NUM            (50)                /* Maximum number of protocol commands */
 
-#define PROTOCOL_DEV_VERSION            ("V0.0.6")          /*协议开发版本号*/
+#define PROTOCOL_DEV_VERSION            ("V0.0.6")          /* Protocol development version */
 
-#define PROTOCOL_MAX_DATA_LEN           (512)               /*协议传输每包最大数据长度*/
-#define PROTOCOL_HEADER                 (0xAAu)             /*协议包帧头*/
-#define PROTOCOL_INTERFACE_MAX          (5)                 /*协议接口最大数量*/
-#define PROTOCOL_OBJ_NAME_MAX_LEN       (32)                /*协议接口名字符串最大长度*/
-#define PROTOCOL_ROUTE_TABLE_MAX_NUM    (254)               /*协议路由最大条数(不可以超过255)*/ 
+#define PROTOCOL_MAX_DATA_LEN           (512)               /* Maximum data length per protocol packet */
+#define PROTOCOL_HEADER                 (0xAAu)             /* Protocol packet header */
+#define PROTOCOL_INTERFACE_MAX          (5)                 /* Maximum number of protocol interfaces */
+#define PROTOCOL_OBJ_NAME_MAX_LEN       (32)                /* Maximum length of protocol interface name string */
+#define PROTOCOL_ROUTE_TABLE_MAX_NUM    (254)               /* Maximum number of protocol routing entries (cannot exceed 255) */
 
-#define PROTOCOL_SEND_DBG_PRINTF_SET    PROTOCOL_ENABLE     /*协议发送信息输出使能*/
-#define PROTOCOL_SEND_ERR_PRINTF_SET    PROTOCOL_ENABLE     /*协议发送信息输出使能*/
-#define PROTOCOL_RCV_DBG_PRINTF_SET     PROTOCOL_ENABLE     /*协议接收信息输出使能*/
-#define PROTOCOL_RCV_ERR_PRINTF_SET     PROTOCOL_ENABLE     /*协议接收信息输出使能*/
-#define PROTOCOL_ERR_INFO_PRINTF_SET    PROTOCOL_ENABLE     /*协议错误信息输出使能*/
-#define PROTOCOL_OTHER_INFO_PRINTF_SET  PROTOCOL_ENABLE     /*协议其他信息输出使能*/
+#define PROTOCOL_SEND_DBG_PRINTF_SET    PROTOCOL_ENABLE     /* Protocol send debug information output enable */
+#define PROTOCOL_SEND_ERR_PRINTF_SET    PROTOCOL_ENABLE     /* Protocol send error information output enable */
+#define PROTOCOL_RCV_DBG_PRINTF_SET     PROTOCOL_ENABLE     /* Protocol receive debug information output enable */
+#define PROTOCOL_RCV_ERR_PRINTF_SET     PROTOCOL_ENABLE     /* Protocol receive error information output enable */
+#define PROTOCOL_ERR_INFO_PRINTF_SET    PROTOCOL_ENABLE     /* Protocol error information output enable */
+#define PROTOCOL_OTHER_INFO_PRINTF_SET  PROTOCOL_ENABLE     /* Protocol other information output enable */
 
-#define PROTOCOL_AUTO_LOOKBACK          PROTOCOL_ENABLE     /*协议自动回环使能*/
+#define PROTOCOL_AUTO_LOOKBACK          PROTOCOL_ENABLE     /* Protocol automatic loopback enable */
 
-#define PROTOCOL_ROUTE_FOWARD           PROTOCOL_ENABLE     /*协议路由转发使能*/
+#define PROTOCOL_ROUTE_FOWARD           PROTOCOL_ENABLE     /* Protocol routing forwarding enable */
 
 #endif /* _PROTOCOL_CFG_H_ */

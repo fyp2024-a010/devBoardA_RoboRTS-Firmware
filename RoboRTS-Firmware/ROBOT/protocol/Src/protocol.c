@@ -17,9 +17,9 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "protocol.h"
+#include "protocol_transmit.h"
 #include "protocol_cfg.h"
 #include "protocol_log.h"
-#include "protocol_transmit.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -137,9 +137,11 @@ int32_t protocol_send_cmd_unregister(uint16_t cmd)
 }
 
 /**
-  * @brief  协议本地信息初始化函数
-  * @param  address	协议本地地址，初始化以后不可改变，相同网络中每一个设备独占一个地址
-  * @retval 协议返回状态
+  /**
+    * @brief  Protocol local information initialization function
+    * @param  address  Protocol local address, which cannot be changed after initialization. Each device in the same network has a unique address.
+    * @retval Protocol return status
+    */
   */
 uint32_t protocol_local_init(uint8_t address)
 {
@@ -148,11 +150,11 @@ uint32_t protocol_local_init(uint8_t address)
 
   status = PROTOCOL_SUCCESS;
 
-  //判断是否是小端机器
+  // Check if it is a little-endian machine
   const uint16_t endian_test = 0xAABB;
   if (*((uint8_t *)(&endian_test)) == 0xAA)
   {
-    //是大端模式
+    // It is big-endian mode
     status = PROTOCOL_ERR_UNSUPPORT_CPU;
     PROTOCOL_ERR_INFO_PRINTF(status, __FILE__, __LINE__);
 
@@ -190,14 +192,15 @@ uint32_t protocol_local_init(uint8_t address)
 }
 
 /**
-  * @brief  协议发送正常帧。
-  * @param  reciver 接收设备地址
-  *         session 会话号，范围为0~63，当session为0时不要求接收方Ack，否则要求Ack。同一时间内一个接收设备不能有两个
-  *         相同的会话号
-  *         cmd 命令值
-  *         p_data 发送数据指针
-  *         data_len 发送数据长度
-  * @retval 协议返回状态
+  /**
+    * @brief  Protocol sends a normal frame.
+    * @param  reciver Receiver device address
+    *         session Session number, ranging from 0 to 63. When session is 0, no Ack is required from the receiver, otherwise Ack is required. The same receiver device cannot have two identical session numbers at the same time.
+    *         cmd Command value
+    *         p_data Pointer to the data to be sent
+    *         data_len Length of the data to be sent
+    * @retval Protocol return status
+    */
   */
 uint32_t protocol_send(uint8_t reciver, uint16_t cmd, void *p_data, uint32_t data_len)
 {
@@ -247,14 +250,14 @@ uint32_t protocol_send(uint8_t reciver, uint16_t cmd, void *p_data, uint32_t dat
 }
 
 /**
-  * @brief  协议发送Ack帧，当收到Session不为0的正常帧以后，需要调用此函数回复Ack。
-  * @param  reciver 接收设备地址
-  *         session 会话号，范围为0~63，当session为0时不要求接收方Ack，否则要求Ack。同一时间内一个接收设备不能有两个
-  *         相同的会话号
-  *         p_data 发送数据指针
-  *         data_len 发送数据长度
-  *         ack_seq	发送Ack包的序列号
-  * @retval 协议返回状态
+  /**
+    * @brief  Protocol sends an Ack frame. This function should be called to reply with an Ack after receiving a normal frame with a non-zero session.
+    * @param  reciver Receiver device address
+    *         session Session number, ranging from 0 to 63. When session is 0, no Ack is required from the receiver, otherwise Ack is required. The same receiver device cannot have two identical session numbers at the same time.
+    *         p_data Pointer to the data to be sent
+    *         data_len Length of the data to be sent
+    *         ack_seq Sequence number of the Ack packet to be sent
+    * @retval Protocol return status
   */
 uint32_t protocol_ack(uint8_t reciver, uint8_t session, void *p_data, uint32_t data_len, uint16_t ack_seq)
 {
@@ -272,9 +275,10 @@ uint32_t protocol_ack(uint8_t reciver, uint8_t session, void *p_data, uint32_t d
 }
 
 /**
-  * @brief  刷新发送列表，调用此函数将发送列表中的数据发送。在调用protocol_send，protocol_ack后调用或者定时调用
-  * @param  void
-  * @retval 协议返回状态
+  /**
+    * @brief Flushes the send list, calling this function will send the data in the send list. Call after calling protocol_send or protocol_ack, or call periodically.
+    * @param void
+    * @retval Protocol return status
   */
 uint32_t protocol_send_flush(void)
 {
@@ -304,9 +308,11 @@ uint32_t protocol_send_flush(void)
 }
 
 /**
-  * @brief  协议刷新接收缓冲区，调用此函数将接收缓冲区内的数据解包。在接收数据之后或者定时调用
-  * @param  void
-  * @retval 协议返回状态
+  /**
+    * @brief  Protocol flushes the receive buffer, calling this function will unpack the data in the receive buffer. Call after receiving data or periodically.
+    * @param  void
+    * @retval Protocol return status
+    */
   */
 uint32_t protocol_unpack_flush(void)
 {
@@ -321,11 +327,13 @@ uint32_t protocol_unpack_flush(void)
 }
 
 /**
-  * @brief  协议接收数据，在接收到数据时使用，如串口中断函数等
-  * @param  p_data 接收到数据指针
-  *         data_len 数据长度
-  *         interface 接口序号，填写接收到数据的接口的序列号
-  * @retval 协议返回状态
+  /**
+    * @brief  Protocol receives data, used when receiving data, such as in interrupt functions for serial communication.
+    * @param  p_data Pointer to the received data
+    *         data_len Length of the received data
+    *         interface Interface index, specify the index of the interface where the data is received
+    * @retval Protocol return status
+    */
   */
 uint32_t protocol_rcv_data(void *p_data, uint32_t data_len, struct perph_interface *perph)
 {
@@ -350,8 +358,8 @@ uint32_t protocol_rcv_data(void *p_data, uint32_t data_len, struct perph_interfa
 
   obj = &(protocol_local_info.interface[perph->idx]);
 
-  //TODO:取消了这里的保护，因为考虑到此函数对于同一个协议接口没有重入，需要仔细思考
-  //添加保护，高速传输仍然可能出现嵌套重入
+  //TODO: remove the protection here because its considered that this function is not reentrant for the same protocol interface, and it requires careful consideration.
+  //Adding protection, high-speed transmission may still have nested reentry.
   rcv_length = fifo_s_puts_noprotect(&(obj->rcvd.fifo), p_data, data_len);
 
   if (rcv_length < data_len)
@@ -365,10 +373,11 @@ uint32_t protocol_rcv_data(void *p_data, uint32_t data_len, struct perph_interfa
 }
 
 /**
-  * @brief  协议注册包发送加入列表回调函数，当协议数据包打包好添加至发送列表后，调用本函数注册的处理回调函数。
-  * @param  fn 回调处理函数指针，格式参见pack_handle_fn_t
-  * @retval 0
-  */
+  /**
+    * @brief  Protocol registers the callback function for adding the send packet to the send list. This function is called after the protocol data packet is packed and added to the send list.
+    * @param  fn Callback function pointer, format refers to pack_handle_fn_t
+    * @retval 0
+    */
 uint32_t protocol_send_list_add_callback_reg(void_fn_t fn)
 {
   protocol_local_info.send_list_add_callBack = fn;

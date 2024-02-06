@@ -24,7 +24,7 @@
   #define PROTOCOL_INTERFACE_H_EXTERN extern
 #endif
 
-#include "../../support/fifo.h"
+#include "fifo.h"
 #include "linux_list.h"
 #include "mem_mang.h"
 #include "macro_mutex.h"

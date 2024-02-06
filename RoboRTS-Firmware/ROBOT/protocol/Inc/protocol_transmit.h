@@ -30,54 +30,54 @@
 uint8_t protocol_get_session(struct perph_interface * interface);
 int32_t protocol_release_session(struct perph_interface * interface, uint8_t id);
 struct send_cmd_info *protocol_get_send_cmd_info(uint16_t cmd);
-//添加发送节点
+// Add send node
 uint32_t protocol_s_add_sendnode(uint8_t reciver, uint8_t session, uint8_t pack_type,
                                  void *p_data, uint32_t data_len, uint16_t cmd, uint16_t ack_seq);
 
-//广播包添加发送节点
+// Add send node for broadcast packets
 uint32_t protocol_s_broadcast_add_node(void *p_data, uint32_t data_len, uint16_t cmd);
 
-//通过接口发送数据
+// Send data through the interface
 uint32_t protocol_s_fill_pack(send_ctx_t *ctx, uint8_t *p_data,
                               uint32_t data_len, uint8_t *pack_zone, uint16_t seq, uint16_t cmd);
 
 uint32_t protocol_s_interface_send_data(send_list_node_t *cur_send_node, struct perph_interface *obj);
 
-//清空正常发送列表
+// Clear the normal send list
 uint32_t protocol_s_interface_normal_send_flush(struct perph_interface *obj);
 
-//清空ACK帧发送列表
+// Clear the ACK frame send list
 uint32_t protocol_s_interface_ack_send_flush(struct perph_interface *obj);
 
-//清空广播包发送列表
+// Clear the broadcast packet send list
 uint32_t protocol_s_broadcast_send_flush(void);
 
-//获取路由
+// Get route
 struct perph_interface *protocol_s_get_route(uint8_t tar_add);
 
-//解包处理函数
+//Unpacking processing function
 uint32_t protocol_s_pack_forward(protocol_pack_desc_t *p_pack, struct perph_interface *src_obj);
 
-//包转发函数
+//Packet forwarding function
 uint32_t protocol_s_unpack_data_handle(struct perph_interface *obj);
 
-//获得session的node
+//Get the node of the session
 send_list_node_t *protocol_s_session_get_node(struct perph_interface *obj,
                                               uint8_t address, uint8_t session);
 
-//解包处理
+// Unpacking processing
 uint32_t protocol_s_extract(struct perph_interface *obj);
 
-//找帧头
+// Find frame header
 uint32_t protocol_s_find_pack_header(rcvd_desc_t *rcvd);
 
-//校验包头
+//Check package header
 uint32_t protocol_s_auth_pack_header(rcvd_desc_t *rcvd);
 
-//获取包数据
+//Get packet data
 uint32_t protocol_s_fetch_pack_data(rcvd_desc_t *rcvd);
 
-//获取帧长度和版本
+//Get frame length and version.
 ver_data_len_t protocol_s_get_ver_datalen(void *pack);
 
 void protocol_s_error_info_printf(uint32_t status, char *file, int line);
