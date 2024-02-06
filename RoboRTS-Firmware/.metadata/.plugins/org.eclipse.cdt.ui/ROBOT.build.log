@@ -1,0 +1,97 @@
+01:27:19 **** Incremental Build of configuration Debug for project ROBOT ****
+make -j7 all 
+arm-none-eabi-gcc "../ulog/ulog_console.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F427xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../support -I../object -I../modules -I../devices -I../controller -I../algorithm -I../imu/Inc -I../gpio/Inc -I../applications/Inc -I../bsp/Inc -I../protocol/Inc -I../ulog -I../utilities -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"ulog/ulog_console.d" -MT"ulog/ulog_console.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "ulog/ulog_console.o"
+arm-none-eabi-gcc "../protocol/Src/protocol_interface.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F427xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../support -I../object -I../modules -I../devices -I../controller -I../algorithm -I../imu/Inc -I../gpio/Inc -I../applications/Inc -I../bsp/Inc -I../protocol/Inc -I../ulog -I../utilities -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"protocol/Src/protocol_interface.d" -MT"protocol/Src/protocol_interface.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "protocol/Src/protocol_interface.o"
+arm-none-eabi-gcc "../modules/shoot.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F427xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../support -I../object -I../modules -I../devices -I../controller -I../algorithm -I../imu/Inc -I../gpio/Inc -I../applications/Inc -I../bsp/Inc -I../protocol/Inc -I../ulog -I../utilities -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"modules/shoot.d" -MT"modules/shoot.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "modules/shoot.o"
+arm-none-eabi-gcc "../imu/Src/drv_imu.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F427xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../support -I../object -I../modules -I../devices -I../controller -I../algorithm -I../imu/Inc -I../gpio/Inc -I../applications/Inc -I../bsp/Inc -I../protocol/Inc -I../ulog -I../utilities -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"imu/Src/drv_imu.d" -MT"imu/Src/drv_imu.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "imu/Src/drv_imu.o"
+arm-none-eabi-gcc "../gpio/Src/test_sanity.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F427xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../support -I../object -I../modules -I../devices -I../controller -I../algorithm -I../imu/Inc -I../gpio/Inc -I../applications/Inc -I../bsp/Inc -I../protocol/Inc -I../ulog -I../utilities -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"gpio/Src/test_sanity.d" -MT"gpio/Src/test_sanity.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "gpio/Src/test_sanity.o"
+arm-none-eabi-gcc "../devices/detect.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F427xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../support -I../object -I../modules -I../devices -I../controller -I../algorithm -I../imu/Inc -I../gpio/Inc -I../applications/Inc -I../bsp/Inc -I../protocol/Inc -I../ulog -I../utilities -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"devices/detect.d" -MT"devices/detect.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "devices/detect.o"
+arm-none-eabi-gcc "../devices/device.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F427xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../support -I../object -I../modules -I../devices -I../controller -I../algorithm -I../imu/Inc -I../gpio/Inc -I../applications/Inc -I../bsp/Inc -I../protocol/Inc -I../ulog -I../utilities -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"devices/device.d" -MT"devices/device.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "devices/device.o"
+In file included from ../gpio/Src/test_sanity.c:8:
+../gpio/Src/../../gpio/Inc/test_sanity.h:11:1: error: unknown type name 'GPIO_PinState'
+   11 | GPIO_PinState read_pin_Z ();
+      | ^~~~~~~~~~~~~
+../gpio/Src/test_sanity.c:12:15: error: conflicting types for 'read_pin_Z'; have 'GPIO_PinState()'
+   12 | GPIO_PinState read_pin_Z (){
+      |               ^~~~~~~~~~
+In file included from ../gpio/Src/test_sanity.c:8:
+../gpio/Src/../../gpio/Inc/test_sanity.h:11:15: note: previous declaration of 'read_pin_Z' with type 'int()'
+   11 | GPIO_PinState read_pin_Z ();
+      |               ^~~~~~~~~~
+make: *** [gpio/Src/subdir.mk:19: gpio/Src/test_sanity.o] Error 1
+make: *** Waiting for unfinished jobs....
+../devices/detect.c: In function 'detect_device_get_event':
+../devices/detect.c:113:12: warning: returning 'void *' from a function with return type 'uint32_t' {aka 'long unsigned int'} makes integer from pointer without a cast [-Wint-conversion]
+  113 |     return NULL;
+      |            ^~~~
+../devices/detect.c: In function 'detect_device_get_state_or':
+../devices/detect.c:121:12: warning: returning 'void *' from a function with return type 'int32_t' {aka 'long int'} makes integer from pointer without a cast [-Wint-conversion]
+  121 |     return NULL;
+      |            ^~~~
+../imu/Src/drv_imu.c: In function 'mpu_get_data':
+../imu/Src/drv_imu.c:209:61: error: 'struct mpu_data_info' has no member named 'max_offset'; did you mean 'ax_offset'?
+  209 |   mpu_data.ax = (mpu_buff[0] << 8 | mpu_buff[1]) - mpu_data.max_offset;
+      |                                                             ^~~~~~~~~~
+      |                                                             ax_offset
+In file included from ../ulog/ulog_console.c:2:
+../bsp/Inc/drv_uart.h:43:3: error: unknown type name 'UART_HandleTypeDef'
+   43 |   UART_HandleTypeDef *uart_h;
+      |   ^~~~~~~~~~~~~~~~~~
+make: *** [ulog/subdir.mk:22: ulog/ulog_console.o] Error 1
+../protocol/Src/protocol_interface.c:103:9: error: conflicting types for 'protocol_can_interface_register'; have 'int32_t(char *, uint16_t,  uint8_t,  uint8_t,  uint32_t,  uint32_t,  int32_t (*)(uint32_t,  uint8_t *, uint32_t))' {aka 'long int(char *, short unsigned int,  unsigned char,  unsigned char,  long unsigned int,  long unsigned int,  long int (*)(long unsigned int,  unsigned char *, long unsigned int))'}
+  103 | int32_t protocol_can_interface_register(char *interface_name,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../protocol/Inc/protocol_common.h:27,
+                 from ../protocol/Inc/protocol.h:23,
+                 from ../protocol/Src/protocol_interface.c:18:
+../protocol/Inc/protocol_interface.h:113:9: note: previous declaration of 'protocol_can_interface_register' with type 'int32_t(char *, uint16_t,  uint8_t,  uint8_t,  uint32_t,  uint32_t,  int (*)(uint32_t,  uint8_t *, uint32_t))' {aka 'long int(char *, short unsigned int,  unsigned char,  unsigned char,  long unsigned int,  long unsigned int,  int (*)(long unsigned int,  unsigned char *, long unsigned int))'}
+  113 | int32_t protocol_can_interface_register(char *interface_name,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../protocol/Src/protocol_interface.c: In function 'protocol_uart_interface_register':
+../protocol/Src/protocol_interface.c:136:39: warning: assignment to 'int32_t (*)(uint8_t *, uint32_t)' {aka 'long int (*)(unsigned char *, long unsigned int)'} from incompatible pointer type 'int (*)(uint8_t *, uint32_t)' {aka 'int (*)(unsigned char *, long unsigned int)'} [-Wincompatible-pointer-types]
+  136 |   interface.send_callback.com_send_fn = com_send_fn;
+      |                                       ^
+make: *** [protocol/Src/subdir.mk:28: protocol/Src/protocol_interface.o] Error 1
+../imu/Src/drv_imu.c: In function 'mpu_device_init':
+../imu/Src/drv_imu.c:32:47: error: 'IST_RESET_Pin' undeclared (first use in this function)
+   32 | #define IST_ENABLE() HAL_GPIO_WritePin(GPIOE, IST_RESET_Pin, GPIO_PIN_SET)
+      |                                               ^~~~~~~~~~~~~
+../imu/Src/drv_imu.c:243:3: note: in expansion of macro 'IST_ENABLE'
+  243 |   IST_ENABLE();
+      |   ^~~~~~~~~~
+../imu/Src/drv_imu.c:32:47: note: each undeclared identifier is reported only once for each function it appears in
+   32 | #define IST_ENABLE() HAL_GPIO_WritePin(GPIOE, IST_RESET_Pin, GPIO_PIN_SET)
+      |                                               ^~~~~~~~~~~~~
+../imu/Src/drv_imu.c:243:3: note: in expansion of macro 'IST_ENABLE'
+  243 |   IST_ENABLE();
+      |   ^~~~~~~~~~
+../imu/Src/drv_imu.c: In function 'get_mpu_acc_offset':
+../imu/Src/drv_imu.c:321:58: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+  321 |     mpu_data.az_offset += mpu_buff[4] << 8 | mpu_buff[5] - 4096;
+      |                                              ~~~~~~~~~~~~^~~~~~
+In file included from ../modules/shoot.c:19:
+../modules/shoot.c: In function 'shoot_state_update':
+../bsp/Inc/drv_io.h:48:44: error: 'TRIG_GPIO_Port' undeclared (first use in this function); did you mean 'LED_G_GPIO_Port'?
+   48 | #define get_trig_status() HAL_GPIO_ReadPin(TRIG_GPIO_Port, TRIG_Pin)
+      |                                            ^~~~~~~~~~~~~~
+../modules/shoot.c:144:24: note: in expansion of macro 'get_trig_status'
+  144 |   shoot->trigger_key = get_trig_status();
+      |                        ^~~~~~~~~~~~~~~
+../bsp/Inc/drv_io.h:48:44: note: each undeclared identifier is reported only once for each function it appears in
+   48 | #define get_trig_status() HAL_GPIO_ReadPin(TRIG_GPIO_Port, TRIG_Pin)
+      |                                            ^~~~~~~~~~~~~~
+../modules/shoot.c:144:24: note: in expansion of macro 'get_trig_status'
+  144 |   shoot->trigger_key = get_trig_status();
+      |                        ^~~~~~~~~~~~~~~
+make: *** [imu/Src/subdir.mk:25: imu/Src/drv_imu.o] Error 1
+../bsp/Inc/drv_io.h:48:60: error: 'TRIG_Pin' undeclared (first use in this function)
+   48 | #define get_trig_status() HAL_GPIO_ReadPin(TRIG_GPIO_Port, TRIG_Pin)
+      |                                                            ^~~~~~~~
+../modules/shoot.c:144:24: note: in expansion of macro 'get_trig_status'
+  144 |   shoot->trigger_key = get_trig_status();
+      |                        ^~~~~~~~~~~~~~~
+make: *** [modules/subdir.mk:28: modules/shoot.o] Error 1
+"make -j7 all" terminated with exit code 2. Build might be incomplete.
+
+01:27:21 Build Failed. 14 errors, 4 warnings. (took 1s.795ms)
+

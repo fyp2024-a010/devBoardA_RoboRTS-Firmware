@@ -1,0 +1,17 @@
+../imu/Src/bsp_imu.c:54:7:inv_sqrt	32	static
+../imu/Src/bsp_imu.c:80:9:mpu_write_byte	24	static
+../imu/Src/bsp_imu.c:98:9:mpu_read_byte	24	static
+../imu/Src/bsp_imu.c:116:9:mpu_read_bytes	24	static
+../imu/Src/bsp_imu.c:134:13:ist_reg_write_by_mpu	16	static
+../imu/Src/bsp_imu.c:155:16:ist_reg_read_by_mpu	24	static
+../imu/Src/bsp_imu.c:175:13:mpu_master_i2c_auto_read_config	16	static
+../imu/Src/bsp_imu.c:215:9:ist8310_init	8	static
+../imu/Src/bsp_imu.c:282:6:ist8310_get_data	16	static
+../imu/Src/bsp_imu.c:294:6:mpu_get_data	8	static
+../imu/Src/bsp_imu.c:326:9:mpu_set_gyro_fsr	16	static
+../imu/Src/bsp_imu.c:338:9:mpu_set_accel_fsr	16	static
+../imu/Src/bsp_imu.c:351:9:mpu_device_init	32	static
+../imu/Src/bsp_imu.c:385:6:mpu_offset_call	16	static
+../imu/Src/bsp_imu.c:418:6:init_quaternion	48	static
+../imu/Src/bsp_imu.c:579:6:imu_ahrs_update	128	static
+../imu/Src/bsp_imu.c:682:6:imu_attitude_update	32	static

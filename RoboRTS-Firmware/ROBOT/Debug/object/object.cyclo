@@ -1,0 +1,8 @@
+../support/linux_list.h:71:22:__list_add	1
+../support/linux_list.h:89:22:list_add	1
+../support/linux_list.h:114:22:__list_del	1
+../support/linux_list.h:126:22:list_del	1
+../object/object.c:53:1:object_get_information	3
+../object/object.c:64:9:object_init	2
+../object/object.c:101:10:object_find	6
+../object/object.c:142:6:object_detach	1

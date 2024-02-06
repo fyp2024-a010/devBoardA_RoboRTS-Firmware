@@ -1,0 +1,9 @@
+../motors/Src/drv_can.c:27:6:can_manage_init	2
+../motors/Src/drv_can.c:67:10:can_msg_bytes_send	9
+../motors/Src/drv_can.c:138:9:can_fifo0_rx_callback_register	3
+../motors/Src/drv_can.c:150:13:can_tx_mailbox_complete_hanle	4
+../motors/Src/drv_can.c:192:6:HAL_CAN_TxMailbox0CompleteCallback	2
+../motors/Src/drv_can.c:200:6:HAL_CAN_TxMailbox1CompleteCallback	2
+../motors/Src/drv_can.c:207:6:HAL_CAN_TxMailbox2CompleteCallback	2
+../motors/Src/drv_can.c:215:6:HAL_CAN_ErrorCallback	2
+../motors/Src/drv_can.c:224:6:HAL_CAN_RxFifo0MsgPendingCallback	4

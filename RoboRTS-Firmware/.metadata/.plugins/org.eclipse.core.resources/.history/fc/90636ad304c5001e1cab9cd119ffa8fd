@@ -1,0 +1,98 @@
+/* USER CODE BEGIN Header */
+/*
+ * init.c
+ *
+ *  Created on: Jan 30, 2024
+ *      Author: bentjh01
+ */
+/* USER CODE END Header */
+
+/* Includes ------------------------------------------------------------------*/
+#include "FreeRTOS.h"
+#include "task.h"
+#include "main.h"
+#include "cmsis_os.h"
+#include "init.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN PTD */
+
+/* USER CODE END PTD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+
+/* USER CODE END PD */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
+
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
+/* USER CODE BEGIN Variables */
+
+/* USER CODE END Variables */
+/* Definitions for defaultTask */
+osThreadId_t imuHandle;
+const osThreadAttr_t some_attributes = {
+  .name = "some",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
+};
+
+/* Private function prototypes -----------------------------------------------*/
+/* USER CODE BEGIN FunctionPrototypes */
+
+/* USER CODE END FunctionPrototypes */
+
+void imu_t(void *argument);
+
+//extern void MX_USB_DEVICE_Init(void);
+void app_init(void); /* (MISRA C 2004 rule 8.1) */
+
+/**
+  * @brief  FreeRTOS initialization
+  * @param  None
+  * @retval None
+  */
+void app_init(void) {
+  someHandle = osThreadNew(some_t, NULL, &some_attributes);
+
+}
+
+/* USER CODE BEGIN Header_StartDefaultTask */
+/**
+  * @brief  Function implementing the defaultTask thread.
+  * @param  argument: Not used
+  * @retval None
+  */
+/* USER CODE END Header_StartDefaultTask */
+void some_t(void *argument)
+{
+  /* init code for USB_DEVICE */
+//  MX_USB_DEVICE_Init();
+  /* USER CODE BEGIN StartDefaultTask */
+  /* Infinite loop */
+  for(;;)
+  {
+	  HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
+    osDelay(1000);
+  }
+  /* USER CODE END StartDefaultTask */
+}
+
+osThreadId_t someHandle;
+const osThreadAttr_t some_attributes = {
+  .name = "some",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
+};
+
+void imu_init(void){
+	imuHandle = osThreadNew(some_t, NULL, &some_attributes);
+}

@@ -1,0 +1,3 @@
+../protocol/Src/protocol_common.c:33:7:protocol_p_malloc	1
+../protocol/Src/protocol_common.c:43:6:protocol_p_free	1
+../protocol/Src/protocol_common.c:53:10:protocol_p_get_time	1
