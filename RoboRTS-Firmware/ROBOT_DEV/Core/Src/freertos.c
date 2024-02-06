@@ -54,34 +54,6 @@ const osThreadAttr_t defaultTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
-/* Definitions for Blink_LED_A */
-osThreadId_t Blink_LED_AHandle;
-const osThreadAttr_t Blink_LED_A_attributes = {
-  .name = "Blink_LED_A",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
-};
-/* Definitions for Blink_LED_B */
-osThreadId_t Blink_LED_BHandle;
-const osThreadAttr_t Blink_LED_B_attributes = {
-  .name = "Blink_LED_B",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
-};
-/* Definitions for Blink_LED_C */
-osThreadId_t Blink_LED_CHandle;
-const osThreadAttr_t Blink_LED_C_attributes = {
-  .name = "Blink_LED_C",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
-};
-/* Definitions for myTask05 */
-osThreadId_t myTask05Handle;
-const osThreadAttr_t myTask05_attributes = {
-  .name = "myTask05",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
-};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -89,10 +61,6 @@ const osThreadAttr_t myTask05_attributes = {
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void *argument);
-void Blink_LED_A_t(void *argument);
-void Blink_LED_B_t(void *argument);
-void Blink_LED_C_t(void *argument);
-void StartTask05(void *argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -127,18 +95,6 @@ void MX_FREERTOS_Init(void) {
   /* creation of defaultTask */
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
-  /* creation of Blink_LED_A */
-  Blink_LED_AHandle = osThreadNew(Blink_LED_A_t, NULL, &Blink_LED_A_attributes);
-
-  /* creation of Blink_LED_B */
-  Blink_LED_BHandle = osThreadNew(Blink_LED_B_t, NULL, &Blink_LED_B_attributes);
-
-  /* creation of Blink_LED_C */
-  Blink_LED_CHandle = osThreadNew(Blink_LED_C_t, NULL, &Blink_LED_C_attributes);
-
-  /* creation of myTask05 */
-  myTask05Handle = osThreadNew(StartTask05, NULL, &myTask05_attributes);
-
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -167,78 +123,6 @@ void StartDefaultTask(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartDefaultTask */
-}
-
-/* USER CODE BEGIN Header_Blink_LED_A_t */
-/**
-* @brief Function implementing the Blink_LED_A thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_Blink_LED_A_t */
-void Blink_LED_A_t(void *argument)
-{
-  /* USER CODE BEGIN Blink_LED_A_t */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END Blink_LED_A_t */
-}
-
-/* USER CODE BEGIN Header_Blink_LED_B_t */
-/**
-* @brief Function implementing the Blink_LED_B thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_Blink_LED_B_t */
-void Blink_LED_B_t(void *argument)
-{
-  /* USER CODE BEGIN Blink_LED_B_t */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END Blink_LED_B_t */
-}
-
-/* USER CODE BEGIN Header_Blink_LED_C_t */
-/**
-* @brief Function implementing the Blink_LED_C thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_Blink_LED_C_t */
-void Blink_LED_C_t(void *argument)
-{
-  /* USER CODE BEGIN Blink_LED_C_t */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END Blink_LED_C_t */
-}
-
-/* USER CODE BEGIN Header_StartTask05 */
-/**
-* @brief Function implementing the myTask05 thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask05 */
-void StartTask05(void *argument)
-{
-  /* USER CODE BEGIN StartTask05 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END StartTask05 */
 }
 
 /* Private application code --------------------------------------------------*/
