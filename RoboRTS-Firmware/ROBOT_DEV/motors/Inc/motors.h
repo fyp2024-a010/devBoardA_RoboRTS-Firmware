@@ -9,6 +9,7 @@
 #define INC_MOTORS_H_
 
 #include "cmsis_os.h"
+#include "can.h"
 #include "main.h"
 
 typedef struct
