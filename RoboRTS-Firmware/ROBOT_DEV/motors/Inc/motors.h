@@ -11,6 +11,9 @@
 #include "cmsis_os.h"
 #include "can.h"
 #include "main.h"
+#include "pid.h"
+
+#define ENCODER_ANGLE_RATIO    (8192.0f/360.0f)
 
 typedef struct
 {

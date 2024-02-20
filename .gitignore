@@ -1,5 +1,5 @@
-./.*
-./RoboRTS-Firmware/.*
-./RoboRTS-Firmware/ROBOT/.*
-./RoboRTS-Firmware/ROBOT_DEV/.*
-
+.DS_Store
+.vscode
+.gitignore
+./ROBOT/.*
+./ROBOT_DEV/.*

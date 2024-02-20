@@ -194,6 +194,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
+	HAL_GPIO_TogglePin(LED_A_GPIO_Port, LED_A_Pin);
+	osDelay(500);
   /* User can add his own implementation to report the HAL error return state */
   __disable_irq();
   while (1)
