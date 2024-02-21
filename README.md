@@ -2,7 +2,7 @@
 - Student: Benjamin Teh Jhen Hing
 - NTU AY23/24
 - FYP A010 Super compact mobile robot development: Mechatronics design
-- Supervisor: Hendral Suratno
+- Supervisor: Hendra Suratno
 - Professor Chen I-Ming  
 - Repo mirrored from [RoboMaster/RoboRTS-Firmware](https://github.com/RoboMaster/DevelopmentBoard-Examples.git)
 
