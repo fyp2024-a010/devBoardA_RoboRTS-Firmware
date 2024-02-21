@@ -1,0 +1,15 @@
+../boards/drv_uart.c:47:6:usart_rx_callback_register	16	static
+../boards/drv_uart.c:53:6:usart3_rx_callback_register	16	static
+../boards/drv_uart.c:59:6:HAL_UART_RxHalfCpltCallback	16	static
+../boards/drv_uart.c:73:6:HAL_UART_RxCpltCallback	16	static
+../boards/drv_uart.c:87:6:HAL_UART_TxCpltCallback	16	static
+../boards/drv_uart.c:101:6:usart3_idle_callback	16	static
+../boards/drv_uart.c:110:6:usart6_idle_callback	16	static
+../boards/drv_uart.c:119:6:usart3_manage_init	8	static
+../boards/drv_uart.c:137:6:usart6_manage_init	8	static
+../boards/drv_uart.c:155:5:usart6_printf	144	static
+../boards/drv_uart.c:176:6:usart3_transmit	16	static
+../boards/drv_uart.c:181:6:usart6_transmit	16	static
+../boards/drv_uart.c:186:10:usart_transmit	32	static
+../boards/drv_uart.c:237:13:usart_transmit_hook	24	static
+../boards/drv_uart.c:265:13:usart_rec_to_buff	40	static

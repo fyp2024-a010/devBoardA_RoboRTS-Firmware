@@ -1,0 +1,3 @@
+../protocol/protocol_common.c:35:7:protocol_p_malloc	16	static
+../protocol/protocol_common.c:46:6:protocol_p_free	16	static
+../protocol/protocol_common.c:57:10:protocol_p_get_time	8	static

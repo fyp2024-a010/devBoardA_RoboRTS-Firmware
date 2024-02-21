@@ -1,0 +1,9 @@
+../support/linux_list.h:59:22:INIT_LIST_HEAD	16	static
+../protocol/protocol_interface.c:35:9:protocol_interface_init	48	static
+../protocol/protocol_interface.c:104:9:protocol_can_interface_register	168	static
+../protocol/protocol_interface.c:126:9:protocol_uart_interface_register	168	static
+../protocol/protocol_interface.c:144:9:protocol_interface_send_data	32	static
+../protocol/protocol_interface.c:183:10:protocol_can_rcv_data	32	static
+../protocol/protocol_interface.c:199:10:protocol_uart_rcv_data	32	static
+../protocol/protocol_interface.c:221:9:protocol_set_route	24	static
+../protocol/protocol_interface.c:256:25:protocol_get_interface	40	static,ignoring_inline_asm

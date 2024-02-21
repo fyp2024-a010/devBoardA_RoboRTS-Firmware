@@ -1,0 +1,10 @@
+14:02:31 **** Incremental Build of configuration Debug for project Communicate ****
+make -j7 all 
+arm-none-eabi-size  Communicate.elf 
+   text	   data	    bss	    dec	    hex	filename
+  45940	    344	  28416	  74700	  123cc	Communicate.elf
+Finished building: default.size.stdout
+ 
+
+14:02:32 Build Finished. 0 errors, 0 warnings. (took 335ms)
+

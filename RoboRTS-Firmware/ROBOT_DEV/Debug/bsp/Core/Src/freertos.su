@@ -1,2 +1,0 @@
-../bsp/Core/Src/freertos.c:73:6:MX_FREERTOS_Init	8	static
-../bsp/Core/Src/freertos.c:115:6:StartDefaultTask	16	static

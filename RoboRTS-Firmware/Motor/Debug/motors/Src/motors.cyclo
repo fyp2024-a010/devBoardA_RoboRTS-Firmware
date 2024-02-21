@@ -1,0 +1,2 @@
+../motors/Src/motors.c:17:6:motors_init	1
+../motors/Src/motors.c:91:6:motors_task	5

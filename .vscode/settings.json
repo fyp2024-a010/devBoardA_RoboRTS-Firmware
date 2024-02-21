@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "protocol_common.h": "c",
+    "protocol_transmit.h": "c",
+    "protocol.h": "c"
+  }
+}

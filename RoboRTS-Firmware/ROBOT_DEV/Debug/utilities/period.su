@@ -1,0 +1,6 @@
+../utilities/period.c:26:9:get_period_init	16	static
+../utilities/period.c:35:9:get_period_start	24	static
+../utilities/period.c:48:9:get_period_start_by_id	16	static
+../utilities/period.c:61:7:get_period_end	24	static
+../utilities/period.c:76:16:get_period_reset	16	static
+../utilities/period.c:86:7:sin_freq_output	32	static
