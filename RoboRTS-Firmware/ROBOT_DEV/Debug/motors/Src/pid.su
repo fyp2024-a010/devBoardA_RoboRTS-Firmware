@@ -1,0 +1,5 @@
+../motors/Src/pid.c:4:6:abs_limit	16	static
+../motors/Src/pid.c:12:13:pid_param_init	32	static
+../motors/Src/pid.c:35:13:pid_reset	24	static
+../motors/Src/pid.c:54:7:pid_calculate	24	static
+../motors/Src/pid.c:76:6:pid_struct_init	32	static

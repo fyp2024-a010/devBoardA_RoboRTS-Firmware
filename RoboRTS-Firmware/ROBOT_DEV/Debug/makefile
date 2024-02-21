@@ -9,19 +9,20 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include support/Src/subdir.mk
 -include motors/Src/subdir.mk
+-include bsp/USB_DEVICE/Target/subdir.mk
+-include bsp/USB_DEVICE/App/subdir.mk
+-include bsp/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
+-include bsp/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/subdir.mk
+-include bsp/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/subdir.mk
+-include bsp/Middlewares/Third_Party/FreeRTOS/Source/subdir.mk
+-include bsp/Middlewares/ST/STM32_USB_Device_Library/Core/Src/subdir.mk
+-include bsp/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/subdir.mk
+-include bsp/Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
+-include bsp/Core/Startup/subdir.mk
+-include bsp/Core/Src/subdir.mk
 -include applications/subdir.mk
--include USB_DEVICE/Target/subdir.mk
--include USB_DEVICE/App/subdir.mk
--include Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
--include Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/subdir.mk
--include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/subdir.mk
--include Middlewares/Third_Party/FreeRTOS/Source/subdir.mk
--include Middlewares/ST/STM32_USB_Device_Library/Core/Src/subdir.mk
--include Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/subdir.mk
--include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
--include Core/Startup/subdir.mk
--include Core/Src/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -70,8 +71,8 @@ all: main-build
 main-build: ROBOT_DEV.elf secondary-outputs
 
 # Tool invocations
-ROBOT_DEV.elf ROBOT_DEV.map: $(OBJS) $(USER_OBJS) /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/STM32F427IIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ROBOT_DEV.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/STM32F427IIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOT_DEV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ROBOT_DEV.elf ROBOT_DEV.map: $(OBJS) $(USER_OBJS) /Users/bentjh01/Documents/01_NTU/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/STM32F427IIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ROBOT_DEV.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/bentjh01/Documents/01_NTU/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT_DEV/STM32F427IIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOT_DEV.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

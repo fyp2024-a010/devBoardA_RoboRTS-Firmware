@@ -33,19 +33,4 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang \
 USB_DEVICE/App \
 USB_DEVICE/Target \
-algorithm \
-applications/Src \
-bsp/Src \
-chasis/Src \
-controller \
-devices \
-gpio/Src \
-imu/Src \
-modules \
-motors/Src \
-object \
-protocol/Src \
-support \
-ulog \
-utilities \
 

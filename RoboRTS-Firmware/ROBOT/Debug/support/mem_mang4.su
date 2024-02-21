@@ -1,7 +1,0 @@
-../support/mem_mang4.c:63:7:heap_malloc	40	static,ignoring_inline_asm
-../support/mem_mang4.c:171:6:heap_free	32	static,ignoring_inline_asm
-../support/mem_mang4.c:211:10:heap_get_free	4	static
-../support/mem_mang4.c:217:10:heap_get_ever_free	4	static
-../support/mem_mang4.c:223:13:heap_init	24	static
-../support/mem_mang4.c:271:13:insert_into_free_list	24	static
-../support/mem_mang4.c:324:6:heap_print_block	16	static

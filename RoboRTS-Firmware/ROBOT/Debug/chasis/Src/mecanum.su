@@ -1,2 +1,0 @@
-../chasis/Src/mecanum.c:36:6:mecanum_calculate	48	static
-../chasis/Src/mecanum.c:80:6:mecanum_position_measure	24	static

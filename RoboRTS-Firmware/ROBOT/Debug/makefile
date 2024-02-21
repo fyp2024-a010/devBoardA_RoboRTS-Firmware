@@ -9,21 +9,6 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include utilities/subdir.mk
--include ulog/subdir.mk
--include support/subdir.mk
--include protocol/Src/subdir.mk
--include object/subdir.mk
--include motors/Src/subdir.mk
--include modules/subdir.mk
--include imu/Src/subdir.mk
--include gpio/Src/subdir.mk
--include devices/subdir.mk
--include controller/subdir.mk
--include chasis/Src/subdir.mk
--include bsp/Src/subdir.mk
--include applications/Src/subdir.mk
--include algorithm/subdir.mk
 -include USB_DEVICE/Target/subdir.mk
 -include USB_DEVICE/App/subdir.mk
 -include Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
@@ -83,8 +68,8 @@ all: main-build
 main-build: ROBOT.elf secondary-outputs
 
 # Tool invocations
-ROBOT.elf ROBOT.map: $(OBJS) $(USER_OBJS) /Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT/STM32F427IIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ROBOT.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/bentjh01/Documents/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT/STM32F427IIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ROBOT.elf ROBOT.map: $(OBJS) $(USER_OBJS) /Users/bentjh01/Documents/01_NTU/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT/STM32F427IIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ROBOT.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/bentjh01/Documents/01_NTU/FYP/RoboMasterDevBoard/RoboRTS-Firmware/ROBOT/STM32F427IIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ROBOT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

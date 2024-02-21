@@ -22,17 +22,18 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-Core/Src \
-Core/Startup \
-Drivers/STM32F4xx_HAL_Driver/Src \
-Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src \
-Middlewares/ST/STM32_USB_Device_Library/Core/Src \
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
-Middlewares/Third_Party/FreeRTOS/Source \
-Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang \
-USB_DEVICE/App \
-USB_DEVICE/Target \
 applications \
+bsp/Core/Src \
+bsp/Core/Startup \
+bsp/Drivers/STM32F4xx_HAL_Driver/Src \
+bsp/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src \
+bsp/Middlewares/ST/STM32_USB_Device_Library/Core/Src \
+bsp/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
+bsp/Middlewares/Third_Party/FreeRTOS/Source \
+bsp/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F \
+bsp/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang \
+bsp/USB_DEVICE/App \
+bsp/USB_DEVICE/Target \
 motors/Src \
+support/Src \
 

@@ -11,6 +11,7 @@
 #include "cmsis_os.h"
 #include "can.h"
 #include "main.h"
+#include "fifo.h"
 #include "pid.h"
 
 #define ENCODER_ANGLE_RATIO    (8192.0f/360.0f)

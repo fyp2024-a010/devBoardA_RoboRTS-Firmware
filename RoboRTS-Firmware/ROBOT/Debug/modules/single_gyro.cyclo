@@ -1,5 +1,0 @@
-../modules/single_gyro.c:23:9:single_gyro_can_send_register	2
-../modules/single_gyro.c:33:9:single_gyro_set_stdid	2
-../modules/single_gyro.c:43:9:single_gyro_update	3
-../modules/single_gyro.c:65:9:single_gyro_reset	3
-../modules/single_gyro.c:79:9:single_gyro_adjust	3
