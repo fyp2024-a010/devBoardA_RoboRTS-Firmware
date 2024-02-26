@@ -1,0 +1,8 @@
+.DS_Store
+.vscode
+RoboRTS-Firmware/.*
+RoboRTS-Firmware/Communicate/.*
+RoboRTS-Firmware/Motor/.*
+RoboRTS-Firmware/ROBOT/.*
+RoboRTS-Firmware/ROBOT_DEV/.*
+RoboRTS-Firmware/Test/.*
