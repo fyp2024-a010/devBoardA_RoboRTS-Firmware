@@ -31,7 +31,8 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
+#define USB_REC_MAX_NUM 5
+static usb_vcp_call_back_f usb_vcp_call_back[USB_REC_MAX_NUM];
 /* USER CODE END PV */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
@@ -62,6 +63,8 @@
   */
 
 /* USER CODE BEGIN PRIVATE_DEFINES */
+#define APP_RX_DATA_SIZE  2048
+#define APP_TX_DATA_SIZE  4096
 /* USER CODE END PRIVATE_DEFINES */
 
 /**
@@ -149,6 +152,11 @@ USBD_CDC_ItfTypeDef USBD_Interface_fops_FS =
   * @brief  Initializes the CDC media low layer over the FS USB IP
   * @retval USBD_OK if all operations are OK else USBD_FAIL
   */
+
+#include "fifo.h"
+fifo_s_t usb_tx_fifo;
+uint8_t usb_tx_fifo_buff[APP_TX_DATA_SIZE];
+
 static int8_t CDC_Init_FS(void)
 {
   /* USER CODE BEGIN 3 */
@@ -261,6 +269,15 @@ static int8_t CDC_Control_FS(uint8_t cmd, uint8_t* pbuf, uint16_t length)
 static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
 {
   /* USER CODE BEGIN 6 */
+
+  for (int i = 0; i < USB_REC_MAX_NUM; i++)
+  {
+    if(usb_vcp_call_back[i] != NULL)
+    {
+        (*usb_vcp_call_back[i])(Buf, *Len);
+    }
+  }
+  
   USBD_CDC_SetRxBuffer(&hUsbDeviceFS, &Buf[0]);
   USBD_CDC_ReceivePacket(&hUsbDeviceFS);
   return (USBD_OK);
@@ -282,15 +299,44 @@ uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len)
 {
   uint8_t result = USBD_OK;
   /* USER CODE BEGIN 7 */
-  USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef*)hUsbDeviceFS.pClassData;
-  if (hcdc->TxState != 0){
-    return USBD_BUSY;
-  }
-  USBD_CDC_SetTxBuffer(&hUsbDeviceFS, Buf, Len);
-  result = USBD_CDC_TransmitPacket(&hUsbDeviceFS);
-  /* USER CODE END 7 */
+  // USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef*)hUsbDeviceFS.pClassData;
+  // if (hcdc->TxState != 0){
+  //   return USBD_BUSY;
+  // }
+  // USBD_CDC_SetTxBuffer(&hUsbDeviceFS, Buf, Len);
+  // result = USBD_CDC_TransmitPacket(&hUsbDeviceFS);
+
+	fifo_s_puts(&usb_tx_fifo, (char*)Buf, Len);
+
   return result;
 }
+
+int32_t usb_tx_flush(void* argc)
+{
+	uint8_t result = USBD_OK;
+	USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef*)hUsbDeviceFS.pClassData;
+	
+	if (hcdc->TxState != 0){
+    return USBD_BUSY;
+  }
+	else
+	{
+		FIFO_CPU_SR_TYPE cpu_sr;
+		uint32_t send_num;
+    cpu_sr = FIFO_GET_CPU_SR();
+
+    FIFO_ENTER_CRITICAL(); 
+		send_num = usb_tx_fifo.used_num;
+		fifo_s_gets_noprotect(&usb_tx_fifo, (char*)UserTxBufferFS, send_num);
+		FIFO_RESTORE_CPU_SR(cpu_sr);
+
+		USBD_CDC_SetTxBuffer(&hUsbDeviceFS, UserTxBufferFS, send_num);
+    result = USBD_CDC_TransmitPacket(&hUsbDeviceFS);
+		return result;
+	}
+}
+//
+  /* USER CODE END 7 */
 
 /**
   * @brief  CDC_TransmitCplt_FS
@@ -316,7 +362,20 @@ static int8_t CDC_TransmitCplt_FS(uint8_t *Buf, uint32_t *Len, uint8_t epnum)
 }
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_IMPLEMENTATION */
-
+int32_t usb_vcp_rx_callback_register(usb_vcp_call_back_f fun)
+{
+    
+  for (int i = 0; i < USB_REC_MAX_NUM; i++)
+  {
+    if(usb_vcp_call_back[i] == NULL)
+    {
+      usb_vcp_call_back[i] = fun;
+      return USBD_OK;
+    }
+  }
+    
+  return USBD_FAIL;
+}
 /* USER CODE END PRIVATE_FUNCTIONS_IMPLEMENTATION */
 
 /**

@@ -15,15 +15,6 @@
  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
  ***************************************************************************/
 
-/*
-The protocol_ternsmite.c file contains the implementation of the protocol_transmit.h file. 
-This file is used to manage the sending of data packets and to forward packets to their destination. 
-It accomplishes this by sending data as nodes that contains the data packet and its description, the information on the 
-destination and the source of the packet, and the number of times the packet has been sent. 
-It connects this to an interface to send or receive. 
-Interface > Node > Packet > Data
-*/
-
 /* Includes ------------------------------------------------------------------*/
 #include "protocol.h"
 #include "protocol_transmit.h"
@@ -39,9 +30,6 @@ extern boardcast_object_t boardcast_object;
 /* Private function prototypes -----------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
 
-/*
-protocol_get_session, is used to get a free session from a peripheral interface.
-*/
 uint8_t protocol_get_session(struct perph_interface * interface)
 {
   for (int i = 0; i < 31; i++)
@@ -55,10 +43,6 @@ uint8_t protocol_get_session(struct perph_interface * interface)
   return 0;
 }
 
-/*
-The provided C function, protocol_release_session, is used to release or free up a session that was previously in use in 
-a peripheral interface.
-*/
 int32_t protocol_release_session(struct perph_interface * interface, uint8_t id)
 {
   if ((id > 0) && (id < 32))
@@ -69,12 +53,7 @@ int32_t protocol_release_session(struct perph_interface * interface, uint8_t id)
   return -1;
 }
 
-// Add protocol frame
-/*
-protocol_s_add_sendnode, is used to create a new node in a send list for a specific protocol. The function takes several 
-parameters including the receiver's address, session ID, packet type, data to be sent, data length, command, and 
-acknowledgment sequence.
-*/
+//添加协议帧
 uint32_t protocol_s_add_sendnode(uint8_t reciver, uint8_t session, uint8_t pack_type,
                                  void *p_data, uint32_t data_len, uint16_t cmd, uint16_t ack_seq)
 {
@@ -97,14 +76,14 @@ uint32_t protocol_s_add_sendnode(uint8_t reciver, uint8_t session, uint8_t pack_
     return status;
   }
 
-  // Configure send parameters
+  //配置发送参数
   ctx.s_a_r.pack_type = pack_type;
   ctx.s_a_r.session = session;
   ctx.s_a_r.res = 0;
   ctx.reciver = reciver;
   ctx.version = PROTOCOL_VERSION;
 
-  // Get the routing interface
+  //获取路由接口
   int_obj = protocol_s_get_route(reciver);
 
   if (int_obj == NULL)
@@ -125,7 +104,7 @@ uint32_t protocol_s_add_sendnode(uint8_t reciver, uint8_t session, uint8_t pack_
     }
   }
 
-  // Allocate memory for the data frame
+  //分配数据帧所需内存
   if (pack_type == PROTOCOL_PACK_ACK)
   {
     malloc_size = PROTOCOL_PACK_HEAD_TAIL_SIZE + PROTOCOL_SEND_NODE_SIZE +
@@ -159,10 +138,10 @@ uint32_t protocol_s_add_sendnode(uint8_t reciver, uint8_t session, uint8_t pack_
   pack_head = (protocol_pack_desc_t *)&malloc_zone[pack_head_offset];
   send_node = (send_list_node_t *)&malloc_zone[0];
 
-  // Fill frame data section
+  //填充帧数据部分
   protocol_s_fill_pack(&ctx, p_data, data_len, (uint8_t *)(pack_head), seq, cmd);
 
-  // Fill send_node
+  //填充send_node
   send_node->session = ctx.s_a_r.session;
   send_node->p_data = &malloc_zone[pack_head_offset];
   send_node->len = malloc_size - PROTOCOL_SEND_NODE_SIZE;
@@ -192,7 +171,7 @@ uint32_t protocol_s_add_sendnode(uint8_t reciver, uint8_t session, uint8_t pack_
     send_node->no_ack_callback = NULL;
   }
 
-  // Add to the send list
+  //添加至发送链表
   MUTEX_LOCK(int_obj->send.mutex_lock);
 
   if ((pack_type == PROTOCOL_PACK_NOR) && (session != 0))
@@ -233,7 +212,7 @@ uint32_t protocol_s_add_sendnode(uint8_t reciver, uint8_t session, uint8_t pack_
   return status;
 }
 
-// Function for adding broadcast packets
+//广播包添加处理函数
 uint32_t protocol_s_broadcast_add_node(void *p_data, uint32_t data_len, uint16_t cmd)
 {
   send_ctx_t ctx;
@@ -253,7 +232,7 @@ uint32_t protocol_s_broadcast_add_node(void *p_data, uint32_t data_len, uint16_t
     return status;
   }
 
-  // Configure the sending parameters
+  //配置发送参数
   ctx.s_a_r.pack_type = PROTOCOL_PACK_NOR;
   ctx.s_a_r.session = 0;
   ctx.s_a_r.res = 0;
@@ -275,10 +254,10 @@ uint32_t protocol_s_broadcast_add_node(void *p_data, uint32_t data_len, uint16_t
   pack_head = (protocol_pack_desc_t *)&malloc_zone[pack_head_offset];
   send_node = (send_list_node_t *)&malloc_zone[0];
 
-  // Fill the frame data section
+  //填充帧数据部分
   protocol_s_fill_pack(&ctx, p_data, data_len, (uint8_t *)(pack_head), 0, cmd);
 
-  // Fill the send_node
+  //填充send_node
   send_node->session = 0;
   send_node->p_data = &malloc_zone[pack_head_offset];
   send_node->len = malloc_size - PROTOCOL_SEND_NODE_SIZE;
@@ -293,7 +272,7 @@ uint32_t protocol_s_broadcast_add_node(void *p_data, uint32_t data_len, uint16_t
   send_node->cmd = cmd;
   send_node->forward_src_obj = NULL;
 
-  // Add to the send list
+  //添加至发送链表
   MUTEX_LOCK(boardcast_object.mutex_lock);
 
   list_add(&(send_node->send_list), &(boardcast_object.send_list_header));
@@ -306,12 +285,7 @@ uint32_t protocol_s_broadcast_add_node(void *p_data, uint32_t data_len, uint16_t
   return status;
 }
 
-// Frame filling
-/*
-protocol_s_fill_pack, is used to fill a packet with data for a specific protocol. The function takes several parameters 
-including a pointer to the send context, a pointer to the data to be sent, the length of the data, a pointer to the 
-packet zone where the packet will be stored, a sequence number, and a command.
-*/
+//帧填充
 uint32_t protocol_s_fill_pack(send_ctx_t *ctx, uint8_t *p_data,
                               uint32_t data_len, uint8_t *pack_zone, uint16_t seq, uint16_t cmd)
 {
@@ -359,11 +333,7 @@ uint32_t protocol_s_fill_pack(send_ctx_t *ctx, uint8_t *p_data,
   return status;
 }
 
-// Send data through the interface
-/*
-protocol_s_interface_send_data, is used to send data through a specific interface. The function takes two parameters: a 
-pointer to the current send node (cur_send_node), and a pointer to the peripheral interface object (obj).
-*/
+//通过接口发送数据
 uint32_t protocol_s_interface_send_data(send_list_node_t *cur_send_node, struct perph_interface *obj)
 {
 
@@ -371,12 +341,12 @@ uint32_t protocol_s_interface_send_data(send_list_node_t *cur_send_node, struct 
 
   if (cur_send_node->address != protocol_local_info.address)
   {
-    // If the sending address is different from the local address, send externally
+    //发送地址与本地地址不相同，外发
     protocol_interface_send_data(obj, cur_send_node->p_data, cur_send_node->len);
   }
   else
   {
-    // If the sending address is the same as the local address, perform an internal loopback
+    //发送地址与本地地址相同，直接内部回环
 
     protocol_rcv_data(cur_send_node->p_data, cur_send_node->len, &protocol_local_info.interface[0]);
 
@@ -395,12 +365,7 @@ uint32_t protocol_s_interface_send_data(send_list_node_t *cur_send_node, struct 
   return PROTOCOL_SUCCESS;
 }
 
-// Clear the send list
-/*
-protocol_s_interface_normal_send_flush, is part of a communication protocol and is used to manage the sending of data 
-packets. The function takes a single parameter, a pointer to a perph_interface object, which represents the peripheral 
-interface through which the data is being sent.
-*/
+//清空发送列表
 uint32_t protocol_s_interface_normal_send_flush(struct perph_interface *obj)
 {
   list_t *head_node;
@@ -416,7 +381,7 @@ uint32_t protocol_s_interface_normal_send_flush(struct perph_interface *obj)
     cur_send_node = (send_list_node_t *)cur_node;
 
     MUTEX_LOCK(obj->send.mutex_lock);
-    // Received ACK, delete
+    //得到ACK，删除
     if (cur_send_node->is_got_ack)
     {
       list_del(cur_node);
@@ -429,7 +394,7 @@ uint32_t protocol_s_interface_normal_send_flush(struct perph_interface *obj)
       continue;
     }
 
-    // Release if exceeded the resend limit
+    //超过重发次数释放
     if (cur_send_node->is_ready_realse)
     {
       list_del(cur_node);
@@ -454,7 +419,7 @@ uint32_t protocol_s_interface_normal_send_flush(struct perph_interface *obj)
 
     timeout = protocol_p_get_time() - cur_send_node->pre_timestamp;
 
-    //Retransmit after timeout or send for the first time
+    //超时重发或者初次发送
     if ((timeout > cur_send_node->timeout || cur_send_node->is_first_send) &&
         cur_send_node->rest_cnt >= 1)
     {
@@ -462,12 +427,12 @@ uint32_t protocol_s_interface_normal_send_flush(struct perph_interface *obj)
 
       cur_send_node->rest_cnt--;
 
-      //send data
+      //发送数据
       protocol_s_interface_send_data(cur_send_node, obj);
 
       if (cur_send_node->session == 0)
       {
-        // If the session is 0, there is no need for retransmission and ACK confirmation
+        //session为0,不需要重发和ACK回复
         MUTEX_LOCK(obj->send.mutex_lock);
         list_del(cur_node);
         obj->send.normal_node_num--;
@@ -477,10 +442,10 @@ uint32_t protocol_s_interface_normal_send_flush(struct perph_interface *obj)
       }
       else
       {
-        //Translation result The session is not 0 and requires retransmission and ACK confirmation.
+        //session不为0,需要重发和ACK确认
         if (cur_send_node->rest_cnt == 0)
         {
-            // The number of send attempts has been exhausted
+          //发送次数用完
           cur_send_node->is_ready_realse = 1;
         }
         else
@@ -494,11 +459,7 @@ uint32_t protocol_s_interface_normal_send_flush(struct perph_interface *obj)
   return 0;
 }
 
-// Clear the ACK frame send list
-/*
-protocol_s_interface_ack_send_flush, is used to clear the ACK frame send list. The function takes a single parameter, a
-pointer to a perph_interface object, which represents the peripheral interface through which the data is being sent.
-*/
+//清空ACK帧发送列表
 uint32_t protocol_s_interface_ack_send_flush(struct perph_interface *obj)
 {
   list_t *head_node;
@@ -514,7 +475,7 @@ uint32_t protocol_s_interface_ack_send_flush(struct perph_interface *obj)
 
     protocol_s_interface_send_data(cur_send_node, obj);
 
-    //The packet is of ACK type and does not require retransmission or confirmation.
+    //包为ACK类型,不需要重发和确认
     MUTEX_LOCK(obj->send.mutex_lock);
     list_del(cur_node);
     obj->send.ack_node_num--;
@@ -525,7 +486,7 @@ uint32_t protocol_s_interface_ack_send_flush(struct perph_interface *obj)
   return 0;
 }
 
-// Clear the broadcast packet send list
+//清空广播包发送列表
 uint32_t protocol_s_broadcast_send_flush(void)
 {
   list_t *head_node;
@@ -560,11 +521,7 @@ uint32_t protocol_s_broadcast_send_flush(void)
   return 0;
 }
 
-// Get the route
-/*
- this function is used to retrieve the peripheral interface associated with a given target address from the route table. 
- It ensures that the retrieved interface is valid and within the bounds of the interface array.
- */
+//获取路由
 struct perph_interface *protocol_s_get_route(uint8_t tar_add)
 {
   uint8_t int_obj_idx;
@@ -585,7 +542,7 @@ struct perph_interface *protocol_s_get_route(uint8_t tar_add)
   }
 }
 
-// Get the node with the specified address and session
+//获得指定地址和session的节点
 send_list_node_t *protocol_s_session_get_node(struct perph_interface *obj,
                                               uint8_t address, uint8_t session)
 {
@@ -612,7 +569,7 @@ send_list_node_t *protocol_s_session_get_node(struct perph_interface *obj,
   return NULL;
 }
 
-// Packet forwarding function
+//包转发函数
 uint32_t protocol_s_pack_forward(protocol_pack_desc_t *p_pack, struct perph_interface *src_obj)
 {
 
@@ -624,7 +581,7 @@ uint32_t protocol_s_pack_forward(protocol_pack_desc_t *p_pack, struct perph_inte
 
   status = PROTOCOL_SUCCESS;
 
-  // Find the destination of the packet
+  //寻找包的目的地
   if (p_pack->reciver != PROTOCOL_BROADCAST_ADDR)
   {
     tar_inter = protocol_s_get_route(p_pack->reciver);
@@ -637,7 +594,7 @@ uint32_t protocol_s_pack_forward(protocol_pack_desc_t *p_pack, struct perph_inte
     }
   }
 
-  // Allocate memory required for the forwarding packet
+  //分配转发包所需的内存
   malloc_zone = protocol_p_malloc(p_pack->data_len + PROTOCOL_SEND_NODE_SIZE);
   if (malloc_zone == NULL)
   {
@@ -658,7 +615,7 @@ uint32_t protocol_s_pack_forward(protocol_pack_desc_t *p_pack, struct perph_inte
   send_node->is_got_ack = 0;
   send_node->is_first_send = 1;
   send_node->address = p_pack->reciver;
-  send_node->pack_type = PROTOCOL_PACK_ACK; //It is faster to send forwarded packets as ACK packets
+  send_node->pack_type = PROTOCOL_PACK_ACK; //把转发包当做ACK包发送更快捷
   send_node->is_ready_realse = 0;
   send_node->cmd = 0;
   send_node->forward_src_obj = src_obj;
@@ -666,9 +623,9 @@ uint32_t protocol_s_pack_forward(protocol_pack_desc_t *p_pack, struct perph_inte
   memcpy(send_node->p_data, p_pack, p_pack->data_len);
   if (p_pack->reciver != PROTOCOL_BROADCAST_ADDR)
   {
-    //Non-broadcast packet handling
+    //非广播包处理
     MUTEX_LOCK(tar_inter->send.mutex_lock);
-    list_add(&(send_node->send_list), &(tar_inter->send.ack_list_header)); //It is faster to send forwarded packets as ACK packets
+    list_add(&(send_node->send_list), &(tar_inter->send.ack_list_header)); //把转发包当做ACK包发送更快捷
     tar_inter->send.ack_node_num++;
     MUTEX_UNLOCK(tar_inter->send.mutex_lock);
 
@@ -677,7 +634,7 @@ uint32_t protocol_s_pack_forward(protocol_pack_desc_t *p_pack, struct perph_inte
   }
   else
   {
-    //Broadcast packet processing
+    //广播包处理
     MUTEX_LOCK(boardcast_object.mutex_lock);
 
     list_add(&(send_node->send_list), &(boardcast_object.send_list_header));
@@ -691,12 +648,7 @@ uint32_t protocol_s_pack_forward(protocol_pack_desc_t *p_pack, struct perph_inte
   return status;
 }
 
-//Unpack processing function
-/*
-protocol_s_pack_forward, is used to forward a packet to its destination. The function takes two parameters: a pointer to 
-a protocol_pack_desc_t structure (p_pack), which represents the packet to be forwarded, and a pointer to a 
-perph_interface structure (src_obj), which represents the source of the packet.
-*/
+//解包处理函数
 uint32_t protocol_s_unpack_data_handle(struct perph_interface *obj)
 {
   uint32_t status;
@@ -709,7 +661,7 @@ uint32_t protocol_s_unpack_data_handle(struct perph_interface *obj)
 
 #if PROTOCOL_ROUTE_FOWARD == PROTOCOL_ENABLE
 
-  //If the receiving address does not match the local address, forward it
+  //若接收地址不符合本地地址，则进行转发
   if (p_pack->reciver != protocol_local_info.address)
   {
     status = protocol_s_pack_forward(p_pack, obj);
@@ -763,7 +715,7 @@ uint32_t protocol_s_unpack_data_handle(struct perph_interface *obj)
   return status;
 }
 
-//Unpack
+//解包
 uint32_t protocol_s_extract(struct perph_interface *obj)
 {
   uint32_t status = 0;
@@ -875,7 +827,7 @@ uint32_t protocol_s_extract(struct perph_interface *obj)
   return status;
 }
 
-//Find frame header
+//找帧头
 uint32_t protocol_s_find_pack_header(rcvd_desc_t *rcvd)
 {
   uint32_t status;
@@ -900,8 +852,7 @@ END:
   return status;
 }
 
-//Verification header
-/* Authenticates the packet header*/
+//校验包头
 uint32_t protocol_s_auth_pack_header(rcvd_desc_t *rcvd)
 {
   uint32_t status;
@@ -937,7 +888,7 @@ uint32_t protocol_s_auth_pack_header(rcvd_desc_t *rcvd)
   return status;
 }
 
-//Fetch data from data packet
+//获取包数据
 uint32_t protocol_s_fetch_pack_data(rcvd_desc_t *rcvd)
 {
   uint32_t status;
@@ -961,7 +912,7 @@ uint32_t protocol_s_fetch_pack_data(rcvd_desc_t *rcvd)
   return status;
 }
 
-//Get version number and data length
+//获取版本号和数据长度
 ver_data_len_t protocol_s_get_ver_datalen(void *pack)
 
 {
@@ -974,7 +925,7 @@ ver_data_len_t protocol_s_get_ver_datalen(void *pack)
   return ver_len;
 }
 
-// Sets error message
+//答应错误信息
 void protocol_s_error_info_printf(uint32_t status, char *file, int line)
 {
   char *err_info;

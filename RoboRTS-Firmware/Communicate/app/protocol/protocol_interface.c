@@ -15,14 +15,6 @@
  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
  ***************************************************************************/
 
-/*
-protocol_interface.c is part of a communication protocol interface, which is used to handle data transmission and 
-reception. It includes the initialization of the protocol interface, the registration of the protocol interface, the 
-sending of data, the reception of data, and the setting of the route. Each protocol interface corresponds to a unique 
-protocol interface object, such as a single serial port or a pair of CAN addresses.
-*/
-
-
 #include "protocol.h"
 #include "protocol_common.h"
 #include "protocol_transmit.h"
@@ -31,14 +23,13 @@ protocol interface object, such as a single serial port or a pair of CAN address
 extern local_info_t protocol_local_info;
 
 /**
-  /**
-   * @brief  Protocol interface initialization function. Each actual interface corresponds to a protocol interface object, such as a single serial port or a pair of CAN addresses.
-   * @param  interface_idx Interface index, each interface corresponds to a unique interface index, with a maximum value not exceeding PROTOCOL_INTERFACE_MAX.
-   *         interface_name Interface name, string length should not exceed PROTOCOL_OBJ_NAME_MAX_LEN.
-   *         rcv_buf_size Receive buffer capacity, receive buffer memory is allocated from the heap.
-   *         boardcast_output_enable Whether the interface sends broadcast packets.
-   *         send_fn Interface send function pointer, refer to send_fn_t.
-   * @retval Protocol return status.
+  * @brief  协议接口初始化函数，每一对实际接口对应一个协议接口对象，如单个串口，CAN中一对收发地址。
+  * @param  interface_idx 接口序列号，每一接口对应唯一一格接口序列号，最大值不可超过PROTOCOL_INTERFACE_MAX。
+  *         interface_name 接口名，字符串长度不可超过PROTOCOL_OBJ_NAME_MAX_LEN
+  *         rcv_buf_size 接收缓冲区容量，接收缓冲区内存从堆中分配
+  *         boardcast_output_enable 该接口是否发送广播包
+  *         send_fn	接口的发送函数指针，参考send_fn_t
+  * @retval 协议返回状态
   */
 int32_t protocol_interface_init(struct perph_interface *perph,
                                 char *interface_name,
@@ -63,7 +54,7 @@ int32_t protocol_interface_init(struct perph_interface *perph,
 
   if (idx == PROTOCOL_INTERFACE_MAX)
   {
-    //TODO:Exceed index length
+    //TODO:超出索引长度
     status = PROTOCOL_ERR_OBJECT_NOT_FOUND;
     PROTOCOL_ERR_INFO_PRINTF(status, __FILE__, __LINE__);
     return status;
@@ -73,7 +64,7 @@ int32_t protocol_interface_init(struct perph_interface *perph,
   
   memcpy(interface, perph, sizeof(struct perph_interface));
 
-  // Initialize the name
+  //初始化名字
   if ((interface_name != NULL) && (strlen(interface_name) < PROTOCOL_OBJ_NAME_MAX_LEN))
   {
     strncpy(interface->object_name, (const char *)interface_name, sizeof(interface->object_name));
@@ -84,7 +75,7 @@ int32_t protocol_interface_init(struct perph_interface *perph,
     strcpy(interface->object_name, "NULL");
   }
 
-  // Initialize the receive buffer
+  //初始化接收缓存区
   uint8_t *rcv_buf = protocol_p_malloc(rcv_buf_size);
   if (rcv_buf == NULL)
   {
@@ -94,7 +85,7 @@ int32_t protocol_interface_init(struct perph_interface *perph,
   }
   fifo_s_init(&interface->rcvd.fifo, rcv_buf, rcv_buf_size);
 
-  // Initialize the send structure
+  //初始化发送结构体
   INIT_LIST_HEAD(&interface->send.normal_list_header);
   INIT_LIST_HEAD(&interface->send.ack_list_header);
   MUTEX_INIT(interface->send.mutex_lock);
@@ -108,12 +99,6 @@ int32_t protocol_interface_init(struct perph_interface *perph,
 
   return status;
 }
-
-/*
-The protocol_can_interface_register and protocol_uart_interface_register functions are used to register a CAN interface 
-and a UART interface respectively. They prepare a perph_interface structure and call the protocol_interface_init 
-function to initialize the interface.
-*/
 
 int32_t protocol_can_interface_register(char *interface_name,
                                         uint16_t rcv_buf_size,
@@ -155,11 +140,6 @@ int32_t protocol_uart_interface_register(char *interface_name,
   return status;
 }
 
-/*
-The protocol_interface_send_data function is used to send data through a protocol interface. It checks the type of the 
-interface and calls the corresponding send function.
-*/
-
 int32_t protocol_interface_send_data(struct perph_interface *perph, uint8_t *buff, uint16_t len)
 {
   uint32_t status;
@@ -199,11 +179,6 @@ int32_t protocol_interface_send_data(struct perph_interface *perph, uint8_t *buf
   return status;
 }
 
-/*
-The protocol_can_rcv_data and protocol_uart_rcv_data functions are used to receive data from a CAN interface and a UART 
-interface respectively. They iterate through all the interfaces and call protocol_rcv_data for the matching interface.
-*/
-
 uint32_t protocol_can_rcv_data(uint8_t can_port, uint32_t rcv_id, void *p_data, uint32_t data_len)
 {
   uint32_t status =PROTOCOL_SUCCESS;
@@ -236,11 +211,10 @@ uint32_t protocol_uart_rcv_data(uint8_t com_port, void *p_data, uint32_t data_le
 }
 
 /**
-  /**
-    * @brief  Protocol set route, sets the next-hop interface for the specified address
-    * @param  tar_add Target address
-    *         interface Next-hop interface serial number for the target address
-    * @retval Protocol return status
+  * @brief  协议设置路由，设置指定地址的下一跳接口
+  * @param  tar_add 目标地址
+  *         interface 目标地址对应的下一跳接口序列号
+  * @retval 协议返回状态
   */
 int32_t protocol_set_route(uint8_t tar_add, const char *name)
 {
@@ -277,11 +251,6 @@ int32_t protocol_set_route(uint8_t tar_add, const char *name)
   return status;
 }
 
-
-/*
-The protocol_get_interface function is used to get the interface with a given name. It iterates through all the 
-interfaces and returns the one with the matching name. It uses enter_critical and exit_critical to ensure thread safety.
-*/
 struct perph_interface *protocol_get_interface(const char *name)
 {
   var_cpu_sr();

@@ -191,7 +191,7 @@ typedef struct send_list_node
 
 typedef struct
 {
-  uint8_t address; /*!< Local Address */
+  uint8_t address; /*!< Locol Address */
 
   uint8_t route_table[PROTOCOL_ROUTE_TABLE_MAX_NUM];
   /*!< Route Table */
