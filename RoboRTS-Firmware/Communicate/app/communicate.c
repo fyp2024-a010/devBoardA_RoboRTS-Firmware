@@ -25,10 +25,8 @@
 #include "offline_check.h"
 #include "init.h"
 #include "infantry_cmd.h"
-#include "referee_system.h"
 #include "protocol.h"
 
-static int32_t can2_send_data(uint32_t std_id, uint8_t *p_data, uint32_t len);
 static void protocol_send_success_callback(void);
 static int32_t usb_interface_send(uint8_t *p_data, uint32_t len);
 
@@ -71,7 +69,7 @@ void communicate_task(void const *argument)
   {
     osEvent event;
 
-    event = osSignalWait(SEND_PROTOCOL_SIGNAL | RECV_PROTOCOL_SIGNAL | REFEREE_SIGNAL, osWaitForever);
+    event = osSignalWait(SEND_PROTOCOL_SIGNAL | RECV_PROTOCOL_SIGNAL, osWaitForever);
 
     if (event.status == osEventSignal)
     {

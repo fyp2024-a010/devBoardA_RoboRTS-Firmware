@@ -55,7 +55,7 @@ void hw_init(void)
 {
   cali_param_init();
   board_config();
-  // test_init();
+  test_init();
   system_config();
   ulog_init();
   ulog_console_backend_init();
@@ -67,7 +67,7 @@ void hw_init(void)
 }
 
 osThreadId timer_task_t;
-osThreadId chassis_task_t;
+// osThreadId chassis_task_t;
 osThreadId communicate_task_t;
 osThreadId cmd_task_t;
 
@@ -85,6 +85,6 @@ void task_init(void)
   osThreadDef(CMD_TASK, infantry_cmd_task, osPriorityNormal, 0, 4096);
   cmd_task_t = osThreadCreate(osThread(CMD_TASK), NULL);
   
-  osThreadDef(CHASSIS_TASK, chassis_task, osPriorityRealtime, 0, 512);
-  chassis_task_t = osThreadCreate(osThread(CHASSIS_TASK), NULL);
+  // osThreadDef(CHASSIS_TASK, chassis_task, osPriorityRealtime, 0, 512);
+  // chassis_task_t = osThreadCreate(osThread(CHASSIS_TASK), NULL);
 }
