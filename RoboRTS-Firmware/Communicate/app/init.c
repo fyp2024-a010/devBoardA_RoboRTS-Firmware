@@ -23,13 +23,9 @@
 #include "detect.h"
 #include "test.h"
 #include "chassis.h"
-// #include "gimbal.h"
-#include "shoot.h"
 
 #include "chassis_task.h"
-// #include "gimbal_task.h"
 #include "timer_task.h"
-// #include "shoot_task.h"
 #include "communicate.h"
 #include "infantry_cmd.h"
 #include "init.h"
@@ -38,12 +34,8 @@
 #include "ulog.h"
 #include "param.h"
 #include "offline_check.h"
-// #include "referee_system.h"
 
 struct chassis chassis;
-// struct gimbal gimbal;
-// struct shoot shoot;
-// static struct rc_device rc_dev;
 
 static uint8_t glb_sys_cfg;
 
@@ -63,43 +55,21 @@ void hw_init(void)
 {
   cali_param_init();
   board_config();
-  test_init();
+  // test_init();
   system_config();
   ulog_init();
   ulog_console_backend_init();
   
-  // referee_param_init();
-  // usart3_rx_callback_register(referee_uart_rx_data_handle);
-  // referee_send_data_register(usart3_transmit);
-
-  // if(glb_sys_cfg == CHASSIS_APP)
-  // {
-    // rc_device_register(&rc_dev, "uart_rc", 0);
-    // dr16_forword_callback_register(rc_data_forword_by_can);
-    chassis_pid_register(&chassis, "chassis", DEVICE_CAN1);
-    chassis_disable(&chassis);
-  // }
-  // else
-  // {
-  //   rc_device_register(&rc_dev, "can_rc", 0);
-  //   gimbal_cascade_register(&gimbal, "gimbal", DEVICE_CAN1);
-
-  //   shoot_pid_register(&shoot, "shoot", DEVICE_CAN1);
-
-  //   gimbal_yaw_disable(&gimbal);
-  //   gimbal_pitch_disable(&gimbal);
-  //   shoot_disable(&shoot);
-  // }
+  chassis_pid_register(&chassis, "chassis", DEVICE_CAN1);
+  chassis_disable(&chassis);
 
   offline_init();
 }
 
 osThreadId timer_task_t;
 osThreadId chassis_task_t;
-// osThreadId gimbal_task_t;
 osThreadId communicate_task_t;
 osThreadId cmd_task_t;
-// osThreadId shoot_task_t;
 
 void task_init(void)
 {
@@ -115,17 +85,6 @@ void task_init(void)
   osThreadDef(CMD_TASK, infantry_cmd_task, osPriorityNormal, 0, 4096);
   cmd_task_t = osThreadCreate(osThread(CMD_TASK), NULL);
   
-  // if (app == CHASSIS_APP)
-  // {
-    osThreadDef(CHASSIS_TASK, chassis_task, osPriorityRealtime, 0, 512);
-    chassis_task_t = osThreadCreate(osThread(CHASSIS_TASK), NULL);
-  // }
-  // else
-  // {
-  //   osThreadDef(GIMBAL_TASK, gimbal_task, osPriorityRealtime, 0, 512);
-  //   gimbal_task_t = osThreadCreate(osThread(GIMBAL_TASK), NULL);
-
-  //   osThreadDef(SHOOT_TASK, shoot_task, osPriorityNormal, 0, 512);
-  //   shoot_task_t = osThreadCreate(osThread(SHOOT_TASK), NULL);
-  // }
+  osThreadDef(CHASSIS_TASK, chassis_task, osPriorityRealtime, 0, 512);
+  chassis_task_t = osThreadCreate(osThread(CHASSIS_TASK), NULL);
 }

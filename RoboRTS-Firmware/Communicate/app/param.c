@@ -56,16 +56,3 @@ void cali_param_init(void)
 {
   cali_data_read();
 }
-
-/**
-  * @brief save gimbal pitch and yaw center point offset
-  *        the offset is absolute encoder value
-  * @usage called in gimbal task loop 
-  */
-void gimbal_save_data(uint16_t yaw_ecd, uint16_t pitch_ecd)
-{
-  cali_param.gim_cali_data.yaw_offset   = yaw_ecd;
-  cali_param.gim_cali_data.pitch_offset = pitch_ecd;
-  cali_param.gim_cali_data.calied_done  = CALIED_FLAG;
-  save_cali_data();
-}

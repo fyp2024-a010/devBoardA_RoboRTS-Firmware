@@ -50,16 +50,7 @@
 #define CMD_GET_CHASSIS_PARAM               (0x0204u)
 #define CMD_SET_CHASSIS_SPD_ACC             (0x0205u)
 
-#define CMD_PUSH_GIMBAL_INFO                (0x0301u)
-#define CMD_SET_GIMBAL_MODE                 (0x0302u)
-#define CMD_SET_GIMBAL_ANGLE                (0x0303u)
-
 #define CMD_SET_FRICTION_SPEED              (0x0304u)
-#define CMD_SET_SHOOT_FREQUENTCY            (0x0305u)
-
-#define CMD_RC_DATA_FORWORD                 (0x0401u)
-#define CMD_PUSH_UWB_INFO                   (0x0402u)
-#define CMD_GIMBAL_ADJUST                   (0x0403u)
 
 #pragma pack(push,1)
 
@@ -81,32 +72,6 @@ struct cmd_chassis_info
   int16_t angle_deg;
   int16_t v_x_mm;
   int16_t v_y_mm;
-};
-
-struct cmd_gimbal_info
-{
-  uint8_t   mode;
-  /* unit: degree */
-  int16_t pitch_ecd_angle;
-  int16_t yaw_ecd_angle;
-  int16_t pitch_gyro_angle;
-  int16_t yaw_gyro_angle;
-  /* uint: degree/s */
-  int16_t yaw_rate;
-  int16_t pitch_rate;
-};
-
-struct cmd_gimbal_angle
-{
-  union{
-    uint8_t flag;
-    struct{
-        uint8_t yaw_mode:1;  // 0 code angle
-        uint8_t pitch_mode:1;
-    }bit;
-  } ctrl;
-  int16_t pitch;
-  int16_t yaw;
 };
 
 struct cmd_chassis_speed
@@ -138,27 +103,16 @@ struct cmd_firction_speed
   uint16_t right;
 };
 
-struct cmd_shoot_num
-{
-  uint8_t  shoot_cmd;
-  uint32_t shoot_add_num;
-  uint16_t shoot_freq;
-};
-
 #pragma pack(pop)
 
 struct manifold_cmd
 {
-  struct cmd_gimbal_angle gimbal_angle;
   struct cmd_chassis_speed chassis_speed;
   struct cmd_chassis_spd_acc chassis_spd_acc;
   struct cmd_firction_speed firction_speed;
-  struct cmd_shoot_num shoot_num; 
 };
 
-int32_t rc_data_forword_by_can(uint8_t *buff, uint16_t len);
 void infantry_cmd_task(void const * argument);
-int32_t gimbal_push_info(void *argc);
 int32_t chassis_push_info(void *argc);
 struct manifold_cmd *get_manifold_cmd(void);
 

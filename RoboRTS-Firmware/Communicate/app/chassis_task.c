@@ -29,18 +29,7 @@ void chassis_task(void const *argument)
 {
   uint32_t period = osKernelSysTick();
   chassis_t pchassis = NULL;
-  rc_device_t prc_dev = NULL;
-  rc_info_t prc_info = NULL;
   pchassis = chassis_find("chassis");
-  prc_dev = rc_device_find("uart_rc");
-
-  if (prc_dev != NULL)
-  {
-    prc_info = rc_device_get_info(prc_dev);
-  }
-  else
-  {
-  }
 
   soft_timer_register(chassis_push_info, (void *)pchassis, 10);
 

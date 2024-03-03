@@ -21,50 +21,16 @@
 #include "detect.h"
 #include "board.h"
 #include "chassis.h"
-// #include "gimbal.h"
-// #include "shoot.h"
 #include "single_gyro.h"
 #include "init.h"
 #include "communicate.h"
 #include "timer_task.h"
-// #include "gimbal_task.h"
 #include "offline_check.h"
 
 int32_t can1_motor_msg_rec(CAN_RxHeaderTypeDef *header, uint8_t *data)
 {
   motor_device_data_update(DEVICE_CAN1, header->StdId, data);
   return 0;
-}
-
-int32_t can2_single_gyro_rec(CAN_RxHeaderTypeDef *header, uint8_t *data)
-{
-  struct single_gyro gyro = {0x401, 0, 0};
-  int32_t err;
-
-  chassis_t pchassis;
-  pchassis = chassis_find("chassis");
-
-  gimbal_t pgimbal;
-  pgimbal = gimbal_find("gimbal");
-
-  err = single_gyro_update(&(gyro), header->StdId, data);
-
-  if(err != RM_OK)
-  goto end;
-  
-  if ((pchassis != NULL) && (err == RM_OK))
-  {
-    chassis_gyro_updata(pchassis, gyro.yaw_gyro_angle, gyro.yaw_gyro_rate);
-  }
-
-  if ((pgimbal != NULL) && (err == RM_OK))
-  {
-    gimbal_yaw_gyro_update(pgimbal, gyro.yaw_gyro_angle + pgimbal->ecd_angle.yaw);
-  }
-
-  return RM_OK;
-end:
-  return err;
 }
 
 int32_t motor_canstd_send(enum device_can can, struct can_msg msg)
@@ -76,50 +42,32 @@ int32_t motor_canstd_send(enum device_can can, struct can_msg msg)
   return 0;
 }
 
-int32_t gyro_can_std_send(uint32_t std_id, uint8_t *can_rx_data)
-{
-  can_msg_bytes_send(&hcan1, can_rx_data, 8, std_id);
-  return RM_OK;
-}
+// void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+// {
+//   if(GPIO_Pin == GPIO_PIN_10)
+//   {
+//     shoot_t pshoot;
+//     pshoot = shoot_find("shoot");
+//     if (pshoot != NULL)
+//     {
+//       shoot_state_update(pshoot);
+//     }
+//   }
+//   if (GPIO_Pin == GPIO_PIN_2)
+//   {
+//     uint8_t app;
+//     app = get_sys_cfg();
 
-int32_t dr16_rx_data_by_uart(uint8_t *buff, uint16_t len)
-{
-  struct detect_device *rc_offline;
-  rc_offline = get_offline_dev();
-  detect_device_update(rc_offline, RC_OFFLINE_EVENT); 
-
-  rc_device_t rc_dev;
-  rc_dev = (rc_device_t)device_find("uart_rc");
-  rc_device_date_update(rc_dev, buff);
-  return 0;
-}
-
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-  if(GPIO_Pin == GPIO_PIN_10)
-  {
-    shoot_t pshoot;
-    pshoot = shoot_find("shoot");
-    if (pshoot != NULL)
-    {
-      shoot_state_update(pshoot);
-    }
-  }
-  if (GPIO_Pin == GPIO_PIN_2)
-  {
-    uint8_t app;
-    app = get_sys_cfg();
-
-    if (app == CHASSIS_APP)
-    {
-      gimbal_adjust();
-    }
-    else
-    {
-      gimbal_auto_adjust_start();
-    }
-  }
-}
+//     if (app == CHASSIS_APP)
+//     {
+//       gimbal_adjust();
+//     }
+//     else
+//     {
+//       gimbal_auto_adjust_start();
+//     }
+//   }
+// }
 
 uint32_t get_time_us(void)
 {
@@ -152,16 +100,11 @@ void board_config(void)
   pwm_device_init();
   mpu_device_init();
 
-  dr16_uart_init();
-  dr16_rx_uart_callback_register(dr16_rx_data_by_uart);
-
   soft_timer_register(motor_can1_output_1ms, NULL, 1);
   soft_timer_register(beep_ctrl_times, NULL, 1);  
   soft_timer_register(led_toggle_300ms, NULL, 1); 
 
   motor_device_can_send_register(motor_canstd_send);
-  single_gyro_can_send_register(gyro_can_std_send);
 
   can_fifo0_rx_callback_register(&can1_manage, can1_motor_msg_rec);
-  can_fifo0_rx_callback_register(&can2_manage, can2_single_gyro_rec);
 }
