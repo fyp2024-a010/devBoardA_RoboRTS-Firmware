@@ -23,13 +23,15 @@
 extern local_info_t protocol_local_info;
 
 /**
-  * @brief  协议接口初始化函数，每一对实际接口对应一个协议接口对象，如单个串口，CAN中一对收发地址。
-  * @param  interface_idx 接口序列号，每一接口对应唯一一格接口序列号，最大值不可超过PROTOCOL_INTERFACE_MAX。
-  *         interface_name 接口名，字符串长度不可超过PROTOCOL_OBJ_NAME_MAX_LEN
-  *         rcv_buf_size 接收缓冲区容量，接收缓冲区内存从堆中分配
-  *         boardcast_output_enable 该接口是否发送广播包
-  *         send_fn	接口的发送函数指针，参考send_fn_t
-  * @retval 协议返回状态
+  * @brief  The protocol interface initialization function is used to initialize a protocol interface object. A protocol 
+  * interface object represents a real-world interface, such as a single serial port or a transmit/receive address pair 
+  * in a CAN bus.
+  * @param  interface_idx Interface index, each interface has a unique index value. This value starts from 0 and cannot exceed PROTOCOL_INTERFACE_MAX
+  *         interface_name Interface name, the string length cannot exceed PROTOCOL_OBJ_NAME_MAX_LEN 
+  *         rcv_buf_size Receive buffer size, memory for the receive buffer is allocated from the heap
+  *         boardcast_output_enable Whether this interface can send broadcast packets.
+  *         send_fn	 Pointer to the interface's send function, refer to send_fn_t for details.
+  * @retval The return value indicates the status of the protocol operation.
   */
 int32_t protocol_interface_init(struct perph_interface *perph,
                                 char *interface_name,
@@ -54,7 +56,7 @@ int32_t protocol_interface_init(struct perph_interface *perph,
 
   if (idx == PROTOCOL_INTERFACE_MAX)
   {
-    //TODO:超出索引长度
+    //TODO: Index length exceeded
     status = PROTOCOL_ERR_OBJECT_NOT_FOUND;
     PROTOCOL_ERR_INFO_PRINTF(status, __FILE__, __LINE__);
     return status;
@@ -64,7 +66,7 @@ int32_t protocol_interface_init(struct perph_interface *perph,
   
   memcpy(interface, perph, sizeof(struct perph_interface));
 
-  //初始化名字
+  // initialization name
   if ((interface_name != NULL) && (strlen(interface_name) < PROTOCOL_OBJ_NAME_MAX_LEN))
   {
     strncpy(interface->object_name, (const char *)interface_name, sizeof(interface->object_name));
@@ -75,7 +77,7 @@ int32_t protocol_interface_init(struct perph_interface *perph,
     strcpy(interface->object_name, "NULL");
   }
 
-  //初始化接收缓存区
+  // Initialize the receive buffer area
   uint8_t *rcv_buf = protocol_p_malloc(rcv_buf_size);
   if (rcv_buf == NULL)
   {
@@ -85,7 +87,7 @@ int32_t protocol_interface_init(struct perph_interface *perph,
   }
   fifo_s_init(&interface->rcvd.fifo, rcv_buf, rcv_buf_size);
 
-  //初始化发送结构体
+  // Initialize the sending structure
   INIT_LIST_HEAD(&interface->send.normal_list_header);
   INIT_LIST_HEAD(&interface->send.ack_list_header);
   MUTEX_INIT(interface->send.mutex_lock);
@@ -211,11 +213,12 @@ uint32_t protocol_uart_rcv_data(uint8_t com_port, void *p_data, uint32_t data_le
 }
 
 /**
-  * @brief  协议设置路由，设置指定地址的下一跳接口
-  * @param  tar_add 目标地址
-  *         interface 目标地址对应的下一跳接口序列号
-  * @retval 协议返回状态
-  */
+  /**
+    * @brief  Protocol set route, set the next hop interface for the specified address
+    * @param  tar_add Target address
+    *         interface Next hop interface serial number corresponding to the target address
+    * @retval Protocol return status
+    */
 int32_t protocol_set_route(uint8_t tar_add, const char *name)
 {
   uint32_t status;

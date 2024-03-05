@@ -26,29 +26,32 @@
 
 /* Exported functions --------------------------------------------------------*/
 /**
-  * @brief  协议内存分配接口函数，用户可以根据实际情况对本函数进行修改
-  * @param  size 需要分配内存大小，单位为字节
-  * @retval 若分配成功返回分配内存的首地址指针，否则返回NULL
-  */
+  /**
+    * @brief  Protocol memory allocation interface function, users can modify this function according to actual needs
+    * @param  size Size of memory to allocate in bytes
+    * @retval If allocation is successful, returns the pointer to the allocated memory, otherwise returns NULL
+    */
 void *protocol_p_malloc(uint32_t size)
 {
   return heap_malloc(size);
 }
 
 /**
-  * @brief  协议内存释放接口函数，用户可以根据实际情况对本函数进行修改
-  * @param  ptr 需要释放内存的首地址指针
-  * @retval void
-  */
-void protocol_p_free(void *ptr)
-{
-  heap_free(ptr);
-}
+  /**
+    * @brief  Protocol memory deallocation interface function, users can modify this function according to actual needs
+    * @param  ptr Pointer to the starting address of the memory to be freed
+    * @retval void
+    */
+  void protocol_p_free(void *ptr)
+  {
+    heap_free(ptr);
+  }
 
 /**
-  * @brief  协议获取系统时间接口函数(毫秒)，用户可以根据实际情况对本函数进行修改
-  * @param  void
-  * @retval 当前系统时间,单位为毫秒
+  /**
+    * @brief  Protocol function to get system time in milliseconds, users can modify this function according to actual needs
+    * @param  void
+    * @retval Current system time in milliseconds
   */
 uint32_t protocol_p_get_time(void)
 {
