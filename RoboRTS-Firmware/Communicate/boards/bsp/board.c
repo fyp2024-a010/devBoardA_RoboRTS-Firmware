@@ -20,12 +20,13 @@
 #include "dbus.h"
 #include "detect.h"
 #include "board.h"
+
+#include "../../application/communicate.h"
+#include "../../application/init.h"
+#include "../../application/offline_check.h"
+#include "../../application/timer_task.h"
 #include "chassis.h"
 #include "single_gyro.h"
-#include "init.h"
-#include "communicate.h"
-#include "timer_task.h"
-#include "offline_check.h"
 
 int32_t can1_motor_msg_rec(CAN_RxHeaderTypeDef *header, uint8_t *data)
 {

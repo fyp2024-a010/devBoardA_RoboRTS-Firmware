@@ -1,0 +1,3 @@
+../test/test_module.c:25:9:test_module_register	3
+../test/test_module.c:39:9:test_module_unregister	2
+../test/test_module.c:49:9:test_module_execute	3

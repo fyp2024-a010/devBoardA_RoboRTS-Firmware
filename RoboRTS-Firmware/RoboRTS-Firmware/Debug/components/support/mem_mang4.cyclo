@@ -1,0 +1,7 @@
+../components/support/mem_mang4.c:63:7:heap_malloc	13
+../components/support/mem_mang4.c:171:6:heap_free	4
+../components/support/mem_mang4.c:211:10:heap_get_free	1
+../components/support/mem_mang4.c:217:10:heap_get_ever_free	1
+../components/support/mem_mang4.c:223:13:heap_init	2
+../components/support/mem_mang4.c:271:13:insert_into_free_list	6
+../components/support/mem_mang4.c:324:6:heap_print_block	2

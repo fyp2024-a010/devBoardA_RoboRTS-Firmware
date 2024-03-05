@@ -1,0 +1,2 @@
+../bsp/cubemx/Core/Src/freertos.c:127:6:MX_FREERTOS_Init	40	static
+../bsp/cubemx/Core/Src/freertos.c:166:6:SystemInitTask	16	static
