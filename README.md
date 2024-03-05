@@ -4,7 +4,7 @@
 - FYP A010 Super compact mobile robot development: Mechatronics design
 - Supervisor: Hendra Suratno
 - Professor Chen I-Ming  
-- Repo mirrored from [RoboMaster/RoboRTS-Firmware](https://github.com/RoboMaster/DevelopmentBoard-Examples.git)
+- Repo mirrored from [RoboMaster/RoboRTS-Firmware](https://github.com/RoboMaster/RoboRTS-Firmware.git)
 
 ## Contents
 ## About the Board
