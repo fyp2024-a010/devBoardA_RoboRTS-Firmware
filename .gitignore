@@ -4,6 +4,7 @@
 
 stm32_ws/.*
 stm32_ws/ROBOT/.*
+stm32_ws/ROBOT/Debug
 
 RoboRTS-Firmware/.*
 RoboRTS-Firmware/Communicate/.*
