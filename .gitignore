@@ -1,5 +1,10 @@
 .DS_Store
 .vscode
+.metadata
+
+stm32_ws/.*
+stm32_ws/ROBOT/.*
+
 RoboRTS-Firmware/.*
 RoboRTS-Firmware/Communicate/.*
 RoboRTS-Firmware/Motor/.*
