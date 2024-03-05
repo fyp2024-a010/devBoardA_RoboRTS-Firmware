@@ -594,7 +594,7 @@ uint32_t protocol_s_pack_forward(protocol_pack_desc_t *p_pack, struct perph_inte
     }
   }
 
-  //分配转发包所需的内存
+  // Allocate memory required to forward packets
   malloc_zone = protocol_p_malloc(p_pack->data_len + PROTOCOL_SEND_NODE_SIZE);
   if (malloc_zone == NULL)
   {
