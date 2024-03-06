@@ -194,10 +194,10 @@ uint32_t protocol_local_init(uint8_t address)
   /**
     * @brief  Protocol sends a normal frame.
     * @param  reciver Receiver device address
-    *         session Session number, ranging from 0 to 63. When session is 0, no Ack is required from the receiver, otherwise Ack is required. The same receiver device cannot have two identical session numbers at the same time.
-    *         cmd Command value
-    *         p_data Pointer to the data to be sent
-    *         data_len Length of the data to be sent
+    * @param  session Session number, ranging from 0 to 63. When session is 0, no Ack is required from the receiver, otherwise Ack is required. The same receiver device cannot have two identical session numbers at the same time.
+    * @param  cmd Command value
+    * @param  p_data Pointer to the data to be sent
+    * @param  data_len Length of the data to be sent
     * @retval Protocol return status
   */
 uint32_t protocol_send(uint8_t reciver, uint16_t cmd, void *p_data, uint32_t data_len)
@@ -251,10 +251,10 @@ uint32_t protocol_send(uint8_t reciver, uint16_t cmd, void *p_data, uint32_t dat
   /**
     * @brief  Protocol sends an Ack frame. This function is called to reply with an Ack after receiving a normal frame with a non-zero session.
     * @param  reciver Receiver device address
-    *         session Session number, ranging from 0 to 63. When session is 0, no Ack is required from the receiver, otherwise Ack is required. The same receiver device cannot have two identical session numbers at the same time.
-    *         p_data Pointer to the data to be sent
-    *         data_len Length of the data to be sent
-    *         ack_seq Sequence number of the Ack packet to be sent
+    * @param  session Session number, ranging from 0 to 63. When session is 0, no Ack is required from the receiver, otherwise Ack is required. The same receiver device cannot have two identical session numbers at the same time.
+    * @param  p_data Pointer to the data to be sent
+    * @param  data_len Length of the data to be sent
+    * @param  ack_seq Sequence number of the Ack packet to be sent
     * @retval Protocol return status
   */
 uint32_t protocol_ack(uint8_t reciver, uint8_t session, void *p_data, uint32_t data_len, uint16_t ack_seq)
@@ -326,8 +326,8 @@ uint32_t protocol_unpack_flush(void)
   /**
     * @brief  Protocol receives data, used when receiving data, such as in interrupt functions for serial communication.
     * @param  p_data Pointer to the received data
-    *         data_len Length of the data
-    *         interface Interface index, specify the index of the interface where the data is received
+    * @param  data_len Length of the data
+    * @param  perph Interface index, specify the index of the interface where the data is received
     * @retval Protocol return status
   */
 uint32_t protocol_rcv_data(void *p_data, uint32_t data_len, struct perph_interface *perph)

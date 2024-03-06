@@ -29,7 +29,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "init.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -102,7 +102,8 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM12_Init();
   /* USER CODE BEGIN 2 */
-
+  hw_init();
+  task_init();
   /* USER CODE END 2 */
 
   /* Init scheduler */

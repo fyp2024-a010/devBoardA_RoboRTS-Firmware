@@ -58,11 +58,12 @@ void usart3_rx_callback_register(usart_call_back fun)
 
 void HAL_UART_RxHalfCpltCallback(UART_HandleTypeDef *huart)
 {
-  if (huart == &huart3)
-  {
-    usart_rec_to_buff(&usart3_manage_obj, INTERRUPT_TYPE_DMA_HALF);
-  }
-  else if (huart == &huart6)
+//  if (huart == &huart3)
+//  {
+//    usart_rec_to_buff(&usart3_manage_obj, INTERRUPT_TYPE_DMA_HALF);
+//  }
+//  else if (huart == &huart6)
+	if (huart == &huart6)
   {
     usart_rec_to_buff(&usart6_manage_obj, INTERRUPT_TYPE_DMA_HALF);
   }
@@ -72,11 +73,12 @@ void HAL_UART_RxHalfCpltCallback(UART_HandleTypeDef *huart)
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-  if (huart == &huart3)
-  {
-    usart_rec_to_buff(&usart3_manage_obj, INTERRUPT_TYPE_DMA_ALL);
-  }
-  else if (huart == &huart6)
+//  if (huart == &huart3)
+//  {
+//    usart_rec_to_buff(&usart3_manage_obj, INTERRUPT_TYPE_DMA_ALL);
+//  }
+//  else if (huart == &huart6)
+	if (huart == &huart6)
   {
     usart_rec_to_buff(&usart6_manage_obj, INTERRUPT_TYPE_DMA_ALL);
   }
