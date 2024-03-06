@@ -1,0 +1,4 @@
+../bsp/cubeMX/Core/Src/main.c:72:5:main	1
+../bsp/cubeMX/Core/Src/main.c:134:6:SystemClock_Config	3
+../bsp/cubeMX/Core/Src/main.c:187:6:HAL_TIM_PeriodElapsedCallback	2
+../bsp/cubeMX/Core/Src/main.c:204:6:Error_Handler	1
