@@ -1,0 +1,10 @@
+../components/controller/controller.c:23:9:controller_register	3
+../components/controller/controller.c:45:9:controller_unregister	3
+../components/controller/controller.c:57:14:controller_find	1
+../components/controller/controller.c:66:9:controller_set_param	2
+../components/controller/controller.c:76:9:controller_execute	6
+../components/controller/controller.c:101:9:controller_set_input	2
+../components/controller/controller.c:109:7:controller_get_output	2
+../components/controller/controller.c:117:22:controller_get_type	2
+../components/controller/controller.c:125:9:controller_enable	2
+../components/controller/controller.c:133:9:controller_disable	2
