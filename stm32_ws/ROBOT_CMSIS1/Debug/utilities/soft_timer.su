@@ -1,0 +1,6 @@
+../utilities/soft_timer.c:75:6:TimerISR_Hook	16	static
+../utilities/soft_timer.c:103:10:soft_timer_init	16	static
+../utilities/soft_timer.c:117:10:soft_timer_destory	16	static
+../utilities/soft_timer.c:146:10:soft_timer_req	32	static,ignoring_inline_asm
+../utilities/soft_timer.c:179:10:soft_timer_update	32	static,ignoring_inline_asm
+../utilities/soft_timer.c:219:10:soft_timer_check	32	static,ignoring_inline_asm

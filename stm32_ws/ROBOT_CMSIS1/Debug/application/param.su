@@ -1,0 +1,5 @@
+../application/param.c:31:13:get_cali_param	4	static
+../application/param.c:40:6:save_cali_data	8	static
+../application/param.c:50:6:cali_data_read	4	static
+../application/param.c:55:6:cali_param_init	8	static
+../application/param.c:65:6:gimbal_save_data	16	static

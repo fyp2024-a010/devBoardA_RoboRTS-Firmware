@@ -1,0 +1,4 @@
+../bsp/cubeMX/Core/Src/freertos.c:67:13:vApplicationStackOverflowHook	16	static
+../bsp/cubeMX/Core/Src/freertos.c:76:13:vApplicationMallocFailedHook	4	static
+../bsp/cubeMX/Core/Src/freertos.c:96:6:MX_FREERTOS_Init	40	static
+../bsp/cubeMX/Core/Src/freertos.c:135:6:StartDefaultTask	16	static

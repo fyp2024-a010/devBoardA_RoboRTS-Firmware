@@ -1,0 +1,16 @@
+/*
+ * blinky_task.h
+ *
+ *  Created on: Mar 7, 2024
+ *      Author: bentjh01
+ */
+
+#ifndef BLINKY_TASK_H_
+#define BLINKY_TASK_H_
+
+#include "sys.h"
+#include "main.h"
+
+void blinky_task (void const *argument);
+
+#endif /* BLINKY_TASK_H_ */

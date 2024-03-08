@@ -1,0 +1,6 @@
+../application/offline_check.c:33:23:get_offline_dev	1
+../application/offline_check.c:40:6:offline_init	2
+../application/offline_check.c:65:9:offline_check	2
+../application/offline_check.c:83:9:get_offline_state	1
+../application/offline_check.c:88:9:offline_beep_set_times	1
+../application/offline_check.c:93:9:can1_detect_update	8

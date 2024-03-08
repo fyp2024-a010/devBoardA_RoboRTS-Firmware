@@ -1,0 +1,2 @@
+../application/timer_task.c:22:6:timer_task	5
+../application/timer_task.c:47:9:soft_timer_register	3

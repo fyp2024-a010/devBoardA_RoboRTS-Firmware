@@ -1,0 +1,7 @@
+../bsp/boards/board.c:29:9:can1_motor_msg_rec	16	static
+../bsp/boards/board.c:35:9:motor_canstd_send	24	static
+../bsp/boards/board.c:69:10:get_time_us	4	static
+../bsp/boards/board.c:74:10:get_time_ms	8	static
+../bsp/boards/board.c:79:7:get_time_ms_us	16	static
+../bsp/boards/board.c:84:9:motor_can1_output_1ms	16	static
+../bsp/boards/board.c:90:6:board_config	8	static

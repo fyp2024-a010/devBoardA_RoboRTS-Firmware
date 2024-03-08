@@ -1,0 +1,3 @@
+../components/devices/device.c:20:9:device_register	3
+../components/devices/device.c:38:9:device_unregister	3
+../components/devices/device.c:50:10:device_find	1
