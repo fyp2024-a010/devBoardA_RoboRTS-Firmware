@@ -1,4 +1,0 @@
-../bsp/cubeMX/Core/Src/main.c:72:5:main	8	static
-../bsp/cubeMX/Core/Src/main.c:134:6:SystemClock_Config	88	static
-../bsp/cubeMX/Core/Src/main.c:187:6:HAL_TIM_PeriodElapsedCallback	16	static
-../bsp/cubeMX/Core/Src/main.c:204:6:Error_Handler	4	static,ignoring_inline_asm
