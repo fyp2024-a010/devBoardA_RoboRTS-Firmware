@@ -37,13 +37,13 @@
 #define BEEP_TUNE        TIM12->ARR
 #define BEEP_CTRL        TIM12->CCR1
 
-#define LED_G_ON()      HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_RESET)
-#define LED_G_OFF()     HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_SET)
-#define LED_G_TOGGLE()  HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin)
+#define LED_GREEN_ON()      HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET)
+#define LED_GREEN_OFF()     HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET)
+#define LED_GREEN_TOGGLE()  HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin)
 
-#define LED_R_ON()      HAL_GPIO_WritePin(LED_R_GPIO_Port, LED_R_Pin, GPIO_PIN_RESET)
-#define LED_R_OFF()     HAL_GPIO_WritePin(LED_R_GPIO_Port, LED_R_Pin, GPIO_PIN_SET)
-#define LED_R_TOGGLE()  HAL_GPIO_TogglePin(LED_R_GPIO_Port, LED_R_Pin)
+#define LED_RED_ON()      HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET)
+#define LED_RED_OFF()     HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET)
+#define LED_RED_TOGGLE()  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin)
 
 #define get_trig_status() HAL_GPIO_ReadPin(TRIG_GPIO_Port, TRIG_Pin)
 

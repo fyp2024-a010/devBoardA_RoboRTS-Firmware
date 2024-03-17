@@ -141,6 +141,7 @@ int32_t protocol_send_cmd_unregister(uint16_t cmd)
     * @param  address  Protocol local address, which cannot be changed after initialization. Each device in the same network occupies a unique address.
     * @retval Protocol return status
   */
+
 uint32_t protocol_local_init(uint8_t address)
 {
 
@@ -156,25 +157,29 @@ uint32_t protocol_local_init(uint8_t address)
     status = PROTOCOL_ERR_UNSUPPORT_CPU;
     PROTOCOL_ERR_INFO_PRINTF(status, __FILE__, __LINE__);
 
-    while (1)
-      ;
+    while (1){
+    }
   }
 
   MUTEX_INIT(protocol_local_info.mutex_lock);
   
   memset(protocol_local_info.route_table, 0xFF, PROTOCOL_ROUTE_TABLE_MAX_NUM);
 	
-	for(int i; i < PROTOCOL_INTERFACE_MAX; i++)
+	for(uint8_t i = 0; i < PROTOCOL_INTERFACE_MAX; i++)
 	{
 		/* initalization user data is 0xFF */
+		// PROBLEM: Triggers HardFault_interupt from memory overflow. THe loop doesnt stop at 5
+		// FIXED: i = 0
 		memset(&protocol_local_info.interface[i].user_data, 0xFF, sizeof(union interface_user_data));
 	}
 
-  for(int i; i < PROTOCOL_CMD_MAX_NUM; i++)
+  for(uint8_t i = 0 ; i < PROTOCOL_CMD_MAX_NUM; i++)
 	{
-		/* initalization cmd is 0xFF */
-		memset(&protocol_local_info.send_cmd_info[i].cmd, 0xFFFF, 2);
-    memset(&protocol_local_info.rcv_cmd_info[i].cmd, 0xFFFF, 2);
+    // PROBLEM: Triggers HardFault_interupt
+    // FIXED: i = 0
+	  /* initalization cmd is 0xFF */
+	   memset(&protocol_local_info.send_cmd_info[i].cmd, 0xFFFF, sizeof(uint16_t));
+	   memset(&protocol_local_info.rcv_cmd_info[i].cmd, 0xFFFF, sizeof(uint16_t));
 	}
 
   protocol_local_info.address = address;
@@ -183,7 +188,7 @@ uint32_t protocol_local_init(uint8_t address)
   MUTEX_INIT(boardcast_object.mutex_lock);
   INIT_LIST_HEAD(&boardcast_object.send_list_header);
   boardcast_object.is_valid = 1;
-  protocol_local_info.is_valid = 1;
+  protocol_local_info.is_valid = 1; // Set the protocol to be valid after initialization
   PROTOCOL_OTHER_INFO_PRINTF("Local info has been initialized.");
 
   return status;

@@ -37,11 +37,13 @@ void skid_steer_calculate(struct skid_steer *ss)
   float wheel_rpm[4];
   float max = 0;
 
+  // RIGHT
   wheel_rpm[0] = (ss->speed.vx + ss->speed.vw * WHEELTRACK) / RADIUS / M_PI * 60;
+  wheel_rpm[3] = wheel_rpm[0];
+  // LEFT
   wheel_rpm[1] = (ss->speed.vx - ss->speed.vw * WHEELTRACK) / RADIUS / M_PI * 60;
   wheel_rpm[2] = wheel_rpm[1];
-  wheel_rpm[3] = wheel_rpm[0];
-
+  
   //find max item
   for (uint8_t i = 0; i < 4; i++)
   {
@@ -49,13 +51,14 @@ void skid_steer_calculate(struct skid_steer *ss)
       max = fabs(wheel_rpm[i]);
   }
 
-  //equal proportion
+  // equal proportion
   if (max > MAX_WHEEL_RPM)
   {
     float rate = MAX_WHEEL_RPM / max;
     for (uint8_t i = 0; i < 4; i++)
       wheel_rpm[i] *= rate;
   }
+  
   memcpy(ss->wheel_rpm, wheel_rpm, 4 * sizeof(float));
 }
 
@@ -98,3 +101,24 @@ void skid_steer_position_measure(struct skid_steer *ss, struct skid_steer_motor_
   ss->position.v_x_mm = v_x;                 //mm/s
   ss->position.rate_deg = v_w * RADIAN_COEF; //degree/s
 }
+
+/*
+void skid_steer_state_model_update(struct skid_steer *ss){
+  static float last_time;
+  struct skid_steer predicted_pose; 
+    predicted_pose.position.position_x_mm = ss->position.position_x_mm + ss->position.v_x_mm * dt * cos(ss->position.angle_deg);
+    predicted_pose.position.position_y_mm = ss->position.position_y_mm + ss->position.v_x_mm * dt * sin(ss->position.angle_deg);
+    predicted_pose.position.angle_deg = ss->position.angle_deg + ss->position.rate_deg * dt;
+    predicted_pose.speed.vx = ss->speed.vx;
+    predicted_pose.speed.vw = ss->speed.vw;
+    return predicted_pose;
+}
+
+void skid_steer_mimu_update(struct skid_steer *ss){
+  struct skid_steer estimated_pose;
+  mahony_ahrs_update(struct ahrs_sensor *sensor, struct attitude *atti);
+  mahony_ahrs_updateIMU(struct ahrs_sensor *sensor, struct attitude *atti);
+  estimated_pose.position.angle_deg = magnetometer_yaw;
+  return estimated_pose;
+}
+*/

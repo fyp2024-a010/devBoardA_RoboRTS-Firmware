@@ -75,21 +75,25 @@ osThreadId blinky_task_t;
 
 void task_init(void)
 {
-  uint8_t app;
-  app = get_sys_cfg();
+  // uint8_t app;
+  // app = get_sys_cfg();
 
   osThreadDef(TIMER_1MS, timer_task, osPriorityHigh, 0, 512);
   timer_task_t = osThreadCreate(osThread(TIMER_1MS), NULL);
 
-  osThreadDef(COMMUNICATE_TASK, communicate_task, osPriorityHigh, 0, 4096);
+  // PROBLEM was 4096
+  // changed to 2048
+  osThreadDef(COMMUNICATE_TASK, communicate_task, osPriorityHigh, 0, 2048);
   communicate_task_t = osThreadCreate(osThread(COMMUNICATE_TASK), NULL);
 
-  osThreadDef(CMD_TASK, infantry_cmd_task, osPriorityNormal, 0, 4096);
-  cmd_task_t = osThreadCreate(osThread(CMD_TASK), NULL);
+  // PROBLEM was 4096
+  // changed to 1024
+  //  osThreadDef(CMD_TASK, infantry_cmd_task, osPriorityNormal, 0, 2048);
+  //  cmd_task_t = osThreadCreate(osThread(CMD_TASK), NULL);
 
-  osThreadDef(CHASSIS_TASK, chassis_task, osPriorityRealtime, 0, 512);
-  chassis_task_t = osThreadCreate(osThread(CHASSIS_TASK), NULL);
+   osThreadDef(CHASSIS_TASK, chassis_task, osPriorityRealtime, 0, 64);
+   chassis_task_t = osThreadCreate(osThread(CHASSIS_TASK), NULL);
 
-  osThreadDef(BLINKY_TASK, blinky_task, osPriorityRealtime, 0, 512);
-  blinky_task_t = osThreadCreate(osThread(BLINKY_TASK), NULL);
+   osThreadDef(BLINKY_TASK, blinky_task, osPriorityRealtime, 0, 64);
+   blinky_task_t = osThreadCreate(osThread(BLINKY_TASK), NULL);
 }

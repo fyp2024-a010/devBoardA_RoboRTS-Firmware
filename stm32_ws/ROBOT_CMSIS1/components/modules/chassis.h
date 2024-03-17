@@ -26,6 +26,7 @@
 
 #include "motor.h"
 #include "mecanum.h"
+#include "skid_steer.h"
 #include "pid_controller.h"
 
 typedef struct chassis *chassis_t;
@@ -40,7 +41,7 @@ struct chassis_acc
 struct chassis
 {
   struct object parent;
-  struct mecanum mecanum;
+  struct skid_steer skid_steer;
 
   struct chassis_acc acc;
 
@@ -69,10 +70,10 @@ int32_t chassis_pid_register(struct chassis *chassis, const char *name, enum dev
 int32_t chassis_execute(struct chassis *chassis);
 int32_t chassis_gyro_updata(struct chassis *chassis, float yaw_angle, float yaw_rate);
 int32_t chassis_set_vw(struct chassis *chassis, float vw);
-int32_t chassis_set_vx_vy(struct chassis *chassis, float vx, float vy);
-int32_t chassis_set_speed(struct chassis *chassis, float vx, float vy, float vw);
-int32_t chassis_set_acc(struct chassis *chassis, float ax, float ay, float wz);
-int32_t chassis_set_offset(struct chassis *chassis, float offset_x, float offset_y);
+int32_t chassis_set_vx(struct chassis *chassis, float vx);
+int32_t chassis_set_speed(struct chassis *chassis, float vx, float vw);
+int32_t chassis_set_acc(struct chassis *chassis, float ax, float wz);
+// int32_t chassis_set_offset(struct chassis *chassis, float offset_x);
 int32_t chassis_get_info(struct chassis *chassis, struct chassis_info *info);
 
 int32_t chassis_enable(struct chassis *chassis);

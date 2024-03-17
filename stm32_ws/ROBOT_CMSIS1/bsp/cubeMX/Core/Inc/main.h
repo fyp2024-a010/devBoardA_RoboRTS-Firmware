@@ -107,12 +107,12 @@ void Error_Handler(void);
 #define IO_PROBE_GPIO_Port GPIOD
 #define PIN_XA2_Pin GPIO_PIN_2
 #define PIN_XA2_GPIO_Port GPIOA
-#define LED_R_Pin GPIO_PIN_11
-#define LED_R_GPIO_Port GPIOE
+#define LED_RED_Pin GPIO_PIN_11
+#define LED_RED_GPIO_Port GPIOE
 #define PIN_W_Pin GPIO_PIN_3
 #define PIN_W_GPIO_Port GPIOA
-#define LED_GF14_Pin GPIO_PIN_14
-#define LED_GF14_GPIO_Port GPIOF
+#define LED_GREEN_Pin GPIO_PIN_14
+#define LED_GREEN_GPIO_Port GPIOF
 
 /* USER CODE BEGIN Private defines */
 

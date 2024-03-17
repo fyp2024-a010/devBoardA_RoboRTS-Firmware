@@ -53,7 +53,8 @@ application/blinky_task.o: ../application/blinky_task.c \
  ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- ../bsp/cubeMX/Core/Inc/main.h
+ ../bsp/cubeMX/Core/Inc/main.h ../application/timer_task.h \
+ ../utilities/soft_timer.h
 ../application/blinky_task.h:
 ../components/object/sys.h:
 ../components/object/errno.h:
@@ -113,3 +114,5 @@ application/blinky_task.o: ../application/blinky_task.c \
 ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
 ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
 ../bsp/cubeMX/Core/Inc/main.h:
+../application/timer_task.h:
+../utilities/soft_timer.h:

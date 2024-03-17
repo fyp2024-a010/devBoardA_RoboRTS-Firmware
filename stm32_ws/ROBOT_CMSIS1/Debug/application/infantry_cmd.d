@@ -60,6 +60,7 @@ application/infantry_cmd.o: ../application/infantry_cmd.c \
  ../components/devices/device.h ../components/object/object.h \
  ../components/object/sys.h ../components/modules/chassis.h \
  ../components/devices/motor.h ../components/algorithm/mecanum.h \
+ ../components/algorithm/skid_steer.h \
  ../components/controller/pid_controller.h ../components/algorithm/pid.h \
  ../components/controller/controller.h ../application/init.h \
  ../application/infantry_cmd.h ../application/chassis_task.h \
@@ -140,6 +141,7 @@ application/infantry_cmd.o: ../application/infantry_cmd.c \
 ../components/modules/chassis.h:
 ../components/devices/motor.h:
 ../components/algorithm/mecanum.h:
+../components/algorithm/skid_steer.h:
 ../components/controller/pid_controller.h:
 ../components/algorithm/pid.h:
 ../components/controller/controller.h:

@@ -19,7 +19,7 @@
 
 /* chassis motor use 3508 */
 /* the deceleration ratio of chassis motor */
-#define MOTOR_DECELE_RATIO (1.0f / 19.0f)
+#define MOTOR_DECELE_RATIO (187.0f / 3591.0f)
 /* single 3508 motor maximum speed, unit is rpm */
 #define MAX_WHEEL_RPM 8500 //8347rpm = 3500mm/s
 /* chassis maximum translation speed, unit is mm/s */
@@ -37,8 +37,6 @@ struct skid_steer_structure
   float wheel_perimeter; /* the perimeter(mm) of wheel */
   float wheeltrack;      /* wheel track distance(mm) */
   float wheelbase;       /* wheelbase distance(mm) */
-  float rotate_x_offset; /* rotate offset(mm) relative to the x-axis of the chassis center */
-  float rotate_y_offset; /* rotate offset(mm) relative to the y-axis of the chassis center */
 };
 
 struct skid_steer_position
@@ -54,7 +52,6 @@ struct skid_steer_position
 struct skid_steer_speed
 {
   float vx; // forward/back
-  float vy; // left/right
   float vw; // anticlockwise/clockwise
 };
 

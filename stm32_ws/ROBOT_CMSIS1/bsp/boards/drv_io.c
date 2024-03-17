@@ -96,7 +96,7 @@ int32_t led_toggle_300ms(void *argc)
 
   if (get_time_ms() - led_tick > 300)
   {
-    LED_G_TOGGLE();
+    LED_GREEN_TOGGLE();
     led_tick = get_time_ms();
   }
 

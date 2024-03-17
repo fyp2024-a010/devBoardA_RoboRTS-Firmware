@@ -64,8 +64,8 @@ test/test.o: ../test/test.c ../test/test_module.h \
  ../bsp/boards/board.h ../bsp/boards/drv_can.h ../bsp/boards/drv_flash.h \
  ../bsp/boards/drv_imu.h ../bsp/boards/drv_io.h ../bsp/boards/drv_uart.h \
  ../application/init.h ../components/modules/chassis.h \
- ../components/algorithm/mecanum.h ../test/log_test.h \
- ../utilities/ulog/ulog.h ../utilities/ulog/ulog_def.h \
+ ../components/algorithm/mecanum.h ../components/algorithm/skid_steer.h \
+ ../test/log_test.h ../utilities/ulog/ulog.h ../utilities/ulog/ulog_def.h \
  ../config/ulog_config.h ../bsp/boards/drv_uart.h
 ../test/test_module.h:
 ../components/object/sys.h:
@@ -150,6 +150,7 @@ test/test.o: ../test/test.c ../test/test_module.h \
 ../application/init.h:
 ../components/modules/chassis.h:
 ../components/algorithm/mecanum.h:
+../components/algorithm/skid_steer.h:
 ../test/log_test.h:
 ../utilities/ulog/ulog.h:
 ../utilities/ulog/ulog_def.h:

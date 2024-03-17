@@ -19,6 +19,12 @@
  
 static int32_t motor_pid_input_convert(struct controller *ctrl, void *input);
 
+/**
+ * Registers a chassis device.
+ * Initialises the chassis device with the given name and CAN bus.
+ * Registers the four motors and their PID controllers.
+ * Sets the parameters of the skid steer.
+*/
 int32_t chassis_pid_register(struct chassis *chassis, const char *name, enum device_can can)
 {
   char motor_name[4][OBJECT_NAME_MAX_LEN] = {0};
@@ -45,17 +51,17 @@ int32_t chassis_pid_register(struct chassis *chassis, const char *name, enum dev
     memcpy(&motor_name[i], name, name_len);
     chassis->motor[i].can_periph = can;
     chassis->motor[i].can_id = 0x201 + i;
-    chassis->motor[i].init_offset_f = 1;
+    // chassis->motor[i].init_offset_f = 1;
 
     chassis->ctrl[i].convert_feedback = motor_pid_input_convert;
     pid_struct_init(&chassis->motor_pid[i], 15000, 500, 6.5f, 0.1, 0);
   }
 
-  chassis->mecanum.param.wheel_perimeter = PERIMETER;
-  chassis->mecanum.param.wheeltrack = WHEELTRACK;
-  chassis->mecanum.param.wheelbase = WHEELBASE;
-  chassis->mecanum.param.rotate_x_offset = ROTATE_X_OFFSET;
-  chassis->mecanum.param.rotate_y_offset = ROTATE_Y_OFFSET;
+  chassis->skid_steer.param.wheel_perimeter = PERIMETER;
+  chassis->skid_steer.param.wheeltrack = WHEELTRACK;
+  chassis->skid_steer.param.wheelbase = WHEELBASE;
+  // chassis->skid_steer.param.rotate_x_offset = ROTATE_X_OFFSET;
+  // chassis->skid_steer.param.rotate_y_offset = ROTATE_Y_OFFSET;
 
   memcpy(&motor_name[0][name_len], "_FR\0", 4);
   memcpy(&motor_name[1][name_len], "_FL\0", 4);
@@ -88,11 +94,17 @@ end:
   return err;
 }
 
+/**
+ * Calculates the speed of each wheel according to the dynamics of the chassis. 
+ * Sets the speed of each wheel to the calculated value.
+ * Sets the PID controller input to the speed of each wheel.
+ * Sets the current of each motor to the output of the PID controller.
+*/
 int32_t chassis_execute(struct chassis *chassis)
 {
   float motor_out;
   struct motor_data *pdata;
-  struct mecanum_motor_fdb wheel_fdb[4];
+  struct skid_steer_motor_fdb wheel_fdb[4];
 
   static uint8_t init_f = 0;
   static float last_time, period;
@@ -112,12 +124,11 @@ int32_t chassis_execute(struct chassis *chassis)
   {
     last_time = get_time_ms_us();
 
-    chassis->mecanum.speed.vx += chassis->acc.ax/1000.0f*period;
-    chassis->mecanum.speed.vy += chassis->acc.ay/1000.0f*period;
-    chassis->mecanum.speed.vw += chassis->acc.wz/1000.0f*period;
+    chassis->skid_steer.speed.vx += chassis->acc.ax/1000.0f*period;
+    chassis->skid_steer.speed.vw += chassis->acc.wz/1000.0f*period;
   }
   
-  mecanum_calculate(&(chassis->mecanum));
+  skid_steer_calculate(&(chassis->skid_steer));
 
   for (int i = 0; i < 4; i++)
   {
@@ -126,14 +137,14 @@ int32_t chassis_execute(struct chassis *chassis)
     wheel_fdb[i].total_ecd = pdata->total_ecd;
     wheel_fdb[i].speed_rpm = pdata->speed_rpm;
 
-    controller_set_input(&chassis->ctrl[i], chassis->mecanum.wheel_rpm[i]);
+    controller_set_input(&chassis->ctrl[i], chassis->skid_steer.wheel_rpm[i]);
     controller_execute(&chassis->ctrl[i], (void *)pdata);
     controller_get_output(&chassis->ctrl[i], &motor_out);
 
     motor_device_set_current(&chassis->motor[i], (int16_t)motor_out);
   }
 
-  mecanum_position_measure(&(chassis->mecanum), wheel_fdb);
+  skid_steer_position_measure(&(chassis->skid_steer), wheel_fdb);
 
   return RM_OK;
 }
@@ -142,27 +153,25 @@ int32_t chassis_gyro_updata(struct chassis *chassis, float yaw_angle, float yaw_
 {
   if (chassis == NULL)
     return -RM_INVAL;
-  chassis->mecanum.gyro.yaw_gyro_angle = yaw_angle;
-  chassis->mecanum.gyro.yaw_gyro_rate = yaw_rate;
+  chassis->skid_steer.gyro.yaw_gyro_angle = yaw_angle;
+  chassis->skid_steer.gyro.yaw_gyro_rate = yaw_rate;
   return RM_OK;
 }
 
-int32_t chassis_set_speed(struct chassis *chassis, float vx, float vy, float vw)
+int32_t chassis_set_speed(struct chassis *chassis, float vx, float vw)
 {
   if (chassis == NULL)
     return -RM_INVAL;
-  chassis->mecanum.speed.vx = vx;
-  chassis->mecanum.speed.vy = vy;
-  chassis->mecanum.speed.vw = vw;
+  chassis->skid_steer.speed.vx = vx;
+  chassis->skid_steer.speed.vw = vw;
   return RM_OK;
 }
 
-int32_t chassis_set_acc(struct chassis *chassis, float ax, float ay, float wz)
+int32_t chassis_set_acc(struct chassis *chassis, float ax, float wz)
 {
   if (chassis == NULL)
     return -RM_INVAL;
   chassis->acc.ax = ax;
-  chassis->acc.ay = ay;
   chassis->acc.wz = wz;
   return RM_OK;
 }
@@ -171,45 +180,43 @@ int32_t chassis_set_vw(struct chassis *chassis, float vw)
 {
   if (chassis == NULL)
     return -RM_INVAL;
-  chassis->mecanum.speed.vw = vw;
+  chassis->skid_steer.speed.vw = vw;
   return RM_OK;
 }
 
-int32_t chassis_set_vx_vy(struct chassis *chassis, float vx, float vy)
+int32_t chassis_set_vx(struct chassis *chassis, float vx)
 {
   if (chassis == NULL)
     return -RM_INVAL;
-  chassis->mecanum.speed.vx = vx;
-  chassis->mecanum.speed.vy = vy;
+  chassis->skid_steer.speed.vx = vx;
   return RM_OK;
 }
 
-int32_t chassis_set_offset(struct chassis *chassis, float offset_x, float offset_y)
-{
-  if (chassis == NULL)
-    return -RM_INVAL;
+// int32_t chassis_set_offset(struct chassis *chassis, float offset_x)
+// {
+//   if (chassis == NULL)
+//     return -RM_INVAL;
 
-  chassis->mecanum.param.rotate_x_offset = offset_x;
-  chassis->mecanum.param.rotate_y_offset = offset_y;
+//   chassis->skid_steer.param.rotate_x_offset = offset_x;
 
-  return RM_OK;
-}
+//   return RM_OK;
+// }
 
 int32_t chassis_get_info(struct chassis *chassis, struct chassis_info *info)
 {
   if (chassis == NULL)
     return NULL;
 
-  memcpy(info, &(chassis->mecanum.position), sizeof(struct mecanum_position));
-  ANGLE_LIMIT_360(info->angle_deg, chassis->mecanum.position.angle_deg);
+  memcpy(info, &(chassis->skid_steer.position), sizeof(struct skid_steer_position));
+  ANGLE_LIMIT_360(info->angle_deg, chassis->skid_steer.position.angle_deg);
   ANGLE_LIMIT_360_TO_180(info->angle_deg);
-  ANGLE_LIMIT_360(info->yaw_gyro_angle, chassis->mecanum.gyro.yaw_gyro_angle);
+  ANGLE_LIMIT_360(info->yaw_gyro_angle, chassis->skid_steer.gyro.yaw_gyro_angle);
   ANGLE_LIMIT_360_TO_180(info->yaw_gyro_angle);
-  info->yaw_gyro_rate = chassis->mecanum.gyro.yaw_gyro_rate;
+  info->yaw_gyro_rate = chassis->skid_steer.gyro.yaw_gyro_rate;
 
   for (int i = 0; i < 4; i++)
   {
-    info->wheel_rpm[i] = chassis->mecanum.wheel_rpm[i] * MOTOR_DECELE_RATIO;
+    info->wheel_rpm[i] = chassis->skid_steer.wheel_rpm[i] * MOTOR_DECELE_RATIO;
   }
 
   return RM_OK;

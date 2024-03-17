@@ -75,6 +75,7 @@
 "./components/algorithm/mecanum.o"
 "./components/algorithm/pid.o"
 "./components/algorithm/ramp.o"
+"./components/algorithm/skid_steer.o"
 "./components/controller/controller.o"
 "./components/controller/pid_controller.o"
 "./components/devices/dbus.o"

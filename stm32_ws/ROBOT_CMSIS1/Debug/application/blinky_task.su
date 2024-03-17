@@ -1,1 +1,2 @@
-../application/blinky_task.c:19:6:blinky_task	24	static
+../application/blinky_task.c:19:6:toggle_led_B	16	static
+../application/blinky_task.c:24:6:blinky_task	24	static

@@ -1,6 +1,7 @@
 ../application/communicate.c:35:16:usb_rcv_callback	16	static
 ../application/communicate.c:42:9:manifold2_heart_package	16	static
 ../application/communicate.c:47:9:report_firmware_version	16	static
-../application/communicate.c:52:6:communicate_task	40	static
-../application/communicate.c:90:16:usb_interface_send	16	static
-../application/communicate.c:96:13:protocol_send_success_callback	8	static
+../application/communicate.c:52:6:toggle_led_C	16	static
+../application/communicate.c:57:6:communicate_task	40	static
+../application/communicate.c:103:16:usb_interface_send	16	static
+../application/communicate.c:109:13:protocol_send_success_callback	8	static

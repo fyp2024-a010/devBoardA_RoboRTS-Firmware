@@ -49,13 +49,20 @@ int32_t report_firmware_version(uint8_t *buff, uint16_t len)
   return FIRMWARE_VERSION;
 }
 
+void toggle_led_C(void* argc)
+{
+  HAL_GPIO_TogglePin(LED_C_GPIO_Port, LED_C_Pin);
+}
+
 void communicate_task(void const *argument)
 {
-  uint8_t app;
-  app = get_sys_cfg();
+  // uint8_t app;
+  // app = get_sys_cfg();
 
   protocol_local_init(CHASSIS_ADDRESS);
-  protocol_uart_interface_register("manifold2", 4096, 1, PROTOCOL_USB_PORT, usb_interface_send);
+  // PROBLEM: Was 4096
+  // protocol_uart_interface_register("manifold2", 4096, 1, PROTOCOL_USB_PORT, usb_interface_send);
+  protocol_uart_interface_register("manifold2", 2048, 1, PROTOCOL_USB_PORT, usb_interface_send);
   protocol_set_route(MANIFOLD2_ADDRESS, "manifold2");
 
   protocol_rcv_cmd_register(CMD_MANIFOLD2_HEART, manifold2_heart_package);
@@ -65,9 +72,15 @@ void communicate_task(void const *argument)
   soft_timer_register(usb_tx_flush, NULL, 1);
 	protocol_send_list_add_callback_reg(protocol_send_success_callback);
 
+  soft_timer_register(toggle_led_C, NULL, 1000);
+
+  osEvent event; // moved from inside the while loop
+
   while (1)
   {
-    osEvent event;
+	  // THIS CAUSES THE USB CONNECTION TO BRICK
+
+    osSignalSet(communicate_task_t, SEND_PROTOCOL_SIGNAL);
 
     event = osSignalWait(SEND_PROTOCOL_SIGNAL | RECV_PROTOCOL_SIGNAL, osWaitForever);
 
@@ -82,8 +95,8 @@ void communicate_task(void const *argument)
       {
         protocol_unpack_flush();
       }
-
     }
+//	  osDelay(1);
   }
 }
 

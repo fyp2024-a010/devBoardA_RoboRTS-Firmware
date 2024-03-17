@@ -71,7 +71,7 @@ int32_t offline_check(void *argc)
 
     chassis_enable(pchassis);
 		
-		LED_R_OFF();
+		LED_RED_OFF();
   }
   else
   {

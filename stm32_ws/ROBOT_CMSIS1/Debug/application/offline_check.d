@@ -61,6 +61,7 @@ application/offline_check.o: ../application/offline_check.c \
  ../components/devices/device.h ../components/object/object.h \
  ../components/object/sys.h ../components/modules/chassis.h \
  ../components/devices/motor.h ../components/algorithm/mecanum.h \
+ ../components/algorithm/skid_steer.h \
  ../components/controller/pid_controller.h ../components/algorithm/pid.h \
  ../components/controller/controller.h ../application/init.h \
  ../application/offline_check.h ../application/timer_task.h \
@@ -139,6 +140,7 @@ application/offline_check.o: ../application/offline_check.c \
 ../components/modules/chassis.h:
 ../components/devices/motor.h:
 ../components/algorithm/mecanum.h:
+../components/algorithm/skid_steer.h:
 ../components/controller/pid_controller.h:
 ../components/algorithm/pid.h:
 ../components/controller/controller.h:

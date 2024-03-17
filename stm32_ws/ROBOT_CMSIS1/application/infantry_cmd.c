@@ -44,19 +44,29 @@ struct manifold_cmd *get_manifold_cmd(void)
 int32_t chassis_speed_ctrl(uint8_t *buff, uint16_t len);
 int32_t chassis_spd_acc_ctrl(uint8_t *buff, uint16_t len);
 
+void toggle_led_D(void *argc)
+{
+  HAL_GPIO_TogglePin(LED_H_GPIO_Port, LED_H_Pin);
+}
+
+#define LED_D_OFF()     HAL_GPIO_WritePin(LED_D_GPIO_Port, LED_D_Pin, GPIO_PIN_SET)
+
 void infantry_cmd_task(void const *argument)
 {
-  uint8_t app;
+  LED_D_OFF();
+  // uint8_t app;
   osEvent event;
-  app = get_sys_cfg();
+  // app = get_sys_cfg();
 
-  rc_device_t prc_dev = NULL;
+  // rc_device_t prc_dev = NULL;
   chassis_t pchassis = NULL;
 
   pchassis = chassis_find("chassis");
 
   protocol_rcv_cmd_register(CMD_SET_CHASSIS_SPEED, chassis_speed_ctrl);
   protocol_rcv_cmd_register(CMD_SET_CHASSIS_SPD_ACC, chassis_spd_acc_ctrl);
+
+  // soft_timer_register(toggle_led_D, NULL, 1000);
 
   while (1)
   {
@@ -68,24 +78,24 @@ void infantry_cmd_task(void const *argument)
       {
         struct cmd_chassis_speed *pspeed;
         pspeed = &manifold_cmd.chassis_speed;
-        chassis_set_offset(pchassis, pspeed->rotate_x_offset, pspeed->rotate_x_offset);
-        chassis_set_acc(pchassis, 0, 0, 0);
-        chassis_set_speed(pchassis, pspeed->vx, pspeed->vy, pspeed->vw / 10.0f);
+        // chassis_set_offset(pchassis, pspeed->rotate_x_offset, pspeed->rotate_x_offset);
+        chassis_set_acc(pchassis, 0, 0);
+        chassis_set_speed(pchassis, pspeed->vx, pspeed->vw / 10.0f);
       }
 
       if (event.value.signals & MANIFOLD2_CHASSIS_ACC_SIGNAL)
       {
         struct cmd_chassis_spd_acc *pacc;
         pacc = &manifold_cmd.chassis_spd_acc;
-        chassis_set_offset(pchassis, pacc->rotate_x_offset, pacc->rotate_x_offset);
-        chassis_set_acc(pchassis, pacc->ax, pacc->ay, pacc->wz / 10.0f);
-        chassis_set_speed(pchassis, pacc->vx, pacc->vy, pacc->vw / 10.0f);
+        // chassis_set_offset(pchassis, pacc->rotate_x_offset, pacc->rotate_x_offset);
+        chassis_set_acc(pchassis, pacc->ax, pacc->wz / 10.0f);
+        chassis_set_speed(pchassis, pacc->vx, pacc->vw / 10.0f);
       }
     }
     else
     {
-      chassis_set_speed(pchassis, 0, 0, 0);
-      chassis_set_acc(pchassis, 0, 0, 0);
+      chassis_set_speed(pchassis, 0, 0);
+      chassis_set_acc(pchassis, 0, 0);
     }
   }
 }
@@ -116,15 +126,26 @@ int32_t chassis_push_info(void *argc)
   chassis_t pchassis = (chassis_t)argc;
   chassis_get_info(pchassis, &info);
 
-  cmd_chassis_info.angle_deg = info.angle_deg * 10;
-  cmd_chassis_info.gyro_angle = info.yaw_gyro_angle * 10;
-  cmd_chassis_info.gyro_palstance = info.yaw_gyro_rate * 10;
-  cmd_chassis_info.position_x_mm = info.position_x_mm;
-  cmd_chassis_info.position_y_mm = info.position_y_mm;
-  cmd_chassis_info.v_x_mm = info.v_x_mm;
-  cmd_chassis_info.v_y_mm = info.v_y_mm;
+  // cmd_chassis_info.angle_deg = info.angle_deg * 10;
+  // cmd_chassis_info.gyro_angle = info.yaw_gyro_angle * 10;
+  // cmd_chassis_info.gyro_palstance = info.yaw_gyro_rate * 10;
+  // cmd_chassis_info.position_x_mm = info.position_x_mm;
+  // cmd_chassis_info.position_y_mm = info.position_y_mm;
+  // cmd_chassis_info.v_x_mm = info.v_x_mm;
+  // cmd_chassis_info.v_y_mm = info.v_y_mm;
 
-  protocol_send(MANIFOLD2_ADDRESS, CMD_PUSH_CHASSIS_INFO, &cmd_chassis_info, sizeof(cmd_chassis_info));
+  // protocol_send(MANIFOLD2_ADDRESS, CMD_PUSH_CHASSIS_INFO, &cmd_chassis_info, sizeof(cmd_chassis_info));
+
+  struct chassis_info test_info;
+  test_info.angle_deg = 1.0;
+  test_info.yaw_gyro_angle = 1.0;
+  test_info.yaw_gyro_rate = 1.0;
+  test_info.position_x_mm = 1.0;
+  test_info.position_y_mm = 1.0;
+  test_info.v_x_mm = 1.0;
+  test_info.v_y_mm = 1.0;
+  HAL_GPIO_TogglePin(LED_H_GPIO_Port, LED_H_Pin);
+  protocol_send(MANIFOLD2_ADDRESS, CMD_PUSH_CHASSIS_INFO, &test_info, sizeof(test_info));
 
   return 0;
 }

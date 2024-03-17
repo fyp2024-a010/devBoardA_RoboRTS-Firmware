@@ -5,10 +5,10 @@
 ../application/protocol/protocol.c:88:9:protocol_send_cmd_config	32	static
 ../application/protocol/protocol.c:113:9:protocol_rcv_cmd_unregister	24	static
 ../application/protocol/protocol.c:126:9:protocol_send_cmd_unregister	24	static
-../application/protocol/protocol.c:144:10:protocol_local_init	32	static
-../application/protocol/protocol.c:201:10:protocol_send	56	static
-../application/protocol/protocol.c:257:10:protocol_ack	48	static
-../application/protocol/protocol.c:277:10:protocol_send_flush	16	static
-../application/protocol/protocol.c:309:10:protocol_unpack_flush	16	static
-../application/protocol/protocol.c:328:10:protocol_rcv_data	56	static,ignoring_inline_asm
-../application/protocol/protocol.c:370:12:protocol_send_list_add_callback_reg	16	static
+../application/protocol/protocol.c:147:10:protocol_local_init	32	static
+../application/protocol/protocol.c:208:10:protocol_send	56	static
+../application/protocol/protocol.c:264:10:protocol_ack	48	static
+../application/protocol/protocol.c:284:10:protocol_send_flush	16	static
+../application/protocol/protocol.c:316:10:protocol_unpack_flush	16	static
+../application/protocol/protocol.c:335:10:protocol_rcv_data	56	static,ignoring_inline_asm
+../application/protocol/protocol.c:377:12:protocol_send_list_add_callback_reg	16	static

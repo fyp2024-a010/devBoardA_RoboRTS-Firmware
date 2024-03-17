@@ -56,10 +56,11 @@ application/chassis_task.o: ../application/chassis_task.c \
  ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
  ../application/chassis_task.h ../components/modules/chassis.h \
  ../components/devices/motor.h ../components/algorithm/mecanum.h \
+ ../components/algorithm/skid_steer.h \
  ../components/controller/pid_controller.h ../components/algorithm/pid.h \
  ../components/controller/controller.h ../application/timer_task.h \
  ../components/object/sys.h ../utilities/soft_timer.h \
- ../application/infantry_cmd.h
+ ../application/infantry_cmd.h ../bsp/cubeMX/Core/Inc/main.h
 ../components/devices/dbus.h:
 ../components/devices/device.h:
 ../components/object/object.h:
@@ -124,6 +125,7 @@ application/chassis_task.o: ../application/chassis_task.c \
 ../components/modules/chassis.h:
 ../components/devices/motor.h:
 ../components/algorithm/mecanum.h:
+../components/algorithm/skid_steer.h:
 ../components/controller/pid_controller.h:
 ../components/algorithm/pid.h:
 ../components/controller/controller.h:
@@ -131,3 +133,4 @@ application/chassis_task.o: ../application/chassis_task.c \
 ../components/object/sys.h:
 ../utilities/soft_timer.h:
 ../application/infantry_cmd.h:
+../bsp/cubeMX/Core/Inc/main.h:

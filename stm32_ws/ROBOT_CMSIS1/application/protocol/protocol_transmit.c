@@ -20,6 +20,8 @@
 #include "protocol_transmit.h"
 #include "protocol_log.h"
 
+#include "main.h"
+
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -526,13 +528,13 @@ struct perph_interface *protocol_s_get_route(uint8_t tar_add)
 {
   uint8_t int_obj_idx;
 
-  int_obj_idx = protocol_local_info.route_table[tar_add];
+  int_obj_idx = protocol_local_info.route_table[tar_add]; 
   if (int_obj_idx > PROTOCOL_INTERFACE_MAX)
   {
     return NULL;
   }
 
-  if (protocol_local_info.interface[int_obj_idx].is_valid)
+  if (protocol_local_info.interface[int_obj_idx].is_valid) 
   {
     return &(protocol_local_info.interface[int_obj_idx]);
   }
