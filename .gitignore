@@ -2,15 +2,19 @@
 .vscode
 .metadata
 
-stm32_ws/.*
-stm32_ws/ROBOT/.*
-stm32_ws/ROBOT/Debug
-stm32_ws/ROBOT_DEV/.*
-stm32_ws/ROBOT_DEV/Debug
+robot.bkp
 
-RoboRTS-Firmware/.*
-RoboRTS-Firmware/Communicate/.*
-RoboRTS-Firmware/Motor/.*
-RoboRTS-Firmware/ROBOT/.*
-RoboRTS-Firmware/ROBOT_DEV/.*
-RoboRTS-Firmware/Test/.*
+stm32_ws/.*
+stm32_ws/ROBOT_CMSIS1/.*
+stm32_ws/ROBOT_CMSIS1/Debug
+
+stm32_ws/ROBOT_CMSIS2/.*
+stm32_ws/ROBOT_CMSIS2/Debug
+
+stm32_ws/ROBOT_DEV_CMSIS1/.*
+stm32_ws/ROBOT_DEV_CMSIS1/Debug
+
+stm32_ws/ROBOT_DEV_CMSIS2/.*
+stm32_ws/ROBOT_DEV_CMSIS2/Debug
+
+stm32_ws/RobotRTS-Firmware
