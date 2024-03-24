@@ -66,7 +66,7 @@ void infantry_cmd_task(void const *argument)
   protocol_rcv_cmd_register(CMD_SET_CHASSIS_SPEED, chassis_speed_ctrl);
   protocol_rcv_cmd_register(CMD_SET_CHASSIS_SPD_ACC, chassis_spd_acc_ctrl);
 
-  // soft_timer_register(toggle_led_D, NULL, 1000);
+  soft_timer_register(toggle_led_D, NULL, 1000);
 
   while (1)
   {

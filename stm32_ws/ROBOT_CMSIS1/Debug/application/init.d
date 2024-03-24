@@ -61,7 +61,7 @@ application/init.o: ../application/init.c ../bsp/cubeMX/Core/Inc/main.h \
  ../components/object/object.h ../components/object/sys.h \
  ../components/devices/dbus.h ../components/devices/detect.h \
  ../test/test.h ../components/modules/chassis.h \
- ../components/algorithm/mecanum.h ../components/algorithm/skid_steer.h \
+ ../components/algorithm/skid_steer.h \
  ../components/controller/pid_controller.h ../components/algorithm/pid.h \
  ../components/controller/controller.h ../application/chassis_task.h \
  ../application/timer_task.h ../utilities/soft_timer.h \
@@ -150,7 +150,6 @@ application/init.o: ../application/init.c ../bsp/cubeMX/Core/Inc/main.h \
 ../components/devices/detect.h:
 ../test/test.h:
 ../components/modules/chassis.h:
-../components/algorithm/mecanum.h:
 ../components/algorithm/skid_steer.h:
 ../components/controller/pid_controller.h:
 ../components/algorithm/pid.h:

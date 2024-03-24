@@ -55,8 +55,7 @@ application/chassis_task.o: ../application/chassis_task.c \
  ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
  ../application/chassis_task.h ../components/modules/chassis.h \
- ../components/devices/motor.h ../components/algorithm/mecanum.h \
- ../components/algorithm/skid_steer.h \
+ ../components/devices/motor.h ../components/algorithm/skid_steer.h \
  ../components/controller/pid_controller.h ../components/algorithm/pid.h \
  ../components/controller/controller.h ../application/timer_task.h \
  ../components/object/sys.h ../utilities/soft_timer.h \
@@ -124,7 +123,6 @@ application/chassis_task.o: ../application/chassis_task.c \
 ../application/chassis_task.h:
 ../components/modules/chassis.h:
 ../components/devices/motor.h:
-../components/algorithm/mecanum.h:
 ../components/algorithm/skid_steer.h:
 ../components/controller/pid_controller.h:
 ../components/algorithm/pid.h:

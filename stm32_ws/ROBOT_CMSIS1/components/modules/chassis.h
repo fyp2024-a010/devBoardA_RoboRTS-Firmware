@@ -25,7 +25,6 @@
 #endif
 
 #include "motor.h"
-#include "mecanum.h"
 #include "skid_steer.h"
 #include "pid_controller.h"
 

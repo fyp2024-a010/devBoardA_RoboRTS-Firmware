@@ -7,7 +7,6 @@
 C_SRCS += \
 ../components/algorithm/madgwick_ahrs.c \
 ../components/algorithm/mahony_ahrs.c \
-../components/algorithm/mecanum.c \
 ../components/algorithm/pid.c \
 ../components/algorithm/ramp.c \
 ../components/algorithm/skid_steer.c 
@@ -15,7 +14,6 @@ C_SRCS += \
 OBJS += \
 ./components/algorithm/madgwick_ahrs.o \
 ./components/algorithm/mahony_ahrs.o \
-./components/algorithm/mecanum.o \
 ./components/algorithm/pid.o \
 ./components/algorithm/ramp.o \
 ./components/algorithm/skid_steer.o 
@@ -23,7 +21,6 @@ OBJS += \
 C_DEPS += \
 ./components/algorithm/madgwick_ahrs.d \
 ./components/algorithm/mahony_ahrs.d \
-./components/algorithm/mecanum.d \
 ./components/algorithm/pid.d \
 ./components/algorithm/ramp.d \
 ./components/algorithm/skid_steer.d 
@@ -36,7 +33,7 @@ components/algorithm/%.o components/algorithm/%.su components/algorithm/%.cyclo:
 clean: clean-components-2f-algorithm
 
 clean-components-2f-algorithm:
-	-$(RM) ./components/algorithm/madgwick_ahrs.cyclo ./components/algorithm/madgwick_ahrs.d ./components/algorithm/madgwick_ahrs.o ./components/algorithm/madgwick_ahrs.su ./components/algorithm/mahony_ahrs.cyclo ./components/algorithm/mahony_ahrs.d ./components/algorithm/mahony_ahrs.o ./components/algorithm/mahony_ahrs.su ./components/algorithm/mecanum.cyclo ./components/algorithm/mecanum.d ./components/algorithm/mecanum.o ./components/algorithm/mecanum.su ./components/algorithm/pid.cyclo ./components/algorithm/pid.d ./components/algorithm/pid.o ./components/algorithm/pid.su ./components/algorithm/ramp.cyclo ./components/algorithm/ramp.d ./components/algorithm/ramp.o ./components/algorithm/ramp.su ./components/algorithm/skid_steer.cyclo ./components/algorithm/skid_steer.d ./components/algorithm/skid_steer.o ./components/algorithm/skid_steer.su
+	-$(RM) ./components/algorithm/madgwick_ahrs.cyclo ./components/algorithm/madgwick_ahrs.d ./components/algorithm/madgwick_ahrs.o ./components/algorithm/madgwick_ahrs.su ./components/algorithm/mahony_ahrs.cyclo ./components/algorithm/mahony_ahrs.d ./components/algorithm/mahony_ahrs.o ./components/algorithm/mahony_ahrs.su ./components/algorithm/pid.cyclo ./components/algorithm/pid.d ./components/algorithm/pid.o ./components/algorithm/pid.su ./components/algorithm/ramp.cyclo ./components/algorithm/ramp.d ./components/algorithm/ramp.o ./components/algorithm/ramp.su ./components/algorithm/skid_steer.cyclo ./components/algorithm/skid_steer.d ./components/algorithm/skid_steer.o ./components/algorithm/skid_steer.su
 
 .PHONY: clean-components-2f-algorithm
 

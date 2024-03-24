@@ -54,6 +54,12 @@ void toggle_led_C(void* argc)
   HAL_GPIO_TogglePin(LED_C_GPIO_Port, LED_C_Pin);
 }
 
+int32_t ros_callback(uint8_t *buff, uint16_t len)
+{
+  HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
+  return 0;
+}
+
 void communicate_task(void const *argument)
 {
   // uint8_t app;
@@ -74,6 +80,8 @@ void communicate_task(void const *argument)
 
   soft_timer_register(toggle_led_C, NULL, 1000);
 
+  protocol_rcv_cmd_register(CMD_SET_CHASSIS_SPEED, ros_callback);
+
   osEvent event; // moved from inside the while loop
 
   while (1)
@@ -88,15 +96,16 @@ void communicate_task(void const *argument)
     {
       if (event.value.signals & SEND_PROTOCOL_SIGNAL)
       {
-        protocol_send_flush();
+//        protocol_send_flush(); //makes the usb communication fail
       }
 
       if (event.value.signals & RECV_PROTOCOL_SIGNAL)
       {
         protocol_unpack_flush();
+        HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
       }
     }
-//	  osDelay(1);
+	  osDelay(1);
   }
 }
 
@@ -110,3 +119,5 @@ static void protocol_send_success_callback(void)
 {
   osSignalSet(communicate_task_t, SEND_PROTOCOL_SIGNAL);
 }
+
+

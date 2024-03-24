@@ -72,7 +72,6 @@
 "./bsp/cubeMX/USB_DEVICE/Target/usbd_conf.o"
 "./components/algorithm/madgwick_ahrs.o"
 "./components/algorithm/mahony_ahrs.o"
-"./components/algorithm/mecanum.o"
 "./components/algorithm/pid.o"
 "./components/algorithm/ramp.o"
 "./components/algorithm/skid_steer.o"

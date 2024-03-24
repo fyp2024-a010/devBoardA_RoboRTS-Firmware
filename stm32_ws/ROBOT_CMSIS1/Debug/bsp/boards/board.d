@@ -60,8 +60,7 @@ bsp/boards/board.o: ../bsp/boards/board.c ../bsp/cubeMX/Core/Inc/can.h \
  ../bsp/boards/drv_flash.h ../bsp/boards/drv_imu.h \
  ../components/algorithm/ahrs.h ../bsp/boards/drv_io.h \
  ../bsp/cubeMX/Core/Inc/main.h ../bsp/boards/drv_uart.h \
- ../components/modules/chassis.h ../components/algorithm/mecanum.h \
- ../components/algorithm/skid_steer.h \
+ ../components/modules/chassis.h ../components/algorithm/skid_steer.h \
  ../components/controller/pid_controller.h ../components/algorithm/pid.h \
  ../components/controller/controller.h ../application/init.h \
  ../application/communicate.h ../application/timer_task.h \
@@ -140,7 +139,6 @@ bsp/boards/board.o: ../bsp/boards/board.c ../bsp/cubeMX/Core/Inc/can.h \
 ../bsp/cubeMX/Core/Inc/main.h:
 ../bsp/boards/drv_uart.h:
 ../components/modules/chassis.h:
-../components/algorithm/mecanum.h:
 ../components/algorithm/skid_steer.h:
 ../components/controller/pid_controller.h:
 ../components/algorithm/pid.h:

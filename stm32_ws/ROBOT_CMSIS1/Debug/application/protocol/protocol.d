@@ -59,8 +59,7 @@ application/protocol/protocol.o: ../application/protocol/protocol.c \
  ../components/support/macro_mutex.h \
  ../application/protocol/protocol_transmit.h \
  ../application/protocol/protocol_log.h ../utilities/ulog/ulog.h \
- ../utilities/ulog/ulog_def.h ../config/ulog_config.h \
- ../bsp/cubeMX/Core/Inc/main.h
+ ../utilities/ulog/ulog_def.h ../config/ulog_config.h
 ../application/protocol/protocol.h:
 ../application/protocol/protocol_common.h:
 ../application/protocol/protocol_cfg.h:
@@ -128,4 +127,3 @@ application/protocol/protocol.o: ../application/protocol/protocol.c \
 ../utilities/ulog/ulog.h:
 ../utilities/ulog/ulog_def.h:
 ../config/ulog_config.h:
-../bsp/cubeMX/Core/Inc/main.h:

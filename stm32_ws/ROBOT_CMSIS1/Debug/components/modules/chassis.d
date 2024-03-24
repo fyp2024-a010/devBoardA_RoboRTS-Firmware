@@ -55,7 +55,7 @@ components/modules/chassis.o: ../components/modules/chassis.c \
  ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- ../components/algorithm/mecanum.h ../components/algorithm/skid_steer.h \
+ ../components/algorithm/skid_steer.h \
  ../components/controller/pid_controller.h ../components/algorithm/pid.h \
  ../components/controller/controller.h
 ../components/modules/chassis.h:
@@ -119,7 +119,6 @@ components/modules/chassis.o: ../components/modules/chassis.c \
 ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
 ../bsp/cubeMX/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
-../components/algorithm/mecanum.h:
 ../components/algorithm/skid_steer.h:
 ../components/controller/pid_controller.h:
 ../components/algorithm/pid.h:
