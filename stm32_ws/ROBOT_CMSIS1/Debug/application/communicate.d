@@ -74,7 +74,10 @@ application/communicate.o: ../application/communicate.c \
  ../application/protocol/protocol_common.h \
  ../application/protocol/protocol_cfg.h \
  ../application/protocol/protocol_interface.h \
- ../components/support/macro_mutex.h
+ ../components/support/macro_mutex.h ../components/modules/chassis.h \
+ ../components/devices/motor.h ../components/algorithm/skid_steer.h \
+ ../components/controller/pid_controller.h ../components/algorithm/pid.h \
+ ../components/controller/controller.h
 ../bsp/cubeMX/Core/Inc/can.h:
 ../bsp/cubeMX/Core/Inc/main.h:
 ../bsp/cubeMX/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -166,3 +169,9 @@ application/communicate.o: ../application/communicate.c \
 ../application/protocol/protocol_cfg.h:
 ../application/protocol/protocol_interface.h:
 ../components/support/macro_mutex.h:
+../components/modules/chassis.h:
+../components/devices/motor.h:
+../components/algorithm/skid_steer.h:
+../components/controller/pid_controller.h:
+../components/algorithm/pid.h:
+../components/controller/controller.h:

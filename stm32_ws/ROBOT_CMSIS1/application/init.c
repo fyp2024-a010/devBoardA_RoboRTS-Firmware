@@ -38,62 +38,59 @@
 
 struct chassis chassis;
 
-static uint8_t glb_sys_cfg;
+// static uint8_t glb_sys_cfg;
 
 extern int ulog_console_backend_init(void);
 
-void system_config(void)
-{
-  glb_sys_cfg = HAL_GPIO_ReadPin(SYS_CFG_GPIO_Port, SYS_CFG_Pin);
-}
+// void system_config(void)
+// {
+//   glb_sys_cfg = HAL_GPIO_ReadPin(SYS_CFG_GPIO_Port, SYS_CFG_Pin);
+// }
 
-uint8_t get_sys_cfg(void)
-{
-  return glb_sys_cfg;
-}
+// uint8_t get_sys_cfg(void)
+// {
+//   return glb_sys_cfg;
+// }
 
 void hw_init(void)
 {
-  cali_param_init();
+  // cali_param_init();
   board_config();
-  test_init();
-  system_config();
-  ulog_init();
-  ulog_console_backend_init();
+  // test_init();
+  // system_config();
+  // ulog_init();
+  // ulog_console_backend_init();
 
   chassis_pid_register(&chassis, "chassis", DEVICE_CAN1);
   chassis_disable(&chassis);
 
-  offline_init();
+  // offline_init();
 }
 
 osThreadId timer_task_t;
-osThreadId chassis_task_t;
 osThreadId communicate_task_t;
-osThreadId cmd_task_t;
-osThreadId blinky_task_t;
+// osThreadId cmd_task_t;
+// osThreadId chassis_task_t;
+// osThreadId blinky_task_t;
+osThreadId comm_test_task_t;
 
 void task_init(void)
 {
-  // uint8_t app;
-  // app = get_sys_cfg();
-
   osThreadDef(TIMER_1MS, timer_task, osPriorityHigh, 0, 512);
   timer_task_t = osThreadCreate(osThread(TIMER_1MS), NULL);
 
-  // PROBLEM was 4096
-  // changed to 2048
-  osThreadDef(COMMUNICATE_TASK, communicate_task, osPriorityHigh, 0, 2048);
-  communicate_task_t = osThreadCreate(osThread(COMMUNICATE_TASK), NULL);
+  // osThreadDef(COMMUNICATE_TASK, communicate_task, osPriorityHigh, 0, 2048);
+  // communicate_task_t = osThreadCreate(osThread(COMMUNICATE_TASK), NULL);
 
-  // PROBLEM was 4096
-  // changed to 1024
-  //  osThreadDef(CMD_TASK, infantry_cmd_task, osPriorityNormal, 0, 2048);
-  //  cmd_task_t = osThreadCreate(osThread(CMD_TASK), NULL);
+  // osThreadDef(CMD_TASK, infantry_cmd_task, osPriorityNormal, 0, 2048);
+  // cmd_task_t = osThreadCreate(osThread(CMD_TASK), NULL);
 
-   osThreadDef(CHASSIS_TASK, chassis_task, osPriorityRealtime, 0, 64);
-   chassis_task_t = osThreadCreate(osThread(CHASSIS_TASK), NULL);
+  // osThreadDef(CHASSIS_TASK, chassis_task, osPriorityRealtime, 0, 64);
+  // chassis_task_t = osThreadCreate(osThread(CHASSIS_TASK), NULL);
 
-   osThreadDef(BLINKY_TASK, blinky_task, osPriorityRealtime, 0, 64);
-   blinky_task_t = osThreadCreate(osThread(BLINKY_TASK), NULL);
+  // osThreadDef(BLINKY_TASK, blinky_task, osPriorityRealtime, 0, 64); // TESTING
+  // blinky_task_t = osThreadCreate(osThread(BLINKY_TASK), NULL); // TESTING
+
+  osThreadDef(COMM_TEST_TASK, comm_test_task_t, osPriorityHigh, 0, 4096);
+  comm_test_task_t = osThreadCreate(osThread(COMM_TEST_TASK), NULL);
 }

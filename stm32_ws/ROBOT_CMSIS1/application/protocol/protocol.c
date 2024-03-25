@@ -141,7 +141,6 @@ int32_t protocol_send_cmd_unregister(uint16_t cmd)
     * @param  address  Protocol local address, which cannot be changed after initialization. Each device in the same network occupies a unique address.
     * @retval Protocol return status
   */
-
 uint32_t protocol_local_init(uint8_t address)
 {
 

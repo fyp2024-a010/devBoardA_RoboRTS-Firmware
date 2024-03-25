@@ -1,6 +1,6 @@
 ../application/infantry_cmd.c:39:22:get_manifold_cmd	1
-../application/infantry_cmd.c:47:6:toggle_led_D	1
-../application/infantry_cmd.c:54:6:infantry_cmd_task	4
-../application/infantry_cmd.c:103:9:chassis_speed_ctrl	2
-../application/infantry_cmd.c:113:9:chassis_spd_acc_ctrl	2
-../application/infantry_cmd.c:123:9:chassis_push_info	1
+../application/infantry_cmd.c:48:6:toggle_led_D	1
+../application/infantry_cmd.c:56:6:infantry_cmd_task	4
+../application/infantry_cmd.c:100:9:chassis_speed_ctrl	2
+../application/infantry_cmd.c:110:9:chassis_spd_acc_ctrl	2
+../application/infantry_cmd.c:120:9:chassis_push_info	1

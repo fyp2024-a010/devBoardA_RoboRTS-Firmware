@@ -1,51 +1,19 @@
-/****************************************************************************
- *  Copyright (C) 2019 RoboMaster.
- *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of 
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program. If not, see <http://www.gnu.org/licenses/>.
- ***************************************************************************/
-
-#include "can.h"
-#include "board.h"
 #include "usbd_cdc_if.h"
-#include "dbus.h"
-#include "detect.h"
-#include "communicate.h"
 #include "timer_task.h"
-#include "offline_check.h"
-#include "init.h"
-#include "infantry_cmd.h"
 #include "protocol.h"
 
-#include "chassis.h" /* TESTING */
+#include "comm_test.h"
 
 static void protocol_send_success_callback(void);
 static int32_t usb_interface_send(uint8_t *p_data, uint32_t len);
 
-extern osThreadId communicate_task_t;
+extern osThreadId comm_test_task_t;
 
 static int32_t usb_rcv_callback(uint8_t *buf, uint32_t len)
 {
   protocol_uart_rcv_data(PROTOCOL_USB_PORT, buf, len);
-  osSignalSet(communicate_task_t, RECV_PROTOCOL_SIGNAL);
-  HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin); /* TESTING */
+  osSignalSet(comm_test_task_t, RECV_PROTOCOL_SIGNAL);
   return len;
-}
-
-int32_t manifold2_heart_package(uint8_t *buff, uint16_t len)
-{
-  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-  return 0;
 }
 
 int32_t report_firmware_version(uint8_t *buff, uint16_t len)
@@ -66,13 +34,12 @@ int32_t ros_callback(uint8_t *buff, uint16_t len)
 }
 /* TESTING */
 
-void communicate_task(void const *argument)
+void comm_test_task(void const *argument)
 {
   protocol_local_init(CHASSIS_ADDRESS);
   protocol_uart_interface_register("manifold2", 2048, 1, PROTOCOL_USB_PORT, usb_interface_send);
   protocol_set_route(MANIFOLD2_ADDRESS, "manifold2");
 
-  protocol_rcv_cmd_register(CMD_MANIFOLD2_HEART, manifold2_heart_package);
   protocol_rcv_cmd_register(CMD_REPORT_VERSION, report_firmware_version);
 
   usb_vcp_rx_callback_register(usb_rcv_callback);

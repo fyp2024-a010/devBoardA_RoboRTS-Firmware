@@ -2,7 +2,7 @@
 ../bsp/cubeMX/USB_DEVICE/App/usbd_cdc_if.c:172:15:CDC_DeInit_FS	4	static
 ../bsp/cubeMX/USB_DEVICE/App/usbd_cdc_if.c:186:15:CDC_Control_FS	16	static
 ../bsp/cubeMX/USB_DEVICE/App/usbd_cdc_if.c:267:15:CDC_Receive_FS	16	static
-../bsp/cubeMX/USB_DEVICE/App/usbd_cdc_if.c:287:9:CDC_Transmit_FS	24	static
-../bsp/cubeMX/USB_DEVICE/App/usbd_cdc_if.c:301:9:usb_tx_flush	48	static,ignoring_inline_asm
-../bsp/cubeMX/USB_DEVICE/App/usbd_cdc_if.c:341:15:CDC_TransmitCplt_FS	32	static
-../bsp/cubeMX/USB_DEVICE/App/usbd_cdc_if.c:353:9:usb_vcp_rx_callback_register	24	static
+../bsp/cubeMX/USB_DEVICE/App/usbd_cdc_if.c:288:9:CDC_Transmit_FS	24	static
+../bsp/cubeMX/USB_DEVICE/App/usbd_cdc_if.c:302:9:usb_tx_flush	48	static,ignoring_inline_asm
+../bsp/cubeMX/USB_DEVICE/App/usbd_cdc_if.c:342:15:CDC_TransmitCplt_FS	32	static
+../bsp/cubeMX/USB_DEVICE/App/usbd_cdc_if.c:354:9:usb_vcp_rx_callback_register	24	static

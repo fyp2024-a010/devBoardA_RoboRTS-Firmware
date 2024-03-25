@@ -1,8 +1,8 @@
-../application/communicate.c:35:16:usb_rcv_callback	1
-../application/communicate.c:42:9:manifold2_heart_package	1
-../application/communicate.c:47:9:report_firmware_version	1
-../application/communicate.c:52:6:toggle_led_C	1
-../application/communicate.c:57:9:ros_callback	1
-../application/communicate.c:63:6:communicate_task	3
-../application/communicate.c:112:16:usb_interface_send	1
-../application/communicate.c:118:13:protocol_send_success_callback	1
+../application/communicate.c:37:16:usb_rcv_callback	1
+../application/communicate.c:45:9:manifold2_heart_package	1
+../application/communicate.c:51:9:report_firmware_version	1
+../application/communicate.c:57:6:toggle_led_C	1
+../application/communicate.c:62:9:ros_callback	1
+../application/communicate.c:69:6:communicate_task	4
+../application/communicate.c:114:16:usb_interface_send	1
+../application/communicate.c:120:13:protocol_send_success_callback	1

@@ -1,4 +1,2 @@
-../application/init.c:45:6:system_config	1
-../application/init.c:50:9:get_sys_cfg	1
 ../application/init.c:55:6:hw_init	1
 ../application/init.c:76:6:task_init	1

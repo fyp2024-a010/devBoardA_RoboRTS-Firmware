@@ -1,4 +1,2 @@
-../application/init.c:45:6:system_config	8	static
-../application/init.c:50:9:get_sys_cfg	4	static
 ../application/init.c:55:6:hw_init	8	static
-../application/init.c:76:6:task_init	96	static
+../application/init.c:76:6:task_init	56	static

@@ -30,11 +30,11 @@
 #include "macro_mutex.h"
 #include "MF_CRC.h"
 
-#define PROTOCOL_CAN_PORT1 0
-#define PROTOCOL_CAN_PORT2 1
+#define PROTOCOL_CAN_PORT1 0 
+#define PROTOCOL_CAN_PORT2 1 
 
-#define PROTOCOL_USB_PORT  0
-#define PROTOCOL_COM1_PORT 1
+#define PROTOCOL_USB_PORT  0 
+#define PROTOCOL_COM1_PORT 1 
 
 enum interface_type
 {

@@ -44,21 +44,18 @@ struct manifold_cmd *get_manifold_cmd(void)
 int32_t chassis_speed_ctrl(uint8_t *buff, uint16_t len);
 int32_t chassis_spd_acc_ctrl(uint8_t *buff, uint16_t len);
 
+/* TESTING */
 void toggle_led_D(void *argc)
 {
-  HAL_GPIO_TogglePin(LED_H_GPIO_Port, LED_H_Pin);
+  HAL_GPIO_TogglePin(LED_D_GPIO_Port, LED_D_Pin);
 }
 
 #define LED_D_OFF()     HAL_GPIO_WritePin(LED_D_GPIO_Port, LED_D_Pin, GPIO_PIN_SET)
+/* TESTING */
 
 void infantry_cmd_task(void const *argument)
 {
-  LED_D_OFF();
-  // uint8_t app;
   osEvent event;
-  // app = get_sys_cfg();
-
-  // rc_device_t prc_dev = NULL;
   chassis_t pchassis = NULL;
 
   pchassis = chassis_find("chassis");
@@ -66,7 +63,7 @@ void infantry_cmd_task(void const *argument)
   protocol_rcv_cmd_register(CMD_SET_CHASSIS_SPEED, chassis_speed_ctrl);
   protocol_rcv_cmd_register(CMD_SET_CHASSIS_SPD_ACC, chassis_spd_acc_ctrl);
 
-  soft_timer_register(toggle_led_D, NULL, 1000);
+  soft_timer_register(toggle_led_D, NULL, 1000); /* TESTING */
 
   while (1)
   {
@@ -136,6 +133,7 @@ int32_t chassis_push_info(void *argc)
 
   // protocol_send(MANIFOLD2_ADDRESS, CMD_PUSH_CHASSIS_INFO, &cmd_chassis_info, sizeof(cmd_chassis_info));
 
+/* TESTING */
   struct chassis_info test_info;
   test_info.angle_deg = 1.0;
   test_info.yaw_gyro_angle = 1.0;
@@ -144,8 +142,11 @@ int32_t chassis_push_info(void *argc)
   test_info.position_y_mm = 1.0;
   test_info.v_x_mm = 1.0;
   test_info.v_y_mm = 1.0;
-  HAL_GPIO_TogglePin(LED_H_GPIO_Port, LED_H_Pin);
   protocol_send(MANIFOLD2_ADDRESS, CMD_PUSH_CHASSIS_INFO, &test_info, sizeof(test_info));
-
+/* TESTING */
   return 0;
 }
+
+// int32_t imu_push_info(void *argc){
+//   return 0;
+// }

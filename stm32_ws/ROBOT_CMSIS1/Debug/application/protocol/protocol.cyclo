@@ -5,10 +5,10 @@
 ../application/protocol/protocol.c:88:9:protocol_send_cmd_config	3
 ../application/protocol/protocol.c:113:9:protocol_rcv_cmd_unregister	4
 ../application/protocol/protocol.c:126:9:protocol_send_cmd_unregister	4
-../application/protocol/protocol.c:145:10:protocol_local_init	4
-../application/protocol/protocol.c:206:10:protocol_send	7
-../application/protocol/protocol.c:262:10:protocol_ack	3
-../application/protocol/protocol.c:282:10:protocol_send_flush	7
-../application/protocol/protocol.c:314:10:protocol_unpack_flush	3
-../application/protocol/protocol.c:333:10:protocol_rcv_data	3
-../application/protocol/protocol.c:375:12:protocol_send_list_add_callback_reg	1
+../application/protocol/protocol.c:144:10:protocol_local_init	4
+../application/protocol/protocol.c:205:10:protocol_send	7
+../application/protocol/protocol.c:261:10:protocol_ack	3
+../application/protocol/protocol.c:281:10:protocol_send_flush	7
+../application/protocol/protocol.c:313:10:protocol_unpack_flush	3
+../application/protocol/protocol.c:332:10:protocol_rcv_data	3
+../application/protocol/protocol.c:374:12:protocol_send_list_add_callback_reg	1
