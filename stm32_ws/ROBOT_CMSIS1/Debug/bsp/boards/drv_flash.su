@@ -1,2 +1,0 @@
-../bsp/boards/drv_flash.c:28:17:GetSector	24	static
-../bsp/boards/drv_flash.c:137:9:BSP_FLASH_Write	56	static

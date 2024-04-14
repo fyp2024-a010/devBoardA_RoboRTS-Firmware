@@ -1,3 +1,0 @@
-../motors/Src/motors.c:17:6:motors_init	1
-../motors/Src/motors.c:21:13:split_data_to_bytes	7
-../motors/Src/motors.c:86:6:motors_task	6

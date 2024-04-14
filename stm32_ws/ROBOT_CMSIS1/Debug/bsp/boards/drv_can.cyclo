@@ -1,9 +1,0 @@
-../bsp/boards/drv_can.c:25:6:can_manage_init	2
-../bsp/boards/drv_can.c:63:10:can_msg_bytes_send	9
-../bsp/boards/drv_can.c:134:9:can_fifo0_rx_callback_register	3
-../bsp/boards/drv_can.c:146:13:can_tx_mailbox_complete_hanle	4
-../bsp/boards/drv_can.c:188:6:HAL_CAN_TxMailbox0CompleteCallback	2
-../bsp/boards/drv_can.c:196:6:HAL_CAN_TxMailbox1CompleteCallback	2
-../bsp/boards/drv_can.c:203:6:HAL_CAN_TxMailbox2CompleteCallback	2
-../bsp/boards/drv_can.c:211:6:HAL_CAN_ErrorCallback	2
-../bsp/boards/drv_can.c:220:6:HAL_CAN_RxFifo0MsgPendingCallback	4

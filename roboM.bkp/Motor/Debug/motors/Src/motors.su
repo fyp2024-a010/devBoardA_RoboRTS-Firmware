@@ -1,2 +1,0 @@
-../motors/Src/motors.c:17:6:motors_init	8	static
-../motors/Src/motors.c:91:6:motors_task	104	static

@@ -1,2 +1,0 @@
-../application/init.c:55:6:hw_init	8	static
-../application/init.c:76:6:task_init	56	static

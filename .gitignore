@@ -1,20 +1,4 @@
 .DS_Store
-.vscode
+roboM.bkp
 .metadata
 
-robot.bkp
-
-stm32_ws/.*
-stm32_ws/ROBOT_CMSIS1/.*
-stm32_ws/ROBOT_CMSIS1/Debug
-
-stm32_ws/ROBOT_CMSIS2/.*
-stm32_ws/ROBOT_CMSIS2/Debug
-
-stm32_ws/ROBOT_DEV_CMSIS1/.*
-stm32_ws/ROBOT_DEV_CMSIS1/Debug
-
-stm32_ws/ROBOT_DEV_CMSIS2/.*
-stm32_ws/ROBOT_DEV_CMSIS2/Debug
-
-stm32_ws/RobotRTS-Firmware

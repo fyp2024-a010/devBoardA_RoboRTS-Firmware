@@ -1,8 +1,0 @@
-../bsp/boards/drv_io.c:22:6:pwm_device_init	8	static
-../bsp/boards/drv_io.c:30:6:fric_set_output	16	static
-../bsp/boards/drv_io.c:36:6:fric_get_speed	16	static
-../bsp/boards/drv_io.c:42:6:beep_set_tune	16	static
-../bsp/boards/drv_io.c:48:6:mpu_heat_output	16	static
-../bsp/boards/drv_io.c:55:9:beep_set_times	16	static
-../bsp/boards/drv_io.c:61:9:beep_ctrl_times	16	static
-../bsp/boards/drv_io.c:93:9:led_toggle_300ms	16	static

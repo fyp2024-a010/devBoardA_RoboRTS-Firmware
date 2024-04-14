@@ -1,6 +1,0 @@
-../utilities/soft_timer.c:75:6:TimerISR_Hook	4
-../utilities/soft_timer.c:103:10:soft_timer_init	2
-../utilities/soft_timer.c:117:10:soft_timer_destory	2
-../utilities/soft_timer.c:146:10:soft_timer_req	3
-../utilities/soft_timer.c:179:10:soft_timer_update	3
-../utilities/soft_timer.c:219:10:soft_timer_check	3

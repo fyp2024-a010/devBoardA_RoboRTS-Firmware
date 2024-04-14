@@ -1,9 +1,0 @@
-../bsp/boards/drv_uart.c:36:6:usart_rx_callback_register	1
-../bsp/boards/drv_uart.c:42:6:HAL_UART_RxHalfCpltCallback	2
-../bsp/boards/drv_uart.c:52:6:usart6_idle_callback	2
-../bsp/boards/drv_uart.c:61:6:usart6_manage_init	1
-../bsp/boards/drv_uart.c:79:5:usart6_printf	2
-../bsp/boards/drv_uart.c:100:6:usart6_transmit	1
-../bsp/boards/drv_uart.c:105:10:usart_transmit	7
-../bsp/boards/drv_uart.c:156:13:usart_transmit_hook	3
-../bsp/boards/drv_uart.c:184:13:usart_rec_to_buff	5

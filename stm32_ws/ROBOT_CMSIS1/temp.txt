@@ -1,5 +1,0 @@
-sudo apt-get install -y \
-                        protobuf-compiler               \
-                        libprotobuf-dev                 \
-                        libsuitesparse-dev              \
-                        libgoogle-glog-dev             

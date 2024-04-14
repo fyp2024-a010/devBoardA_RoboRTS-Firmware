@@ -1,5 +1,0 @@
-../bsp/boards/drv_dr16.c:30:9:dr16_rx_uart_callback_register	2
-../bsp/boards/drv_dr16.c:40:9:dr16_forword_callback_register	2
-../bsp/boards/drv_dr16.c:50:6:dr16_uart_init	1
-../bsp/boards/drv_dr16.c:57:10:dr16_uart_rx_data_handle	5
-../bsp/boards/drv_dr16.c:88:5:UART_Receive_DMA_No_IT	5
