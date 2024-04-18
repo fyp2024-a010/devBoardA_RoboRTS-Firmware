@@ -40,9 +40,6 @@
         * EXTI
         * Free pins are configured automatically as Analog (this feature is enabled through
         * the Code Generation settings)
-     PB13   ------> CAN2_TX
-     PD9   ------> USART3_RX
-     PD8   ------> USART3_TX
 */
 void MX_GPIO_Init(void)
 {
@@ -96,13 +93,13 @@ void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB8 PB4 PB3 PB9
-                           PB7 PB6 PB12 PB1
-                           PB0 PB10 PB11 PB14
-                           PB15 */
+                           PB7 PB6 PB12 PB13
+                           PB1 PB0 PB10 PB11
+                           PB14 PB15 */
   GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_4|GPIO_PIN_3|GPIO_PIN_9
-                          |GPIO_PIN_7|GPIO_PIN_6|GPIO_PIN_12|GPIO_PIN_1
-                          |GPIO_PIN_0|GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_14
-                          |GPIO_PIN_15;
+                          |GPIO_PIN_7|GPIO_PIN_6|GPIO_PIN_12|GPIO_PIN_13
+                          |GPIO_PIN_1|GPIO_PIN_0|GPIO_PIN_10|GPIO_PIN_11
+                          |GPIO_PIN_14|GPIO_PIN_15;
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
@@ -117,10 +114,10 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : PD7 PD5 PD4 PD3
                            PD2 PD15 PD14 PD13
-                           PD11 PD10 */
+                           PD11 PD10 PD9 PD8 */
   GPIO_InitStruct.Pin = GPIO_PIN_7|GPIO_PIN_5|GPIO_PIN_4|GPIO_PIN_3
                           |GPIO_PIN_2|GPIO_PIN_15|GPIO_PIN_14|GPIO_PIN_13
-                          |GPIO_PIN_11|GPIO_PIN_10;
+                          |GPIO_PIN_11|GPIO_PIN_10|GPIO_PIN_9|GPIO_PIN_8;
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
@@ -232,22 +229,6 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(IO_PROBE_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : PB13 */
-  GPIO_InitStruct.Pin = GPIO_PIN_13;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF9_CAN2;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : PD9 PD8 */
-  GPIO_InitStruct.Pin = GPIO_PIN_9|GPIO_PIN_8;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF7_USART3;
-  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
 }
 
