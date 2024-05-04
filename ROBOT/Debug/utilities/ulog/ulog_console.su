@@ -1,0 +1,2 @@
+../utilities/ulog/ulog_console.c:6:6:ulog_console_backend_output	24	static
+../utilities/ulog/ulog_console.c:12:5:ulog_console_backend_init	8	static

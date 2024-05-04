@@ -1,0 +1,2 @@
+../components/algorithm/mahony_ahrs.c:39:6:mahony_ahrs_update	8
+../components/algorithm/mahony_ahrs.c:157:6:mahony_ahrs_updateIMU	5

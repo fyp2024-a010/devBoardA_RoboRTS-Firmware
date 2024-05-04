@@ -1,0 +1,7 @@
+../bsp/cubemx/USB_DEVICE/App/usbd_cdc_if.c:188:15:CDC_Init_FS	1
+../bsp/cubemx/USB_DEVICE/App/usbd_cdc_if.c:203:15:CDC_DeInit_FS	1
+../bsp/cubemx/USB_DEVICE/App/usbd_cdc_if.c:217:15:CDC_Control_FS	1
+../bsp/cubemx/USB_DEVICE/App/usbd_cdc_if.c:297:15:CDC_Receive_FS	3
+../bsp/cubemx/USB_DEVICE/App/usbd_cdc_if.c:325:9:CDC_Transmit_FS	1
+../bsp/cubemx/USB_DEVICE/App/usbd_cdc_if.c:335:9:usb_tx_flush	2
+../bsp/cubemx/USB_DEVICE/App/usbd_cdc_if.c:361:9:usb_vcp_rx_callback_register	3

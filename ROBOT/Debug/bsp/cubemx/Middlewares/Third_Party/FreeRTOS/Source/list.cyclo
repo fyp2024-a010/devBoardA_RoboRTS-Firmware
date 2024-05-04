@@ -1,0 +1,5 @@
+../bsp/cubemx/Middlewares/Third_Party/FreeRTOS/Source/list.c:79:6:vListInitialise	1
+../bsp/cubemx/Middlewares/Third_Party/FreeRTOS/Source/list.c:104:6:vListInitialiseItem	1
+../bsp/cubemx/Middlewares/Third_Party/FreeRTOS/Source/list.c:116:6:vListInsertEnd	1
+../bsp/cubemx/Middlewares/Third_Party/FreeRTOS/Source/list.c:145:6:vListInsert	3
+../bsp/cubemx/Middlewares/Third_Party/FreeRTOS/Source/list.c:212:13:uxListRemove	2
