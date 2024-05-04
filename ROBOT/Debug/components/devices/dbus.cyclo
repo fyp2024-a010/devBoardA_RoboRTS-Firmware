@@ -1,7 +1,0 @@
-../components/devices/dbus.c:23:9:rc_device_register	3
-../components/devices/dbus.c:41:9:rc_device_date_update	2
-../components/devices/dbus.c:52:9:rc_device_get_state	3
-../components/devices/dbus.c:78:11:rc_device_get_info	2
-../components/devices/dbus.c:88:13:rc_device_find	3
-../components/devices/dbus.c:110:13:get_dr16_data	13
-../components/devices/dbus.c:159:13:get_dr16_state	15

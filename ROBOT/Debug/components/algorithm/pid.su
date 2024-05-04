@@ -1,5 +1,0 @@
-../components/algorithm/pid.c:21:6:abs_limit	16	static
-../components/algorithm/pid.c:29:13:pid_param_init	32	static
-../components/algorithm/pid.c:52:13:pid_reset	24	static
-../components/algorithm/pid.c:71:7:pid_calculate	24	static
-../components/algorithm/pid.c:93:6:pid_struct_init	32	static
