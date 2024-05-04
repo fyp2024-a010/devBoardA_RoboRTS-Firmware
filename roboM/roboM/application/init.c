@@ -1,8 +1,9 @@
 #include "main.h"
 
-#include "init.h"
 #include "blinky_task.h"
 #include "timer_task.h"
+
+#include "init.h"
 
 void hw_init(void)
 {
