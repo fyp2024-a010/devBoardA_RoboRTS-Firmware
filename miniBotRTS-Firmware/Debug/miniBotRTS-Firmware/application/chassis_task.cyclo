@@ -1,0 +1,6 @@
+../miniBotRTS-Firmware/application/chassis_task.c:12:9:toggle_led_red	1
+../miniBotRTS-Firmware/application/chassis_task.c:19:9:motor_can1_output_1ms	1
+../miniBotRTS-Firmware/application/chassis_task.c:25:9:motor_canstd_send	1
+../miniBotRTS-Firmware/application/chassis_task.c:31:9:can1_motor_msg_rec	1
+../miniBotRTS-Firmware/application/chassis_task.c:36:6:chassis_task_init	1
+../miniBotRTS-Firmware/application/chassis_task.c:59:6:chassis_task	1

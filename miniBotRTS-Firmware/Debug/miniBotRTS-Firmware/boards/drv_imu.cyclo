@@ -1,0 +1,14 @@
+../miniBotRTS-Firmware/boards/drv_imu.c:43:9:mpu_write_reg	1
+../miniBotRTS-Firmware/boards/drv_imu.c:54:9:mpu_read_reg	1
+../miniBotRTS-Firmware/boards/drv_imu.c:64:9:mpu_read_regs	1
+../miniBotRTS-Firmware/boards/drv_imu.c:75:13:ist_reg_write_by_mpu	1
+../miniBotRTS-Firmware/boards/drv_imu.c:89:16:ist_reg_read_by_mpu	1
+../miniBotRTS-Firmware/boards/drv_imu.c:103:13:mpu_mst_i2c_auto_read_config	1
+../miniBotRTS-Firmware/boards/drv_imu.c:134:9:ist8310_init	6
+../miniBotRTS-Firmware/boards/drv_imu.c:195:6:ist8310_get_data	1
+../miniBotRTS-Firmware/boards/drv_imu.c:201:6:mpu_get_data	1
+../miniBotRTS-Firmware/boards/drv_imu.c:233:6:mpu_get_temp	1
+../miniBotRTS-Firmware/boards/drv_imu.c:238:9:mpu_device_init	6
+../miniBotRTS-Firmware/boards/drv_imu.c:290:13:get_mpu_gyro_offset	2
+../miniBotRTS-Firmware/boards/drv_imu.c:310:13:get_mpu_acc_offset	2
+../miniBotRTS-Firmware/boards/drv_imu.c:331:13:get_ist_mag_offset	5

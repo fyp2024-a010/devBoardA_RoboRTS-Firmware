@@ -1,0 +1,10 @@
+../miniBotRTS-Firmware/application/mb_protocol/mb_protocol.c:15:9:process_request	2
+../miniBotRTS-Firmware/application/mb_protocol/mb_protocol.c:27:9:determine_receiving_data	7
+../miniBotRTS-Firmware/application/mb_protocol/mb_protocol.c:37:9:get_response	30
+../miniBotRTS-Firmware/application/mb_protocol/mb_protocol.c:66:9:get_cmd_vel_response	7
+../miniBotRTS-Firmware/application/mb_protocol/mb_protocol.c:99:9:get_odom_response	14
+../miniBotRTS-Firmware/application/mb_protocol/mb_protocol.c:133:9:get_imu_response	11
+../miniBotRTS-Firmware/application/mb_protocol/mb_protocol.c:161:9:float_to_int32_scaled	1
+../miniBotRTS-Firmware/application/mb_protocol/mb_protocol.c:164:7:int32_to_float_scaled	1
+../miniBotRTS-Firmware/application/mb_protocol/mb_protocol.c:168:9:int32_to_bytes	2
+../miniBotRTS-Firmware/application/mb_protocol/mb_protocol.c:184:9:bytes_to_int32	2

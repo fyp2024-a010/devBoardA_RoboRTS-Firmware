@@ -1,0 +1,10 @@
+../miniBotRTS-Firmware/components/devices/motor.c:27:9:motor_device_register	24	static
+../miniBotRTS-Firmware/components/devices/motor.c:50:6:motor_device_can_send_register	16	static
+../miniBotRTS-Firmware/components/devices/motor.c:55:16:motor_device_find	24	static
+../miniBotRTS-Firmware/components/devices/motor.c:73:14:motor_device_get_data	16	static
+../miniBotRTS-Firmware/components/devices/motor.c:80:9:motor_device_set_current	16	static
+../miniBotRTS-Firmware/components/devices/motor.c:89:16:motor_device_find_by_canid	56	static,ignoring_inline_asm
+../miniBotRTS-Firmware/components/devices/motor.c:130:9:motor_device_can_output	64	static,ignoring_inline_asm
+../miniBotRTS-Firmware/components/devices/motor.c:183:9:motor_device_data_update	24	static
+../miniBotRTS-Firmware/components/devices/motor.c:194:13:get_encoder_data	24	static
+../miniBotRTS-Firmware/components/devices/motor.c:228:13:get_motor_offset	16	static

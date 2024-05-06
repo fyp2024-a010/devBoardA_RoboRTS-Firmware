@@ -1,6 +1,8 @@
 #include "mb_protocol_task.h"
-#include "mb_protocol/mb_protocol.h"
-#include <stdint.h>
+
+struct twist_msg cmd_twist;
+struct odom_msg robot_odom;
+struct imu_msg robot_imu;
 
 uint8_t waiting4master = 1;
 
@@ -15,6 +17,8 @@ static int32_t usb_rcv_callback(uint8_t *buf, uint32_t len) {
   if (waiting4master == 1) {
     waiting4master = 0;
     process_request(buf);
+//    usb_send(get_response(&cmd_twist, &robot_odom, &robot_imu));
+//    waiting4master = 1;
   }
   return 0;
 }
@@ -25,11 +29,12 @@ void mb_protocol_task(void const *argument) {
   // soft_timer_register(usb_tx_flush_run, NULL, 1);
 
   for (;;) {
-    if (waiting4master == 0) {
-      usb_send(get_response());
-      waiting4master = 1;
-    } else {
-      osDelay(1);
-    }
+//    osDelay(1);
+     if (waiting4master == 0) {
+       usb_send(get_response(&cmd_twist, &robot_odom, &robot_imu));
+       waiting4master = 1;
+     } else {
+       osDelay(1);
+     }
   }
 }

@@ -1,0 +1,9 @@
+../miniBotRTS-Firmware/components/support/mf_crc.c:57:9:get_crc8	32	static
+../miniBotRTS-Firmware/components/support/mf_crc.c:120:10:verify_crc8	24	static
+../miniBotRTS-Firmware/components/support/mf_crc.c:136:6:append_crc8	24	static
+../miniBotRTS-Firmware/components/support/mf_crc.c:200:10:get_crc16	32	static
+../miniBotRTS-Firmware/components/support/mf_crc.c:223:10:verify_crc16	24	static
+../miniBotRTS-Firmware/components/support/mf_crc.c:241:6:append_crc16	24	static
+../miniBotRTS-Firmware/components/support/mf_crc.c:314:10:get_crc32	32	static
+../miniBotRTS-Firmware/components/support/mf_crc.c:337:10:verify_crc32	24	static
+../miniBotRTS-Firmware/components/support/mf_crc.c:360:6:append_crc32	24	static

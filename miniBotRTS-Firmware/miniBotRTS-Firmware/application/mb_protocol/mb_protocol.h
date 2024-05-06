@@ -88,7 +88,8 @@ struct imu_msg
 };
 
 int32_t process_request(uint8_t *buf);
-uint8_t get_ready2send_status(void);
+int32_t get_response(struct twist_msg *twist_msg, struct odom_msg *odom_msg,
+                     struct imu_msg *imu_msg);
 
 uint8_t int32_to_bytes(int32_t value, uint8_t *bytes, int8_t is_big_endian);
 int32_t float_to_int32_scaled(float num);

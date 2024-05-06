@@ -2,6 +2,7 @@
 #define BLINKY_TASK_H_
 
 #include "main.h"
+
 #include "timer_task.h"
 
 void blinky_task(void const *argument);

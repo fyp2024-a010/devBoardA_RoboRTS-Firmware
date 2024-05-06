@@ -1,0 +1,4 @@
+../miniBotRTS-Firmware/components/controller/pid_controller.c:21:9:pid_controller_register	32	static
+../miniBotRTS-Firmware/components/controller/pid_controller.c:36:9:pid_control	32	static
+../miniBotRTS-Firmware/components/controller/pid_controller.c:48:9:cascade_controller_register	32	static
+../miniBotRTS-Firmware/components/controller/pid_controller.c:63:9:cascade_control	32	static

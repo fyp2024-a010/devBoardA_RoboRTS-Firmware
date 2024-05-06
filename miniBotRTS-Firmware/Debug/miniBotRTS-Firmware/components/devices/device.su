@@ -1,0 +1,3 @@
+../miniBotRTS-Firmware/components/devices/device.c:20:9:device_register	24	static
+../miniBotRTS-Firmware/components/devices/device.c:38:9:device_unregister	16	static
+../miniBotRTS-Firmware/components/devices/device.c:50:10:device_find	24	static

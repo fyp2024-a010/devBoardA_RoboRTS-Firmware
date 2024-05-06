@@ -1,0 +1,2 @@
+../miniBotRTS-Firmware/components/algorithm/skid_steer.c:23:6:skid_steer_calculate	9
+../miniBotRTS-Firmware/components/algorithm/skid_steer.c:60:6:skid_steer_position_measure	1

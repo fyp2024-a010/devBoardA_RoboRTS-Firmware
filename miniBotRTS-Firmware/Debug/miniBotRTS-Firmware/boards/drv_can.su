@@ -1,0 +1,9 @@
+../miniBotRTS-Firmware/boards/drv_can.c:25:6:can_manage_init	56	static
+../miniBotRTS-Firmware/boards/drv_can.c:64:10:can_msg_bytes_send	88	static
+../miniBotRTS-Firmware/boards/drv_can.c:135:9:can_fifo0_rx_callback_register	24	static
+../miniBotRTS-Firmware/boards/drv_can.c:147:13:can_tx_mailbox_complete_hanle	80	static,ignoring_inline_asm
+../miniBotRTS-Firmware/boards/drv_can.c:189:6:HAL_CAN_TxMailbox0CompleteCallback	16	static
+../miniBotRTS-Firmware/boards/drv_can.c:197:6:HAL_CAN_TxMailbox1CompleteCallback	16	static
+../miniBotRTS-Firmware/boards/drv_can.c:204:6:HAL_CAN_TxMailbox2CompleteCallback	16	static
+../miniBotRTS-Firmware/boards/drv_can.c:212:6:HAL_CAN_ErrorCallback	16	static
+../miniBotRTS-Firmware/boards/drv_can.c:221:6:HAL_CAN_RxFifo0MsgPendingCallback	56	static

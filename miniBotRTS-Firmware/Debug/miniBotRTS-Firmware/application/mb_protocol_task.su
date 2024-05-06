@@ -1,0 +1,3 @@
+../miniBotRTS-Firmware/application/mb_protocol_task.c:9:6:usb_send	24	static
+../miniBotRTS-Firmware/application/mb_protocol_task.c:16:16:usb_rcv_callback	16	static
+../miniBotRTS-Firmware/application/mb_protocol_task.c:26:6:mb_protocol_task	16	static

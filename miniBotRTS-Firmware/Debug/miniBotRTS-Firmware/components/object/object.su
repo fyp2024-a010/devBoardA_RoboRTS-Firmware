@@ -1,0 +1,8 @@
+../miniBotRTS-Firmware/components/support/linux_list.h:71:22:__list_add	24	static
+../miniBotRTS-Firmware/components/support/linux_list.h:89:22:list_add	16	static
+../miniBotRTS-Firmware/components/support/linux_list.h:114:22:__list_del	16	static
+../miniBotRTS-Firmware/components/support/linux_list.h:126:22:list_del	16	static
+../miniBotRTS-Firmware/components/object/object.c:48:28:object_get_information	24	static
+../miniBotRTS-Firmware/components/object/object.c:58:9:object_init	48	static,ignoring_inline_asm
+../miniBotRTS-Firmware/components/object/object.c:92:10:object_find	48	static,ignoring_inline_asm
+../miniBotRTS-Firmware/components/object/object.c:128:6:object_detach	32	static,ignoring_inline_asm

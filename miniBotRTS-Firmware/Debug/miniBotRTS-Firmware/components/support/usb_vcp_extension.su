@@ -1,0 +1,12 @@
+../miniBotRTS-Firmware/components/support/usb_vcp_extension.c:24:6:usb_vcp_init	16	static
+../miniBotRTS-Firmware/components/support/usb_vcp_extension.c:39:6:usb_vcp_receive_processing	24	static
+../miniBotRTS-Firmware/components/support/usb_vcp_extension.c:50:8:usb_vcp_transmit_callback_processing	16	static
+../miniBotRTS-Firmware/components/support/usb_vcp_extension.c:59:9:usb_vcp_transmit_processing	16	static
+../miniBotRTS-Firmware/components/support/usb_vcp_extension.c:66:9:transmit_processing_stm32_default	24	static
+../miniBotRTS-Firmware/components/support/usb_vcp_extension.c:78:6:usb_vcp_tx_write_fifo	16	static
+../miniBotRTS-Firmware/components/support/usb_vcp_extension.c:86:9:transmit_processing_robomaster_fifo	16	static
+../miniBotRTS-Firmware/components/support/usb_vcp_extension.c:92:9:usb_vcp_rx_callback_register	24	static
+../miniBotRTS-Firmware/components/support/usb_vcp_extension.c:102:6:set_usb_tx_need_flushing	24	static,ignoring_inline_asm
+../miniBotRTS-Firmware/components/support/usb_vcp_extension.c:110:9:usb_tx_flush	48	static,ignoring_inline_asm
+../miniBotRTS-Firmware/components/support/usb_vcp_extension.c:134:9:usb_tx_flush_run	16	static
+../miniBotRTS-Firmware/components/support/usb_vcp_extension.c:141:6:force_send	24	static

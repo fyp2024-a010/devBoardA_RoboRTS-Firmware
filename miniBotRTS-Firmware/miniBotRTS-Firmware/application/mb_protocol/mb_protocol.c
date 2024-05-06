@@ -1,26 +1,19 @@
 #include "mb_protocol.h"
-#include <stdint.h>
 
-int32_t test32 = 0;
 // REQ TYPE
 int32_t request_type;
 uint32_t receving_data = 0;
 int32_t data_received = 0;
-uint8_t ready2send = 0;
-
-struct twist_msg twist;
-struct odom_msg odom;
-struct imu_msg imu;
 
 uint8_t determine_receiving_data(int32_t cmd);
 
-int32_t get_cmd_vel_response(int32_t cmd_type, int32_t cmd_data);
-int32_t get_odom_response(int32_t odom_type);
-int32_t get_imu_response(int32_t imu_type);
+int32_t get_cmd_vel_response(struct twist_msg *twist_msg, int32_t cmd_type,
+                             int32_t cmd_data);
+int32_t get_odom_response(struct odom_msg *odom_msg, int32_t odom_type);
+int32_t get_imu_response(struct imu_msg *imu_msg, int32_t imu_type);
 
 int32_t process_request(uint8_t *buf) {
   int32_t rcv_value = bytes_to_int32(buf, LITTLE_ENDIAN);
-  test32 = rcv_value;
   if (receving_data == 1) {
     receving_data = 0;
     data_received = rcv_value;
@@ -30,8 +23,6 @@ int32_t process_request(uint8_t *buf) {
   }
   return rcv_value;
 }
-
-uint8_t get_ready2send_status(void) { return ready2send; }
 
 uint8_t determine_receiving_data(int32_t cmd) {
   if (cmd == CMD_VEL_LINEAR_X || cmd == CMD_VEL_LINEAR_Y ||
@@ -43,11 +34,12 @@ uint8_t determine_receiving_data(int32_t cmd) {
   }
 }
 
-int32_t get_response(void) {
+int32_t get_response(struct twist_msg *twist_msg, struct odom_msg *odom_msg,
+                     struct imu_msg *imu_msg) {
   if (request_type == CMD_VEL_LINEAR_X || request_type == CMD_VEL_LINEAR_Y ||
       request_type == CMD_VEL_LINEAR_Z || request_type == CMD_VEL_ANGULAR_X ||
       request_type == CMD_VEL_ANGULAR_Y || request_type == CMD_VEL_ANGULAR_Z) {
-    return get_cmd_vel_response(request_type, data_received);
+    return get_cmd_vel_response(twist_msg, request_type, data_received);
   } else if (request_type == ODOM_POINT_X || request_type == ODOM_POINT_Y ||
              request_type == ODOM_POINT_Z || request_type == ODOM_LINEAR_X ||
              request_type == ODOM_LINEAR_Y || request_type == ODOM_LINEAR_Z ||
@@ -57,7 +49,7 @@ int32_t get_response(void) {
              request_type == ODOM_QUATERNION_Y ||
              request_type == ODOM_QUATERNION_Z ||
              request_type == ODOM_QUATERNION_W) {
-    return get_odom_response(request_type);
+    return get_odom_response(odom_msg, request_type);
   } else if (request_type == IMU_ACCEL_X || request_type == IMU_ACCEL_Y ||
              request_type == IMU_ACCEL_Z || request_type == IMU_ANGULAR_X ||
              request_type == IMU_ANGULAR_Y || request_type == IMU_ANGULAR_Z ||
@@ -65,100 +57,101 @@ int32_t get_response(void) {
              request_type == IMU_QUATERNION_Y ||
              request_type == IMU_QUATERNION_Z ||
              request_type == IMU_QUATERNION_W) {
-    return get_imu_response(request_type);
+    return get_imu_response(imu_msg, request_type);
   } else {
     return ACK;
   }
 }
 
-int32_t get_cmd_vel_response(int32_t cmd_type, int32_t cmd_data) {
+int32_t get_cmd_vel_response(struct twist_msg *twist_msg, int32_t cmd_type,
+                             int32_t cmd_data) {
   float cmd_vel_data = int32_to_float_scaled(cmd_data);
   switch (cmd_type) {
   case CMD_VEL_LINEAR_X:
-    twist.linear.x = cmd_vel_data;
+    twist_msg->linear.x = cmd_vel_data;
     break;
   case CMD_VEL_LINEAR_Y:
-    twist.linear.y = cmd_vel_data;
+    twist_msg->linear.y = cmd_vel_data;
     break;
   case CMD_VEL_LINEAR_Z:
-    twist.linear.z = cmd_vel_data;
+    twist_msg->linear.z = cmd_vel_data;
     break;
   case CMD_VEL_ANGULAR_X:
-    twist.angular.x = cmd_vel_data;
+    twist_msg->angular.x = cmd_vel_data;
     break;
   case CMD_VEL_ANGULAR_Y:
-    twist.angular.y = cmd_vel_data;
+    twist_msg->angular.y = cmd_vel_data;
     break;
   case CMD_VEL_ANGULAR_Z:
-    twist.angular.z = cmd_vel_data;
+    twist_msg->angular.z = cmd_vel_data;
     break;
   default:
-    twist.linear.x = 0;
-    twist.linear.y = 0;
-    twist.linear.z = 0;
-    twist.angular.x = 0;
-    twist.angular.y = 0;
-    twist.angular.z = 0;
+    twist_msg->linear.x = 0;
+    twist_msg->linear.y = 0;
+    twist_msg->linear.z = 0;
+    twist_msg->angular.x = 0;
+    twist_msg->angular.y = 0;
+    twist_msg->angular.z = 0;
   }
   return ACK;
 }
 
-int32_t get_odom_response(int32_t odom_type) {
+int32_t get_odom_response(struct odom_msg *odom_msg, int32_t odom_type) {
   switch (odom_type) {
   case ODOM_POINT_X:
-    return float_to_int32_scaled(odom.point.x);
+    return float_to_int32_scaled(odom_msg->point.x);
   case ODOM_POINT_Y:
-    return float_to_int32_scaled(odom.point.y);
+    return float_to_int32_scaled(odom_msg->point.y);
   case ODOM_POINT_Z:
-    return float_to_int32_scaled(odom.point.z);
+    return float_to_int32_scaled(odom_msg->point.z);
   case ODOM_QUATERNION_X:
-    return float_to_int32_scaled(odom.quaternion.x);
+    return float_to_int32_scaled(odom_msg->quaternion.x);
   case ODOM_QUATERNION_Y:
-    return float_to_int32_scaled(odom.quaternion.y);
+    return float_to_int32_scaled(odom_msg->quaternion.y);
   case ODOM_QUATERNION_Z:
-    return float_to_int32_scaled(odom.quaternion.z);
+    return float_to_int32_scaled(odom_msg->quaternion.z);
   case ODOM_QUATERNION_W:
-    return float_to_int32_scaled(odom.quaternion.w);
+    return float_to_int32_scaled(odom_msg->quaternion.w);
   case ODOM_LINEAR_X:
-    return float_to_int32_scaled(odom.linear.x);
+    return float_to_int32_scaled(odom_msg->linear.x);
   case ODOM_LINEAR_Y:
-    return float_to_int32_scaled(odom.linear.y);
+    return float_to_int32_scaled(odom_msg->linear.y);
   case ODOM_LINEAR_Z:
-    return float_to_int32_scaled(odom.linear.z);
+    return float_to_int32_scaled(odom_msg->linear.z);
   case ODOM_ANGULAR_X:
-    return float_to_int32_scaled(odom.angular.x);
+    return float_to_int32_scaled(odom_msg->angular.x);
   case ODOM_ANGULAR_Y:
-    return float_to_int32_scaled(odom.angular.y);
+    return float_to_int32_scaled(odom_msg->angular.y);
   case ODOM_ANGULAR_Z:
-    return float_to_int32_scaled(odom.angular.z);
+    return float_to_int32_scaled(odom_msg->angular.z);
   default:
     return ACK;
   }
   return ACK;
 }
 
-int32_t get_imu_response(int32_t imu_type) {
+int32_t get_imu_response(struct imu_msg *imu_msg, int32_t imu_type) {
   switch (imu_type) {
   case IMU_QUATERNION_X:
-    return float_to_int32_scaled(imu.quaternion.x);
+    return float_to_int32_scaled(imu_msg->quaternion.x);
   case IMU_QUATERNION_Y:
-    return float_to_int32_scaled(imu.quaternion.y);
+    return float_to_int32_scaled(imu_msg->quaternion.y);
   case IMU_QUATERNION_Z:
-    return float_to_int32_scaled(imu.quaternion.z);
+    return float_to_int32_scaled(imu_msg->quaternion.z);
   case IMU_QUATERNION_W:
-    return float_to_int32_scaled(imu.quaternion.w);
+    return float_to_int32_scaled(imu_msg->quaternion.w);
   case IMU_ANGULAR_X:
-    return float_to_int32_scaled(imu.angular.x);
+    return float_to_int32_scaled(imu_msg->angular.x);
   case IMU_ANGULAR_Y:
-    return float_to_int32_scaled(imu.angular.y);
+    return float_to_int32_scaled(imu_msg->angular.y);
   case IMU_ANGULAR_Z:
-    return float_to_int32_scaled(imu.angular.z);
+    return float_to_int32_scaled(imu_msg->angular.z);
   case IMU_ACCEL_X:
-    return float_to_int32_scaled(imu.accel.x);
+    return float_to_int32_scaled(imu_msg->accel.x);
   case IMU_ACCEL_Y:
-    return float_to_int32_scaled(imu.accel.y);
+    return float_to_int32_scaled(imu_msg->accel.y);
   case IMU_ACCEL_Z:
-    return float_to_int32_scaled(imu.accel.z);
+    return float_to_int32_scaled(imu_msg->accel.z);
   default:
     return ACK;
   }

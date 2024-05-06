@@ -1,0 +1,2 @@
+../miniBotRTS-Firmware/application/timer_task.c:31:6:timer_task	24	static
+../miniBotRTS-Firmware/application/timer_task.c:70:9:soft_timer_register	32	static
