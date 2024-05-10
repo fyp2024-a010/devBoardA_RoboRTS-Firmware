@@ -31,7 +31,7 @@ void skid_steer_calculate(struct skid_steer *ss) {
   float max = 0;
 
   // RIGHT
-  wheel_rpm[0] = ((ss->speed.vx / RADIUS) +
+  wheel_rpm[0] = -1.0f * ((ss->speed.vx / RADIUS) +
                   (WHEELTRACK * (ss->speed.vw / RADIAN_COEF) / RADIUS)) *
                  (M_PI * 60);
   wheel_rpm[3] = wheel_rpm[0];
@@ -73,8 +73,8 @@ void skid_steer_position_measure(struct skid_steer *ss,
   last_d_x = d_x;
   last_d_w = d_w;
 
-  float ecd_r = (wheel_fdb[0].total_ecd + wheel_fdb[1].total_ecd) / 2.0;
-  float ecd_l = (wheel_fdb[2].total_ecd + wheel_fdb[3].total_ecd) / 2.0;
+  float ecd_r = -1.0f * (wheel_fdb[0].total_ecd + wheel_fdb[3].total_ecd) / 2.0;
+  float ecd_l = (wheel_fdb[1].total_ecd + wheel_fdb[2].total_ecd) / 2.0;
 
   d_x = ecd_ratio * (ecd_r + ecd_l) / 2.0f;
   d_w = ecd_ratio * (ecd_r - ecd_l) / WHEELTRACK;
@@ -91,8 +91,8 @@ void skid_steer_position_measure(struct skid_steer *ss,
   ss->position.position_y_mm = position_y;        // mm
   ss->position.angle_deg = angle_w * RADIAN_COEF; // degree
 
-  float rpmR = (wheel_fdb[0].speed_rpm + wheel_fdb[1].speed_rpm) / 2.0f;
-  float rpmL = (wheel_fdb[2].speed_rpm + wheel_fdb[3].speed_rpm) / 2.0f;
+  float rpmR = -1.0f * (wheel_fdb[0].speed_rpm + wheel_fdb[3].speed_rpm) / 2.0f;
+  float rpmL = (wheel_fdb[1].speed_rpm + wheel_fdb[2].speed_rpm) / 2.0f;
   v_x = rpm_ratio * (rpmR + rpmL) / 2.0f;
   v_w = rpm_ratio * (rpmR - rpmL) / WHEELTRACK;
 

@@ -61,11 +61,11 @@ Archive member included to satisfy reference by file (symbol)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_atan.o)
                               /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_atan2.o) (atan)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_cos.o)
-                              ./miniBotRTS-Firmware/application/imu_task.o (cos)
+                              ./miniBotRTS-Firmware/application/chassis_task.o (cos)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_fabs.o)
                               /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-w_asin.o) (fabs)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_sin.o)
-                              ./miniBotRTS-Firmware/application/imu_task.o (sin)
+                              ./miniBotRTS-Firmware/application/chassis_task.o (sin)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_sqrt.o)
                               /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_asin.o) (__ieee754_sqrt)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_nan.o)
@@ -83,7 +83,7 @@ Archive member included to satisfy reference by file (symbol)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_floor.o)
                               /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-k_rem_pio2.o) (floor)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldf3.o)
-                              ./miniBotRTS-Firmware/application/imu_task.o (__aeabi_dmul)
+                              ./miniBotRTS-Firmware/application/chassis_task.o (__aeabi_dmul)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
                               ./miniBotRTS-Firmware/components/algorithm/mecanum.o (__aeabi_dsub)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldivdf3.o)
@@ -95,7 +95,7 @@ Archive member included to satisfy reference by file (symbol)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixdfsi.o)
                               /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_rem_pio2.o) (__aeabi_d2iz)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_truncdfsf2.o)
-                              ./miniBotRTS-Firmware/application/imu_task.o (__aeabi_d2f)
+                              ./miniBotRTS-Firmware/application/chassis_task.o (__aeabi_d2f)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/libgcc.a(_aeabi_uldivmod.o)
                               ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o (__aeabi_uldivmod)
 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
@@ -11709,7 +11709,7 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
                 0x0000000008000000                g_pfnVectors
                 0x00000000080001ac                . = ALIGN (0x4)
 
-.text           0x00000000080001b0    0x132d0
+.text           0x00000000080001b0    0x13570
                 0x00000000080001b0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080001b0       0x40 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -12788,501 +12788,502 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
                 0x000000000800d504       0x8c ./miniBotRTS-Firmware/application/chassis_task.o
                 0x000000000800d504                chassis_task_init
  .text.chassis_task
-                0x000000000800d590       0x78 ./miniBotRTS-Firmware/application/chassis_task.o
+                0x000000000800d590      0x304 ./miniBotRTS-Firmware/application/chassis_task.o
                 0x000000000800d590                chassis_task
  .text.imu_update
-                0x000000000800d608      0x298 ./miniBotRTS-Firmware/application/imu_task.o
-                0x000000000800d608                imu_update
+                0x000000000800d894      0x298 ./miniBotRTS-Firmware/application/imu_task.o
+                0x000000000800d894                imu_update
  .text.imu_task
-                0x000000000800d8a0       0x18 ./miniBotRTS-Firmware/application/imu_task.o
-                0x000000000800d8a0                imu_task
+                0x000000000800db2c       0x18 ./miniBotRTS-Firmware/application/imu_task.o
+                0x000000000800db2c                imu_task
  .text.task_init
-                0x000000000800d8b8       0xdc ./miniBotRTS-Firmware/application/init.o
-                0x000000000800d8b8                task_init
+                0x000000000800db44       0xdc ./miniBotRTS-Firmware/application/init.o
+                0x000000000800db44                task_init
  .text.usb_send
-                0x000000000800d994       0x2a ./miniBotRTS-Firmware/application/mb_protocol_task.o
-                0x000000000800d994                usb_send
- *fill*         0x000000000800d9be        0x2 
+                0x000000000800dc20       0x2a ./miniBotRTS-Firmware/application/mb_protocol_task.o
+                0x000000000800dc20                usb_send
+ *fill*         0x000000000800dc4a        0x2 
  .text.usb_rcv_callback
-                0x000000000800d9c0       0x2c ./miniBotRTS-Firmware/application/mb_protocol_task.o
+                0x000000000800dc4c       0x2c ./miniBotRTS-Firmware/application/mb_protocol_task.o
  .text.mb_protocol_task
-                0x000000000800d9ec       0x54 ./miniBotRTS-Firmware/application/mb_protocol_task.o
-                0x000000000800d9ec                mb_protocol_task
+                0x000000000800dc78       0x54 ./miniBotRTS-Firmware/application/mb_protocol_task.o
+                0x000000000800dc78                mb_protocol_task
  .text.timer_task
-                0x000000000800da40       0xa8 ./miniBotRTS-Firmware/application/timer_task.o
-                0x000000000800da40                timer_task
+                0x000000000800dccc       0xa8 ./miniBotRTS-Firmware/application/timer_task.o
+                0x000000000800dccc                timer_task
  .text.soft_timer_register
-                0x000000000800dae8       0x80 ./miniBotRTS-Firmware/application/timer_task.o
-                0x000000000800dae8                soft_timer_register
+                0x000000000800dd74       0x80 ./miniBotRTS-Firmware/application/timer_task.o
+                0x000000000800dd74                soft_timer_register
  .text.process_request
-                0x000000000800db68       0x58 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
-                0x000000000800db68                process_request
+                0x000000000800ddf4       0x58 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+                0x000000000800ddf4                process_request
  .text.determine_receiving_data
-                0x000000000800dbc0       0x54 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
-                0x000000000800dbc0                determine_receiving_data
+                0x000000000800de4c       0x54 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+                0x000000000800de4c                determine_receiving_data
  .text.get_response
-                0x000000000800dc14      0x1a4 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
-                0x000000000800dc14                get_response
+                0x000000000800dea0      0x1a4 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+                0x000000000800dea0                get_response
  .text.get_cmd_vel_response
-                0x000000000800ddb8       0xac ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
-                0x000000000800ddb8                get_cmd_vel_response
+                0x000000000800e044       0xac ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+                0x000000000800e044                get_cmd_vel_response
  .text.get_odom_response
-                0x000000000800de64      0x160 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
-                0x000000000800de64                get_odom_response
+                0x000000000800e0f0      0x160 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+                0x000000000800e0f0                get_odom_response
  .text.get_imu_response
-                0x000000000800dfc4      0x11c ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
-                0x000000000800dfc4                get_imu_response
+                0x000000000800e250      0x11c ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+                0x000000000800e250                get_imu_response
  .text.float_to_int32_scaled
-                0x000000000800e0e0       0x30 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
-                0x000000000800e0e0                float_to_int32_scaled
+                0x000000000800e36c       0x30 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+                0x000000000800e36c                float_to_int32_scaled
  .text.int32_to_float_scaled
-                0x000000000800e110       0x30 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
-                0x000000000800e110                int32_to_float_scaled
+                0x000000000800e39c       0x30 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+                0x000000000800e39c                int32_to_float_scaled
  .text.int32_to_bytes
-                0x000000000800e140       0x7e ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
-                0x000000000800e140                int32_to_bytes
+                0x000000000800e3cc       0x7e ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+                0x000000000800e3cc                int32_to_bytes
  .text.bytes_to_int32
-                0x000000000800e1be       0x70 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
-                0x000000000800e1be                bytes_to_int32
- *fill*         0x000000000800e22e        0x2 
+                0x000000000800e44a       0x70 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+                0x000000000800e44a                bytes_to_int32
+ *fill*         0x000000000800e4ba        0x2 
  .text.can_manage_init
-                0x000000000800e230       0xcc ./miniBotRTS-Firmware/boards/drv_can.o
-                0x000000000800e230                can_manage_init
+                0x000000000800e4bc       0xcc ./miniBotRTS-Firmware/boards/drv_can.o
+                0x000000000800e4bc                can_manage_init
  .text.can_msg_bytes_send
-                0x000000000800e2fc      0x158 ./miniBotRTS-Firmware/boards/drv_can.o
-                0x000000000800e2fc                can_msg_bytes_send
+                0x000000000800e588      0x158 ./miniBotRTS-Firmware/boards/drv_can.o
+                0x000000000800e588                can_msg_bytes_send
  .text.can_fifo0_rx_callback_register
-                0x000000000800e454       0x4a ./miniBotRTS-Firmware/boards/drv_can.o
-                0x000000000800e454                can_fifo0_rx_callback_register
+                0x000000000800e6e0       0x4a ./miniBotRTS-Firmware/boards/drv_can.o
+                0x000000000800e6e0                can_fifo0_rx_callback_register
  .text.can_tx_mailbox_complete_hanle
-                0x000000000800e49e       0xa8 ./miniBotRTS-Firmware/boards/drv_can.o
- *fill*         0x000000000800e546        0x2 
+                0x000000000800e72a       0xa8 ./miniBotRTS-Firmware/boards/drv_can.o
+ *fill*         0x000000000800e7d2        0x2 
  .text.HAL_CAN_TxMailbox0CompleteCallback
-                0x000000000800e548       0x28 ./miniBotRTS-Firmware/boards/drv_can.o
-                0x000000000800e548                HAL_CAN_TxMailbox0CompleteCallback
+                0x000000000800e7d4       0x28 ./miniBotRTS-Firmware/boards/drv_can.o
+                0x000000000800e7d4                HAL_CAN_TxMailbox0CompleteCallback
  .text.HAL_CAN_TxMailbox1CompleteCallback
-                0x000000000800e570       0x28 ./miniBotRTS-Firmware/boards/drv_can.o
-                0x000000000800e570                HAL_CAN_TxMailbox1CompleteCallback
+                0x000000000800e7fc       0x28 ./miniBotRTS-Firmware/boards/drv_can.o
+                0x000000000800e7fc                HAL_CAN_TxMailbox1CompleteCallback
  .text.HAL_CAN_TxMailbox2CompleteCallback
-                0x000000000800e598       0x28 ./miniBotRTS-Firmware/boards/drv_can.o
-                0x000000000800e598                HAL_CAN_TxMailbox2CompleteCallback
+                0x000000000800e824       0x28 ./miniBotRTS-Firmware/boards/drv_can.o
+                0x000000000800e824                HAL_CAN_TxMailbox2CompleteCallback
  .text.HAL_CAN_ErrorCallback
-                0x000000000800e5c0       0x2c ./miniBotRTS-Firmware/boards/drv_can.o
-                0x000000000800e5c0                HAL_CAN_ErrorCallback
+                0x000000000800e84c       0x2c ./miniBotRTS-Firmware/boards/drv_can.o
+                0x000000000800e84c                HAL_CAN_ErrorCallback
  .text.HAL_CAN_RxFifo0MsgPendingCallback
-                0x000000000800e5ec       0x68 ./miniBotRTS-Firmware/boards/drv_can.o
-                0x000000000800e5ec                HAL_CAN_RxFifo0MsgPendingCallback
+                0x000000000800e878       0x68 ./miniBotRTS-Firmware/boards/drv_can.o
+                0x000000000800e878                HAL_CAN_RxFifo0MsgPendingCallback
  .text.mpu_write_reg
-                0x000000000800e654       0x70 ./miniBotRTS-Firmware/boards/drv_imu.o
-                0x000000000800e654                mpu_write_reg
+                0x000000000800e8e0       0x70 ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x000000000800e8e0                mpu_write_reg
  .text.mpu_read_reg
-                0x000000000800e6c4       0x68 ./miniBotRTS-Firmware/boards/drv_imu.o
-                0x000000000800e6c4                mpu_read_reg
+                0x000000000800e950       0x68 ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x000000000800e950                mpu_read_reg
  .text.mpu_read_regs
-                0x000000000800e72c       0x78 ./miniBotRTS-Firmware/boards/drv_imu.o
-                0x000000000800e72c                mpu_read_regs
+                0x000000000800e9b8       0x78 ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x000000000800e9b8                mpu_read_regs
  .text.ist_reg_write_by_mpu
-                0x000000000800e7a4       0x54 ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x000000000800ea30       0x54 ./miniBotRTS-Firmware/boards/drv_imu.o
  .text.ist_reg_read_by_mpu
-                0x000000000800e7f8       0x4a ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x000000000800ea84       0x4a ./miniBotRTS-Firmware/boards/drv_imu.o
  .text.mpu_mst_i2c_auto_read_config
-                0x000000000800e842       0xac ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x000000000800eace       0xac ./miniBotRTS-Firmware/boards/drv_imu.o
  .text.ist8310_init
-                0x000000000800e8ee      0x112 ./miniBotRTS-Firmware/boards/drv_imu.o
-                0x000000000800e8ee                ist8310_init
+                0x000000000800eb7a      0x112 ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x000000000800eb7a                ist8310_init
  .text.ist8310_get_data
-                0x000000000800ea00       0x1a ./miniBotRTS-Firmware/boards/drv_imu.o
-                0x000000000800ea00                ist8310_get_data
- *fill*         0x000000000800ea1a        0x2 
+                0x000000000800ec8c       0x1a ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x000000000800ec8c                ist8310_get_data
+ *fill*         0x000000000800eca6        0x2 
  .text.mpu_get_data
-                0x000000000800ea1c      0x24c ./miniBotRTS-Firmware/boards/drv_imu.o
-                0x000000000800ea1c                mpu_get_data
+                0x000000000800eca8      0x24c ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x000000000800eca8                mpu_get_data
  .text.mpu_device_init
-                0x000000000800ec68       0xbc ./miniBotRTS-Firmware/boards/drv_imu.o
-                0x000000000800ec68                mpu_device_init
+                0x000000000800eef4       0xbc ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x000000000800eef4                mpu_device_init
  .text.get_mpu_gyro_offset
-                0x000000000800ed24      0x104 ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x000000000800efb0      0x104 ./miniBotRTS-Firmware/boards/drv_imu.o
  .text.get_mpu_acc_offset
-                0x000000000800ee28      0x10c ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x000000000800f0b4      0x10c ./miniBotRTS-Firmware/boards/drv_imu.o
  .text.get_ist_mag_offset
-                0x000000000800ef34      0x174 ./miniBotRTS-Firmware/boards/drv_imu.o
- .text.invSqrt  0x000000000800f0a8       0x78 ./miniBotRTS-Firmware/components/algorithm/madgwick_ahrs.o
-                0x000000000800f0a8                invSqrt
+                0x000000000800f1c0      0x174 ./miniBotRTS-Firmware/boards/drv_imu.o
+ .text.invSqrt  0x000000000800f334       0x78 ./miniBotRTS-Firmware/components/algorithm/madgwick_ahrs.o
+                0x000000000800f334                invSqrt
+ *fill*         0x000000000800f3ac        0x4 
  .text.mahony_ahrs_updateIMU
-                0x000000000800f120      0x790 ./miniBotRTS-Firmware/components/algorithm/mahony_ahrs.o
-                0x000000000800f120                mahony_ahrs_updateIMU
+                0x000000000800f3b0      0x790 ./miniBotRTS-Firmware/components/algorithm/mahony_ahrs.o
+                0x000000000800f3b0                mahony_ahrs_updateIMU
  .text.abs_limit
-                0x000000000800f8b0       0x5a ./miniBotRTS-Firmware/components/algorithm/pid.o
-                0x000000000800f8b0                abs_limit
+                0x000000000800fb40       0x5a ./miniBotRTS-Firmware/components/algorithm/pid.o
+                0x000000000800fb40                abs_limit
  .text.pid_param_init
-                0x000000000800f90a       0x46 ./miniBotRTS-Firmware/components/algorithm/pid.o
+                0x000000000800fb9a       0x46 ./miniBotRTS-Firmware/components/algorithm/pid.o
  .text.pid_reset
-                0x000000000800f950       0x52 ./miniBotRTS-Firmware/components/algorithm/pid.o
+                0x000000000800fbe0       0x52 ./miniBotRTS-Firmware/components/algorithm/pid.o
  .text.pid_calculate
-                0x000000000800f9a2      0x112 ./miniBotRTS-Firmware/components/algorithm/pid.o
-                0x000000000800f9a2                pid_calculate
+                0x000000000800fc32      0x112 ./miniBotRTS-Firmware/components/algorithm/pid.o
+                0x000000000800fc32                pid_calculate
  .text.pid_struct_init
-                0x000000000800fab4       0x68 ./miniBotRTS-Firmware/components/algorithm/pid.o
-                0x000000000800fab4                pid_struct_init
- *fill*         0x000000000800fb1c        0x4 
+                0x000000000800fd44       0x68 ./miniBotRTS-Firmware/components/algorithm/pid.o
+                0x000000000800fd44                pid_struct_init
+ *fill*         0x000000000800fdac        0x4 
  .text.skid_steer_calculate
-                0x000000000800fb20      0x230 ./miniBotRTS-Firmware/components/algorithm/skid_steer.o
-                0x000000000800fb20                skid_steer_calculate
+                0x000000000800fdb0      0x238 ./miniBotRTS-Firmware/components/algorithm/skid_steer.o
+                0x000000000800fdb0                skid_steer_calculate
  .text.skid_steer_position_measure
-                0x000000000800fd50      0x300 ./miniBotRTS-Firmware/components/algorithm/skid_steer.o
-                0x000000000800fd50                skid_steer_position_measure
+                0x000000000800ffe8      0x308 ./miniBotRTS-Firmware/components/algorithm/skid_steer.o
+                0x000000000800ffe8                skid_steer_position_measure
  .text.controller_register
-                0x0000000008010050       0x60 ./miniBotRTS-Firmware/components/controller/controller.o
-                0x0000000008010050                controller_register
+                0x00000000080102f0       0x60 ./miniBotRTS-Firmware/components/controller/controller.o
+                0x00000000080102f0                controller_register
  .text.controller_find
-                0x00000000080100b0       0x1c ./miniBotRTS-Firmware/components/controller/controller.o
-                0x00000000080100b0                controller_find
+                0x0000000008010350       0x1c ./miniBotRTS-Firmware/components/controller/controller.o
+                0x0000000008010350                controller_find
  .text.controller_execute
-                0x00000000080100cc       0x72 ./miniBotRTS-Firmware/components/controller/controller.o
-                0x00000000080100cc                controller_execute
+                0x000000000801036c       0x72 ./miniBotRTS-Firmware/components/controller/controller.o
+                0x000000000801036c                controller_execute
  .text.controller_set_input
-                0x000000000801013e       0x2a ./miniBotRTS-Firmware/components/controller/controller.o
-                0x000000000801013e                controller_set_input
+                0x00000000080103de       0x2a ./miniBotRTS-Firmware/components/controller/controller.o
+                0x00000000080103de                controller_set_input
  .text.controller_get_output
-                0x0000000008010168       0x34 ./miniBotRTS-Firmware/components/controller/controller.o
-                0x0000000008010168                controller_get_output
+                0x0000000008010408       0x34 ./miniBotRTS-Firmware/components/controller/controller.o
+                0x0000000008010408                controller_get_output
  .text.controller_enable
-                0x000000000801019c       0x28 ./miniBotRTS-Firmware/components/controller/controller.o
-                0x000000000801019c                controller_enable
+                0x000000000801043c       0x28 ./miniBotRTS-Firmware/components/controller/controller.o
+                0x000000000801043c                controller_enable
  .text.controller_disable
-                0x00000000080101c4       0x38 ./miniBotRTS-Firmware/components/controller/controller.o
-                0x00000000080101c4                controller_disable
+                0x0000000008010464       0x38 ./miniBotRTS-Firmware/components/controller/controller.o
+                0x0000000008010464                controller_disable
  .text.pid_controller_register
-                0x00000000080101fc       0x44 ./miniBotRTS-Firmware/components/controller/pid_controller.o
-                0x00000000080101fc                pid_controller_register
+                0x000000000801049c       0x44 ./miniBotRTS-Firmware/components/controller/pid_controller.o
+                0x000000000801049c                pid_controller_register
  .text.pid_control
-                0x0000000008010240       0x3e ./miniBotRTS-Firmware/components/controller/pid_controller.o
-                0x0000000008010240                pid_control
+                0x00000000080104e0       0x3e ./miniBotRTS-Firmware/components/controller/pid_controller.o
+                0x00000000080104e0                pid_control
  .text.device_register
-                0x000000000801027e       0x56 ./miniBotRTS-Firmware/components/devices/device.o
-                0x000000000801027e                device_register
+                0x000000000801051e       0x56 ./miniBotRTS-Firmware/components/devices/device.o
+                0x000000000801051e                device_register
  .text.device_find
-                0x00000000080102d4       0x1c ./miniBotRTS-Firmware/components/devices/device.o
-                0x00000000080102d4                device_find
+                0x0000000008010574       0x1c ./miniBotRTS-Firmware/components/devices/device.o
+                0x0000000008010574                device_find
  .text.motor_device_register
-                0x00000000080102f0       0x94 ./miniBotRTS-Firmware/components/devices/motor.o
-                0x00000000080102f0                motor_device_register
+                0x0000000008010590       0x94 ./miniBotRTS-Firmware/components/devices/motor.o
+                0x0000000008010590                motor_device_register
  .text.motor_device_can_send_register
-                0x0000000008010384       0x24 ./miniBotRTS-Firmware/components/devices/motor.o
-                0x0000000008010384                motor_device_can_send_register
+                0x0000000008010624       0x24 ./miniBotRTS-Firmware/components/devices/motor.o
+                0x0000000008010624                motor_device_can_send_register
  .text.motor_device_get_data
-                0x00000000080103a8       0x22 ./miniBotRTS-Firmware/components/devices/motor.o
-                0x00000000080103a8                motor_device_get_data
+                0x0000000008010648       0x22 ./miniBotRTS-Firmware/components/devices/motor.o
+                0x0000000008010648                motor_device_get_data
  .text.motor_device_set_current
-                0x00000000080103ca       0x2e ./miniBotRTS-Firmware/components/devices/motor.o
-                0x00000000080103ca                motor_device_set_current
+                0x000000000801066a       0x2e ./miniBotRTS-Firmware/components/devices/motor.o
+                0x000000000801066a                motor_device_set_current
  .text.motor_device_find_by_canid
-                0x00000000080103f8       0x92 ./miniBotRTS-Firmware/components/devices/motor.o
-                0x00000000080103f8                motor_device_find_by_canid
- *fill*         0x000000000801048a        0x2 
+                0x0000000008010698       0x92 ./miniBotRTS-Firmware/components/devices/motor.o
+                0x0000000008010698                motor_device_find_by_canid
+ *fill*         0x000000000801072a        0x2 
  .text.motor_device_can_output
-                0x000000000801048c      0x1ec ./miniBotRTS-Firmware/components/devices/motor.o
-                0x000000000801048c                motor_device_can_output
+                0x000000000801072c      0x1ec ./miniBotRTS-Firmware/components/devices/motor.o
+                0x000000000801072c                motor_device_can_output
  .text.motor_device_data_update
-                0x0000000008010678       0x3e ./miniBotRTS-Firmware/components/devices/motor.o
-                0x0000000008010678                motor_device_data_update
- *fill*         0x00000000080106b6        0x2 
+                0x0000000008010918       0x3e ./miniBotRTS-Firmware/components/devices/motor.o
+                0x0000000008010918                motor_device_data_update
+ *fill*         0x0000000008010956        0x2 
  .text.get_encoder_data
-                0x00000000080106b8      0x148 ./miniBotRTS-Firmware/components/devices/motor.o
+                0x0000000008010958      0x148 ./miniBotRTS-Firmware/components/devices/motor.o
  .text.get_motor_offset
-                0x0000000008010800       0x38 ./miniBotRTS-Firmware/components/devices/motor.o
+                0x0000000008010aa0       0x38 ./miniBotRTS-Firmware/components/devices/motor.o
  .text.chassis_pid_register
-                0x0000000008010838      0x2f4 ./miniBotRTS-Firmware/components/modules/chassis.o
-                0x0000000008010838                chassis_pid_register
+                0x0000000008010ad8      0x2f4 ./miniBotRTS-Firmware/components/modules/chassis.o
+                0x0000000008010ad8                chassis_pid_register
  .text.chassis_execute
-                0x0000000008010b2c      0x180 ./miniBotRTS-Firmware/components/modules/chassis.o
-                0x0000000008010b2c                chassis_execute
+                0x0000000008010dcc      0x180 ./miniBotRTS-Firmware/components/modules/chassis.o
+                0x0000000008010dcc                chassis_execute
  .text.chassis_set_speed
-                0x0000000008010cac       0x36 ./miniBotRTS-Firmware/components/modules/chassis.o
-                0x0000000008010cac                chassis_set_speed
+                0x0000000008010f4c       0x36 ./miniBotRTS-Firmware/components/modules/chassis.o
+                0x0000000008010f4c                chassis_set_speed
  .text.chassis_find
-                0x0000000008010ce2       0x1c ./miniBotRTS-Firmware/components/modules/chassis.o
-                0x0000000008010ce2                chassis_find
+                0x0000000008010f82       0x1c ./miniBotRTS-Firmware/components/modules/chassis.o
+                0x0000000008010f82                chassis_find
  .text.chassis_enable
-                0x0000000008010cfe       0x4a ./miniBotRTS-Firmware/components/modules/chassis.o
-                0x0000000008010cfe                chassis_enable
+                0x0000000008010f9e       0x4a ./miniBotRTS-Firmware/components/modules/chassis.o
+                0x0000000008010f9e                chassis_enable
  .text.chassis_disable
-                0x0000000008010d48       0x4a ./miniBotRTS-Firmware/components/modules/chassis.o
-                0x0000000008010d48                chassis_disable
+                0x0000000008010fe8       0x4a ./miniBotRTS-Firmware/components/modules/chassis.o
+                0x0000000008010fe8                chassis_disable
  .text.motor_pid_input_convert
-                0x0000000008010d92       0x36 ./miniBotRTS-Firmware/components/modules/chassis.o
+                0x0000000008011032       0x36 ./miniBotRTS-Firmware/components/modules/chassis.o
  .text.__list_add
-                0x0000000008010dc8       0x30 ./miniBotRTS-Firmware/components/object/object.o
+                0x0000000008011068       0x30 ./miniBotRTS-Firmware/components/object/object.o
  .text.list_add
-                0x0000000008010df8       0x20 ./miniBotRTS-Firmware/components/object/object.o
+                0x0000000008011098       0x20 ./miniBotRTS-Firmware/components/object/object.o
  .text.__list_del
-                0x0000000008010e18       0x22 ./miniBotRTS-Firmware/components/object/object.o
+                0x00000000080110b8       0x22 ./miniBotRTS-Firmware/components/object/object.o
  .text.list_del
-                0x0000000008010e3a       0x20 ./miniBotRTS-Firmware/components/object/object.o
- *fill*         0x0000000008010e5a        0x2 
+                0x00000000080110da       0x20 ./miniBotRTS-Firmware/components/object/object.o
+ *fill*         0x00000000080110fa        0x2 
  .text.object_get_information
-                0x0000000008010e5c       0x54 ./miniBotRTS-Firmware/components/object/object.o
-                0x0000000008010e5c                object_get_information
+                0x00000000080110fc       0x54 ./miniBotRTS-Firmware/components/object/object.o
+                0x00000000080110fc                object_get_information
  .text.object_init
-                0x0000000008010eb0       0x78 ./miniBotRTS-Firmware/components/object/object.o
-                0x0000000008010eb0                object_init
+                0x0000000008011150       0x78 ./miniBotRTS-Firmware/components/object/object.o
+                0x0000000008011150                object_init
  .text.object_find
-                0x0000000008010f28       0x98 ./miniBotRTS-Firmware/components/object/object.o
-                0x0000000008010f28                object_find
+                0x00000000080111c8       0x98 ./miniBotRTS-Firmware/components/object/object.o
+                0x00000000080111c8                object_find
  .text.object_detach
-                0x0000000008010fc0       0x3a ./miniBotRTS-Firmware/components/object/object.o
-                0x0000000008010fc0                object_detach
- *fill*         0x0000000008010ffa        0x2 
+                0x0000000008011260       0x3a ./miniBotRTS-Firmware/components/object/object.o
+                0x0000000008011260                object_detach
+ *fill*         0x000000000801129a        0x2 
  .text.get_time_us
-                0x0000000008010ffc       0x18 ./miniBotRTS-Firmware/components/object/sys.o
-                0x0000000008010ffc                get_time_us
+                0x000000000801129c       0x18 ./miniBotRTS-Firmware/components/object/sys.o
+                0x000000000801129c                get_time_us
  .text.get_time_ms
-                0x0000000008011014        0xe ./miniBotRTS-Firmware/components/object/sys.o
-                0x0000000008011014                get_time_ms
- *fill*         0x0000000008011022        0x2 
+                0x00000000080112b4        0xe ./miniBotRTS-Firmware/components/object/sys.o
+                0x00000000080112b4                get_time_ms
+ *fill*         0x00000000080112c2        0x2 
  .text.get_time_ms_us
-                0x0000000008011024       0x3c ./miniBotRTS-Firmware/components/object/sys.o
-                0x0000000008011024                get_time_ms_us
+                0x00000000080112c4       0x3c ./miniBotRTS-Firmware/components/object/sys.o
+                0x00000000080112c4                get_time_ms_us
  .text.fifo_s_init
-                0x0000000008011060       0x44 ./miniBotRTS-Firmware/components/support/fifo.o
-                0x0000000008011060                fifo_s_init
+                0x0000000008011300       0x44 ./miniBotRTS-Firmware/components/support/fifo.o
+                0x0000000008011300                fifo_s_init
  .text.fifo_init
-                0x00000000080110a4       0x54 ./miniBotRTS-Firmware/components/support/fifo.o
-                0x00000000080110a4                fifo_init
+                0x0000000008011344       0x54 ./miniBotRTS-Firmware/components/support/fifo.o
+                0x0000000008011344                fifo_init
  .text.fifo_put
-                0x00000000080110f8       0x8c ./miniBotRTS-Firmware/components/support/fifo.o
-                0x00000000080110f8                fifo_put
+                0x0000000008011398       0x8c ./miniBotRTS-Firmware/components/support/fifo.o
+                0x0000000008011398                fifo_put
  .text.fifo_get
-                0x0000000008011184       0x8c ./miniBotRTS-Firmware/components/support/fifo.o
-                0x0000000008011184                fifo_get
+                0x0000000008011424       0x8c ./miniBotRTS-Firmware/components/support/fifo.o
+                0x0000000008011424                fifo_get
  .text.fifo_get_noprotect
-                0x0000000008011210       0x68 ./miniBotRTS-Firmware/components/support/fifo.o
-                0x0000000008011210                fifo_get_noprotect
+                0x00000000080114b0       0x68 ./miniBotRTS-Firmware/components/support/fifo.o
+                0x00000000080114b0                fifo_get_noprotect
  .text.fifo_is_empty
-                0x0000000008011278       0x22 ./miniBotRTS-Firmware/components/support/fifo.o
-                0x0000000008011278                fifo_is_empty
+                0x0000000008011518       0x22 ./miniBotRTS-Firmware/components/support/fifo.o
+                0x0000000008011518                fifo_is_empty
  .text.fifo_is_full
-                0x000000000801129a       0x22 ./miniBotRTS-Firmware/components/support/fifo.o
-                0x000000000801129a                fifo_is_full
+                0x000000000801153a       0x22 ./miniBotRTS-Firmware/components/support/fifo.o
+                0x000000000801153a                fifo_is_full
  .text.TimerISR_Hook
-                0x00000000080112bc       0x58 ./miniBotRTS-Firmware/components/support/soft_timer.o
-                0x00000000080112bc                TimerISR_Hook
+                0x000000000801155c       0x58 ./miniBotRTS-Firmware/components/support/soft_timer.o
+                0x000000000801155c                TimerISR_Hook
  .text.soft_timer_init
-                0x0000000008011314       0x44 ./miniBotRTS-Firmware/components/support/soft_timer.o
-                0x0000000008011314                soft_timer_init
+                0x00000000080115b4       0x44 ./miniBotRTS-Firmware/components/support/soft_timer.o
+                0x00000000080115b4                soft_timer_init
  .text.soft_timer_req
-                0x0000000008011358       0x74 ./miniBotRTS-Firmware/components/support/soft_timer.o
-                0x0000000008011358                soft_timer_req
+                0x00000000080115f8       0x74 ./miniBotRTS-Firmware/components/support/soft_timer.o
+                0x00000000080115f8                soft_timer_req
  .text.soft_timer_update
-                0x00000000080113cc       0x68 ./miniBotRTS-Firmware/components/support/soft_timer.o
-                0x00000000080113cc                soft_timer_update
+                0x000000000801166c       0x68 ./miniBotRTS-Firmware/components/support/soft_timer.o
+                0x000000000801166c                soft_timer_update
  .text.soft_timer_check
-                0x0000000008011434       0x60 ./miniBotRTS-Firmware/components/support/soft_timer.o
-                0x0000000008011434                soft_timer_check
+                0x00000000080116d4       0x60 ./miniBotRTS-Firmware/components/support/soft_timer.o
+                0x00000000080116d4                soft_timer_check
  .text.usb_vcp_init
-                0x0000000008011494       0x60 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
-                0x0000000008011494                usb_vcp_init
+                0x0000000008011734       0x60 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
+                0x0000000008011734                usb_vcp_init
  .text.usb_vcp_receive_processing
-                0x00000000080114f4       0x58 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
-                0x00000000080114f4                usb_vcp_receive_processing
+                0x0000000008011794       0x58 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
+                0x0000000008011794                usb_vcp_receive_processing
  .text.usb_vcp_transmit_callback_processing
-                0x000000000801154c       0x18 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
-                0x000000000801154c                usb_vcp_transmit_callback_processing
+                0x00000000080117ec       0x18 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
+                0x00000000080117ec                usb_vcp_transmit_callback_processing
  .text.usb_vcp_rx_callback_register
-                0x0000000008011564       0x48 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
-                0x0000000008011564                usb_vcp_rx_callback_register
+                0x0000000008011804       0x48 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
+                0x0000000008011804                usb_vcp_rx_callback_register
  .text.force_send
-                0x00000000080115ac       0x34 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
-                0x00000000080115ac                force_send
+                0x000000000801184c       0x34 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
+                0x000000000801184c                force_send
  .text.__malloc_lock
-                0x00000000080115e0        0xc /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mlock.o)
-                0x00000000080115e0                __malloc_lock
+                0x0000000008011880        0xc /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mlock.o)
+                0x0000000008011880                __malloc_lock
  .text.__malloc_unlock
-                0x00000000080115ec        0xc /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mlock.o)
-                0x00000000080115ec                __malloc_unlock
- .text.strncmp  0x00000000080115f8       0x24 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-strncmp.o)
-                0x00000000080115f8                strncmp
- .text.strncpy  0x000000000801161c       0x26 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-strncpy.o)
-                0x000000000801161c                strncpy
- .text.memset   0x0000000008011642       0x10 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
-                0x0000000008011642                memset
- *fill*         0x0000000008011652        0x2 
+                0x000000000801188c        0xc /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-mlock.o)
+                0x000000000801188c                __malloc_unlock
+ .text.strncmp  0x0000000008011898       0x24 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-strncmp.o)
+                0x0000000008011898                strncmp
+ .text.strncpy  0x00000000080118bc       0x26 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-strncpy.o)
+                0x00000000080118bc                strncpy
+ .text.memset   0x00000000080118e2       0x10 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memset.o)
+                0x00000000080118e2                memset
+ *fill*         0x00000000080118f2        0x2 
  .text._reclaim_reent
-                0x0000000008011654       0xac /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-reent.o)
-                0x0000000008011654                _reclaim_reent
- .text.__errno  0x0000000008011700        0xc /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-errno.o)
-                0x0000000008011700                __errno
+                0x00000000080118f4       0xac /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-reent.o)
+                0x00000000080118f4                _reclaim_reent
+ .text.__errno  0x00000000080119a0        0xc /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-errno.o)
+                0x00000000080119a0                __errno
  .text.__libc_init_array
-                0x000000000801170c       0x48 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-init.o)
-                0x000000000801170c                __libc_init_array
+                0x00000000080119ac       0x48 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-init.o)
+                0x00000000080119ac                __libc_init_array
  .text.__retarget_lock_acquire_recursive
-                0x0000000008011754        0x2 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-lock.o)
-                0x0000000008011754                __retarget_lock_acquire_recursive
+                0x00000000080119f4        0x2 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-lock.o)
+                0x00000000080119f4                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0000000008011756        0x2 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-lock.o)
-                0x0000000008011756                __retarget_lock_release_recursive
- .text.memcpy   0x0000000008011758       0x1c /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
-                0x0000000008011758                memcpy
- .text._free_r  0x0000000008011774       0x98 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-freer.o)
-                0x0000000008011774                _free_r
- .text.asin     0x000000000801180c       0x68 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-w_asin.o)
-                0x000000000801180c                asin
- .text.atan2    0x0000000008011874        0x4 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-w_atan2.o)
-                0x0000000008011874                atan2
+                0x00000000080119f6        0x2 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-lock.o)
+                0x00000000080119f6                __retarget_lock_release_recursive
+ .text.memcpy   0x00000000080119f8       0x1c /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-memcpy-stub.o)
+                0x00000000080119f8                memcpy
+ .text._free_r  0x0000000008011a14       0x98 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(libc_a-freer.o)
+                0x0000000008011a14                _free_r
+ .text.asin     0x0000000008011aac       0x68 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-w_asin.o)
+                0x0000000008011aac                asin
+ .text.atan2    0x0000000008011b14        0x4 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-w_atan2.o)
+                0x0000000008011b14                atan2
  .text.__ieee754_asin
-                0x0000000008011878      0x428 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_asin.o)
-                0x0000000008011878                __ieee754_asin
+                0x0000000008011b18      0x428 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_asin.o)
+                0x0000000008011b18                __ieee754_asin
  .text.__ieee754_atan2
-                0x0000000008011ca0      0x18c /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_atan2.o)
-                0x0000000008011ca0                __ieee754_atan2
- *fill*         0x0000000008011e2c        0x4 
- .text.atan     0x0000000008011e30      0x340 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_atan.o)
-                0x0000000008011e30                atan
- .text.cos      0x0000000008012170       0xa8 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_cos.o)
-                0x0000000008012170                cos
- .text.fabs     0x0000000008012218       0x12 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_fabs.o)
-                0x0000000008012218                fabs
- *fill*         0x000000000801222a        0x6 
- .text.sin      0x0000000008012230       0xb0 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_sin.o)
-                0x0000000008012230                sin
+                0x0000000008011f40      0x18c /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_atan2.o)
+                0x0000000008011f40                __ieee754_atan2
+ *fill*         0x00000000080120cc        0x4 
+ .text.atan     0x00000000080120d0      0x340 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_atan.o)
+                0x00000000080120d0                atan
+ .text.cos      0x0000000008012410       0xa8 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_cos.o)
+                0x0000000008012410                cos
+ .text.fabs     0x00000000080124b8       0x12 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_fabs.o)
+                0x00000000080124b8                fabs
+ *fill*         0x00000000080124ca        0x6 
+ .text.sin      0x00000000080124d0       0xb0 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_sin.o)
+                0x00000000080124d0                sin
  .text.__ieee754_sqrt
-                0x00000000080122e0      0x1b4 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_sqrt.o)
-                0x00000000080122e0                __ieee754_sqrt
- *fill*         0x0000000008012494        0x4 
- .text.nan      0x0000000008012498       0x10 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_nan.o)
-                0x0000000008012498                nan
+                0x0000000008012580      0x1b4 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_sqrt.o)
+                0x0000000008012580                __ieee754_sqrt
+ *fill*         0x0000000008012734        0x4 
+ .text.nan      0x0000000008012738       0x10 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_nan.o)
+                0x0000000008012738                nan
  .text.__ieee754_rem_pio2
-                0x00000000080124a8      0x40c /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_rem_pio2.o)
-                0x00000000080124a8                __ieee754_rem_pio2
- *fill*         0x00000000080128b4        0x4 
+                0x0000000008012748      0x40c /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_rem_pio2.o)
+                0x0000000008012748                __ieee754_rem_pio2
+ *fill*         0x0000000008012b54        0x4 
  .text.__kernel_rem_pio2
-                0x00000000080128b8      0x69c /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-k_rem_pio2.o)
-                0x00000000080128b8                __kernel_rem_pio2
- *fill*         0x0000000008012f54        0x4 
+                0x0000000008012b58      0x69c /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-k_rem_pio2.o)
+                0x0000000008012b58                __kernel_rem_pio2
+ *fill*         0x00000000080131f4        0x4 
  .text.__kernel_cos
-                0x0000000008012f58      0x18c /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-k_cos.o)
-                0x0000000008012f58                __kernel_cos
- *fill*         0x00000000080130e4        0x4 
+                0x00000000080131f8      0x18c /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-k_cos.o)
+                0x00000000080131f8                __kernel_cos
+ *fill*         0x0000000008013384        0x4 
  .text.__kernel_sin
-                0x00000000080130e8      0x17c /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-k_sin.o)
-                0x00000000080130e8                __kernel_sin
- *fill*         0x0000000008013264        0x4 
- .text.scalbn   0x0000000008013268       0xfc /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_scalbn.o)
-                0x0000000008013268                scalbn
- *fill*         0x0000000008013364        0x4 
- .text.floor    0x0000000008013368      0x100 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_floor.o)
-                0x0000000008013368                floor
+                0x0000000008013388      0x17c /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-k_sin.o)
+                0x0000000008013388                __kernel_sin
+ *fill*         0x0000000008013504        0x4 
+ .text.scalbn   0x0000000008013508       0xfc /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_scalbn.o)
+                0x0000000008013508                scalbn
+ *fill*         0x0000000008013604        0x4 
+ .text.floor    0x0000000008013608      0x100 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_floor.o)
+                0x0000000008013608                floor
  *(.glue_7)
- .glue_7        0x0000000008013468        0x0 linker stubs
+ .glue_7        0x0000000008013708        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008013468        0x0 linker stubs
+ .glue_7t       0x0000000008013708        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008013468        0x0 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x0000000008013708        0x0 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x0000000008013468        0x4 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0000000008013468                _init
- .init          0x000000000801346c        0x8 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x0000000008013708        0x4 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0000000008013708                _init
+ .init          0x000000000801370c        0x8 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x0000000008013474        0x4 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0000000008013474                _fini
- .fini          0x0000000008013478        0x8 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x0000000008013480                . = ALIGN (0x4)
-                0x0000000008013480                _etext = .
+ .fini          0x0000000008013714        0x4 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0000000008013714                _fini
+ .fini          0x0000000008013718        0x8 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x0000000008013720                . = ALIGN (0x4)
+                0x0000000008013720                _etext = .
 
-.vfp11_veneer   0x0000000008013480        0x0
- .vfp11_veneer  0x0000000008013480        0x0 linker stubs
+.vfp11_veneer   0x0000000008013720        0x0
+ .vfp11_veneer  0x0000000008013720        0x0 linker stubs
 
-.v4_bx          0x0000000008013480        0x0
- .v4_bx         0x0000000008013480        0x0 linker stubs
+.v4_bx          0x0000000008013720        0x0
+ .v4_bx         0x0000000008013720        0x0 linker stubs
 
-.iplt           0x0000000008013480        0x0
- .iplt          0x0000000008013480        0x0 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x0000000008013720        0x0
+ .iplt          0x0000000008013720        0x0 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x0000000008013480      0x3e0
-                0x0000000008013480                . = ALIGN (0x4)
+.rodata         0x0000000008013720      0x3e0
+                0x0000000008013720                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000008013480       0x20 ./Core/Src/freertos.o
- .rodata        0x00000000080134a0        0x5 ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
- *fill*         0x00000000080134a5        0x3 
- .rodata        0x00000000080134a8       0x46 ./USB_DEVICE/App/usbd_desc.o
- *fill*         0x00000000080134ee        0x2 
- .rodata        0x00000000080134f0        0x8 ./miniBotRTS-Firmware/application/chassis_task.o
- .rodata        0x00000000080134f8       0xa8 ./miniBotRTS-Firmware/application/init.o
- .rodata        0x00000000080135a0        0xe ./miniBotRTS-Firmware/boards/drv_imu.o
- *fill*         0x00000000080135ae        0x2 
- .rodata        0x00000000080135b0       0x40 ./miniBotRTS-Firmware/components/modules/chassis.o
+ .rodata        0x0000000008013720       0x20 ./Core/Src/freertos.o
+ .rodata        0x0000000008013740        0x5 ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ *fill*         0x0000000008013745        0x3 
+ .rodata        0x0000000008013748       0x46 ./USB_DEVICE/App/usbd_desc.o
+ *fill*         0x000000000801378e        0x2 
+ .rodata        0x0000000008013790        0x8 ./miniBotRTS-Firmware/application/chassis_task.o
+ .rodata        0x0000000008013798       0xa8 ./miniBotRTS-Firmware/application/init.o
+ .rodata        0x0000000008013840        0xe ./miniBotRTS-Firmware/boards/drv_imu.o
+ *fill*         0x000000000801384e        0x2 
+ .rodata        0x0000000008013850       0x40 ./miniBotRTS-Firmware/components/modules/chassis.o
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x00000000080135f0       0x10 ./Core/Src/system_stm32f4xx.o
-                0x00000000080135f0                AHBPrescTable
+                0x0000000008013890       0x10 ./Core/Src/system_stm32f4xx.o
+                0x0000000008013890                AHBPrescTable
  .rodata.APBPrescTable
-                0x0000000008013600        0x8 ./Core/Src/system_stm32f4xx.o
-                0x0000000008013600                APBPrescTable
+                0x00000000080138a0        0x8 ./Core/Src/system_stm32f4xx.o
+                0x00000000080138a0                APBPrescTable
  .rodata.flagBitshiftOffset.0
-                0x0000000008013608        0x8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+                0x00000000080138a8        0x8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
  .rodata.asin.str1.1
-                0x0000000008013610        0x1 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-w_asin.o)
- *fill*         0x0000000008013611        0x7 
+                0x00000000080138b0        0x1 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-w_asin.o)
+ *fill*         0x00000000080138b1        0x7 
  .rodata.CSWTCH.8
-                0x0000000008013618       0x18 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_atan2.o)
+                0x00000000080138b8       0x18 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_atan2.o)
  .rodata.CSWTCH.9
-                0x0000000008013630       0x18 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_atan2.o)
+                0x00000000080138d0       0x18 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_atan2.o)
  .rodata.atanhi
-                0x0000000008013648       0x20 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_atan.o)
+                0x00000000080138e8       0x20 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_atan.o)
  .rodata.atanlo
-                0x0000000008013668       0x20 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_atan.o)
+                0x0000000008013908       0x20 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-s_atan.o)
  .rodata.npio2_hw
-                0x0000000008013688       0x80 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_rem_pio2.o)
+                0x0000000008013928       0x80 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_rem_pio2.o)
  .rodata.two_over_pi
-                0x0000000008013708      0x108 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_rem_pio2.o)
- .rodata.PIo2   0x0000000008013810       0x40 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-k_rem_pio2.o)
+                0x00000000080139a8      0x108 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-e_rem_pio2.o)
+ .rodata.PIo2   0x0000000008013ab0       0x40 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-k_rem_pio2.o)
  .rodata.init_jk
-                0x0000000008013850       0x10 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-k_rem_pio2.o)
-                0x0000000008013860                . = ALIGN (0x4)
+                0x0000000008013af0       0x10 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a(libm_a-k_rem_pio2.o)
+                0x0000000008013b00                . = ALIGN (0x4)
 
-.ARM.extab      0x0000000008013860        0x0
-                0x0000000008013860                . = ALIGN (0x4)
+.ARM.extab      0x0000000008013b00        0x0
+                0x0000000008013b00                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008013860                . = ALIGN (0x4)
+                0x0000000008013b00                . = ALIGN (0x4)
 
-.ARM            0x0000000008013860        0x8
-                0x0000000008013860                . = ALIGN (0x4)
-                0x0000000008013860                __exidx_start = .
+.ARM            0x0000000008013b00        0x8
+                0x0000000008013b00                . = ALIGN (0x4)
+                0x0000000008013b00                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0000000008013860        0x8 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
-                0x0000000008013868                __exidx_end = .
-                0x0000000008013868                . = ALIGN (0x4)
+ .ARM.exidx     0x0000000008013b00        0x8 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/libgcc.a(_udivmoddi4.o)
+                0x0000000008013b08                __exidx_end = .
+                0x0000000008013b08                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008013868        0x0
- .rel.iplt      0x0000000008013868        0x0 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x0000000008013b08        0x0
+ .rel.iplt      0x0000000008013b08        0x0 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.preinit_array  0x0000000008013868        0x0
-                0x0000000008013868                . = ALIGN (0x4)
-                0x0000000008013868                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008013b08        0x0
+                0x0000000008013b08                . = ALIGN (0x4)
+                0x0000000008013b08                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008013868                PROVIDE (__preinit_array_end = .)
-                0x0000000008013868                . = ALIGN (0x4)
+                0x0000000008013b08                PROVIDE (__preinit_array_end = .)
+                0x0000000008013b08                . = ALIGN (0x4)
 
-.init_array     0x0000000008013868        0x4
-                0x0000000008013868                . = ALIGN (0x4)
-                0x0000000008013868                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008013b08        0x4
+                0x0000000008013b08                . = ALIGN (0x4)
+                0x0000000008013b08                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008013868        0x4 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x000000000801386c                PROVIDE (__init_array_end = .)
-                0x000000000801386c                . = ALIGN (0x4)
+ .init_array    0x0000000008013b08        0x4 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0000000008013b0c                PROVIDE (__init_array_end = .)
+                0x0000000008013b0c                . = ALIGN (0x4)
 
-.fini_array     0x000000000801386c        0x4
-                0x000000000801386c                . = ALIGN (0x4)
+.fini_array     0x0000000008013b0c        0x4
+                0x0000000008013b0c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x000000000801386c        0x4 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x0000000008013b0c        0x4 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000008013870                . = ALIGN (0x4)
-                0x0000000008013870                _sidata = LOADADDR (.data)
+                0x0000000008013b10                . = ALIGN (0x4)
+                0x0000000008013b10                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x1a8 load address 0x0000000008013870
+.data           0x0000000020000000      0x1a8 load address 0x0000000008013b10
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -13358,12 +13359,12 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  *(.RamFunc*)
                 0x00000000200001a8                . = ALIGN (0x4)
                 0x00000000200001a8                _edata = .
-                0x0000000008013a18                _siccmram = LOADADDR (.ccmram)
+                0x0000000008013cb8                _siccmram = LOADADDR (.ccmram)
 
-.igot.plt       0x00000000200001a8        0x0 load address 0x0000000008013a18
+.igot.plt       0x00000000200001a8        0x0 load address 0x0000000008013cb8
  .igot.plt      0x00000000200001a8        0x0 /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.macos64_1.1.100.202310310803/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.ccmram         0x0000000010000000        0x0 load address 0x0000000008013a18
+.ccmram         0x0000000010000000        0x0 load address 0x0000000008013cb8
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _sccmram = .
  *(.ccmram)
@@ -13921,7 +13922,7 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .comment       0x0000000000000043       0x44 ./miniBotRTS-Firmware/components/support/soft_timer.o
  .comment       0x0000000000000043       0x44 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
 
-.debug_info     0x0000000000000000    0x2b3d4
+.debug_info     0x0000000000000000    0x2b529
  .debug_info    0x0000000000000000      0xb84 ./Core/Src/can.o
  .debug_info    0x0000000000000b84      0x4ef ./Core/Src/dma.o
  .debug_info    0x0000000000001073      0x2e4 ./Core/Src/freertos.o
@@ -13962,30 +13963,30 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_info    0x000000000001f416      0x458 ./USB_DEVICE/App/usbd_desc.o
  .debug_info    0x000000000001f86e     0x1caf ./USB_DEVICE/Target/usbd_conf.o
  .debug_info    0x000000000002151d      0x2c9 ./miniBotRTS-Firmware/application/blinky_task.o
- .debug_info    0x00000000000217e6     0x1384 ./miniBotRTS-Firmware/application/chassis_task.o
- .debug_info    0x0000000000022b6a      0x426 ./miniBotRTS-Firmware/application/imu_task.o
- .debug_info    0x0000000000022f90      0x2c1 ./miniBotRTS-Firmware/application/init.o
- .debug_info    0x0000000000023251      0x418 ./miniBotRTS-Firmware/application/mb_protocol_task.o
- .debug_info    0x0000000000023669      0x2eb ./miniBotRTS-Firmware/application/timer_task.o
- .debug_info    0x0000000000023954      0x443 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
- .debug_info    0x0000000000023d97      0xc7d ./miniBotRTS-Firmware/boards/drv_can.o
- .debug_info    0x0000000000024a14      0xbf2 ./miniBotRTS-Firmware/boards/drv_imu.o
- .debug_info    0x0000000000025606      0x63a ./miniBotRTS-Firmware/components/algorithm/madgwick_ahrs.o
- .debug_info    0x0000000000025c40      0x520 ./miniBotRTS-Firmware/components/algorithm/mahony_ahrs.o
- .debug_info    0x0000000000026160      0x348 ./miniBotRTS-Firmware/components/algorithm/pid.o
- .debug_info    0x00000000000264a8      0x41b ./miniBotRTS-Firmware/components/algorithm/skid_steer.o
- .debug_info    0x00000000000268c3      0x4fc ./miniBotRTS-Firmware/components/controller/controller.o
- .debug_info    0x0000000000026dbf      0x635 ./miniBotRTS-Firmware/components/controller/pid_controller.o
- .debug_info    0x00000000000273f4      0x344 ./miniBotRTS-Firmware/components/devices/device.o
- .debug_info    0x0000000000027738      0x940 ./miniBotRTS-Firmware/components/devices/motor.o
- .debug_info    0x0000000000028078      0xe05 ./miniBotRTS-Firmware/components/modules/chassis.o
- .debug_info    0x0000000000028e7d      0x5c5 ./miniBotRTS-Firmware/components/object/object.o
- .debug_info    0x0000000000029442      0x208 ./miniBotRTS-Firmware/components/object/sys.o
- .debug_info    0x000000000002964a      0xde7 ./miniBotRTS-Firmware/components/support/fifo.o
- .debug_info    0x000000000002a431      0x38f ./miniBotRTS-Firmware/components/support/soft_timer.o
- .debug_info    0x000000000002a7c0      0xc14 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
+ .debug_info    0x00000000000217e6     0x14d9 ./miniBotRTS-Firmware/application/chassis_task.o
+ .debug_info    0x0000000000022cbf      0x426 ./miniBotRTS-Firmware/application/imu_task.o
+ .debug_info    0x00000000000230e5      0x2c1 ./miniBotRTS-Firmware/application/init.o
+ .debug_info    0x00000000000233a6      0x418 ./miniBotRTS-Firmware/application/mb_protocol_task.o
+ .debug_info    0x00000000000237be      0x2eb ./miniBotRTS-Firmware/application/timer_task.o
+ .debug_info    0x0000000000023aa9      0x443 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+ .debug_info    0x0000000000023eec      0xc7d ./miniBotRTS-Firmware/boards/drv_can.o
+ .debug_info    0x0000000000024b69      0xbf2 ./miniBotRTS-Firmware/boards/drv_imu.o
+ .debug_info    0x000000000002575b      0x63a ./miniBotRTS-Firmware/components/algorithm/madgwick_ahrs.o
+ .debug_info    0x0000000000025d95      0x520 ./miniBotRTS-Firmware/components/algorithm/mahony_ahrs.o
+ .debug_info    0x00000000000262b5      0x348 ./miniBotRTS-Firmware/components/algorithm/pid.o
+ .debug_info    0x00000000000265fd      0x41b ./miniBotRTS-Firmware/components/algorithm/skid_steer.o
+ .debug_info    0x0000000000026a18      0x4fc ./miniBotRTS-Firmware/components/controller/controller.o
+ .debug_info    0x0000000000026f14      0x635 ./miniBotRTS-Firmware/components/controller/pid_controller.o
+ .debug_info    0x0000000000027549      0x344 ./miniBotRTS-Firmware/components/devices/device.o
+ .debug_info    0x000000000002788d      0x940 ./miniBotRTS-Firmware/components/devices/motor.o
+ .debug_info    0x00000000000281cd      0xe05 ./miniBotRTS-Firmware/components/modules/chassis.o
+ .debug_info    0x0000000000028fd2      0x5c5 ./miniBotRTS-Firmware/components/object/object.o
+ .debug_info    0x0000000000029597      0x208 ./miniBotRTS-Firmware/components/object/sys.o
+ .debug_info    0x000000000002979f      0xde7 ./miniBotRTS-Firmware/components/support/fifo.o
+ .debug_info    0x000000000002a586      0x38f ./miniBotRTS-Firmware/components/support/soft_timer.o
+ .debug_info    0x000000000002a915      0xc14 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
 
-.debug_abbrev   0x0000000000000000     0x7f12
+.debug_abbrev   0x0000000000000000     0x7f3e
  .debug_abbrev  0x0000000000000000      0x225 ./Core/Src/can.o
  .debug_abbrev  0x0000000000000225      0x10e ./Core/Src/dma.o
  .debug_abbrev  0x0000000000000333      0x185 ./Core/Src/freertos.o
@@ -14026,28 +14027,28 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_abbrev  0x0000000000005027      0x1e1 ./USB_DEVICE/App/usbd_desc.o
  .debug_abbrev  0x0000000000005208      0x33f ./USB_DEVICE/Target/usbd_conf.o
  .debug_abbrev  0x0000000000005547      0x1a7 ./miniBotRTS-Firmware/application/blinky_task.o
- .debug_abbrev  0x00000000000056ee      0x341 ./miniBotRTS-Firmware/application/chassis_task.o
- .debug_abbrev  0x0000000000005a2f      0x182 ./miniBotRTS-Firmware/application/imu_task.o
- .debug_abbrev  0x0000000000005bb1      0x134 ./miniBotRTS-Firmware/application/init.o
- .debug_abbrev  0x0000000000005ce5      0x1bc ./miniBotRTS-Firmware/application/mb_protocol_task.o
- .debug_abbrev  0x0000000000005ea1      0x1ad ./miniBotRTS-Firmware/application/timer_task.o
- .debug_abbrev  0x000000000000604e      0x120 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
- .debug_abbrev  0x000000000000616e      0x2ea ./miniBotRTS-Firmware/boards/drv_can.o
- .debug_abbrev  0x0000000000006458      0x2bc ./miniBotRTS-Firmware/boards/drv_imu.o
- .debug_abbrev  0x0000000000006714      0x12e ./miniBotRTS-Firmware/components/algorithm/madgwick_ahrs.o
- .debug_abbrev  0x0000000000006842       0xfe ./miniBotRTS-Firmware/components/algorithm/mahony_ahrs.o
- .debug_abbrev  0x0000000000006940      0x11f ./miniBotRTS-Firmware/components/algorithm/pid.o
- .debug_abbrev  0x0000000000006a5f      0x161 ./miniBotRTS-Firmware/components/algorithm/skid_steer.o
- .debug_abbrev  0x0000000000006bc0      0x172 ./miniBotRTS-Firmware/components/controller/controller.o
- .debug_abbrev  0x0000000000006d32      0x15c ./miniBotRTS-Firmware/components/controller/pid_controller.o
- .debug_abbrev  0x0000000000006e8e      0x14a ./miniBotRTS-Firmware/components/devices/device.o
- .debug_abbrev  0x0000000000006fd8      0x295 ./miniBotRTS-Firmware/components/devices/motor.o
- .debug_abbrev  0x000000000000726d      0x227 ./miniBotRTS-Firmware/components/modules/chassis.o
- .debug_abbrev  0x0000000000007494      0x224 ./miniBotRTS-Firmware/components/object/object.o
- .debug_abbrev  0x00000000000076b8       0xd2 ./miniBotRTS-Firmware/components/object/sys.o
- .debug_abbrev  0x000000000000778a      0x2d7 ./miniBotRTS-Firmware/components/support/fifo.o
- .debug_abbrev  0x0000000000007a61      0x1ad ./miniBotRTS-Firmware/components/support/soft_timer.o
- .debug_abbrev  0x0000000000007c0e      0x304 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
+ .debug_abbrev  0x00000000000056ee      0x36d ./miniBotRTS-Firmware/application/chassis_task.o
+ .debug_abbrev  0x0000000000005a5b      0x182 ./miniBotRTS-Firmware/application/imu_task.o
+ .debug_abbrev  0x0000000000005bdd      0x134 ./miniBotRTS-Firmware/application/init.o
+ .debug_abbrev  0x0000000000005d11      0x1bc ./miniBotRTS-Firmware/application/mb_protocol_task.o
+ .debug_abbrev  0x0000000000005ecd      0x1ad ./miniBotRTS-Firmware/application/timer_task.o
+ .debug_abbrev  0x000000000000607a      0x120 ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+ .debug_abbrev  0x000000000000619a      0x2ea ./miniBotRTS-Firmware/boards/drv_can.o
+ .debug_abbrev  0x0000000000006484      0x2bc ./miniBotRTS-Firmware/boards/drv_imu.o
+ .debug_abbrev  0x0000000000006740      0x12e ./miniBotRTS-Firmware/components/algorithm/madgwick_ahrs.o
+ .debug_abbrev  0x000000000000686e       0xfe ./miniBotRTS-Firmware/components/algorithm/mahony_ahrs.o
+ .debug_abbrev  0x000000000000696c      0x11f ./miniBotRTS-Firmware/components/algorithm/pid.o
+ .debug_abbrev  0x0000000000006a8b      0x161 ./miniBotRTS-Firmware/components/algorithm/skid_steer.o
+ .debug_abbrev  0x0000000000006bec      0x172 ./miniBotRTS-Firmware/components/controller/controller.o
+ .debug_abbrev  0x0000000000006d5e      0x15c ./miniBotRTS-Firmware/components/controller/pid_controller.o
+ .debug_abbrev  0x0000000000006eba      0x14a ./miniBotRTS-Firmware/components/devices/device.o
+ .debug_abbrev  0x0000000000007004      0x295 ./miniBotRTS-Firmware/components/devices/motor.o
+ .debug_abbrev  0x0000000000007299      0x227 ./miniBotRTS-Firmware/components/modules/chassis.o
+ .debug_abbrev  0x00000000000074c0      0x224 ./miniBotRTS-Firmware/components/object/object.o
+ .debug_abbrev  0x00000000000076e4       0xd2 ./miniBotRTS-Firmware/components/object/sys.o
+ .debug_abbrev  0x00000000000077b6      0x2d7 ./miniBotRTS-Firmware/components/support/fifo.o
+ .debug_abbrev  0x0000000000007a8d      0x1ad ./miniBotRTS-Firmware/components/support/soft_timer.o
+ .debug_abbrev  0x0000000000007c3a      0x304 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
 
 .debug_aranges  0x0000000000000000     0x2398
  .debug_aranges
@@ -14176,7 +14177,7 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
                 0x0000000000002320       0x78 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
 
 .debug_rnglists
-                0x0000000000000000     0x1afc
+                0x0000000000000000     0x1afd
  .debug_rnglists
                 0x0000000000000000       0x27 ./Core/Src/can.o
  .debug_rnglists
@@ -14258,49 +14259,49 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_rnglists
                 0x00000000000015e8       0x1a ./miniBotRTS-Firmware/application/blinky_task.o
  .debug_rnglists
-                0x0000000000001602       0x32 ./miniBotRTS-Firmware/application/chassis_task.o
+                0x0000000000001602       0x33 ./miniBotRTS-Firmware/application/chassis_task.o
  .debug_rnglists
-                0x0000000000001634       0x1a ./miniBotRTS-Firmware/application/imu_task.o
+                0x0000000000001635       0x1a ./miniBotRTS-Firmware/application/imu_task.o
  .debug_rnglists
-                0x000000000000164e       0x14 ./miniBotRTS-Firmware/application/init.o
+                0x000000000000164f       0x14 ./miniBotRTS-Firmware/application/init.o
  .debug_rnglists
-                0x0000000000001662       0x1f ./miniBotRTS-Firmware/application/mb_protocol_task.o
+                0x0000000000001663       0x1f ./miniBotRTS-Firmware/application/mb_protocol_task.o
  .debug_rnglists
-                0x0000000000001681       0x1b ./miniBotRTS-Firmware/application/timer_task.o
+                0x0000000000001682       0x1b ./miniBotRTS-Firmware/application/timer_task.o
  .debug_rnglists
-                0x000000000000169c       0x4d ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+                0x000000000000169d       0x4d ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
  .debug_rnglists
-                0x00000000000016e9       0x46 ./miniBotRTS-Firmware/boards/drv_can.o
+                0x00000000000016ea       0x46 ./miniBotRTS-Firmware/boards/drv_can.o
  .debug_rnglists
-                0x000000000000172f       0x68 ./miniBotRTS-Firmware/boards/drv_imu.o
+                0x0000000000001730       0x68 ./miniBotRTS-Firmware/boards/drv_imu.o
  .debug_rnglists
-                0x0000000000001797       0x21 ./miniBotRTS-Firmware/components/algorithm/madgwick_ahrs.o
+                0x0000000000001798       0x21 ./miniBotRTS-Firmware/components/algorithm/madgwick_ahrs.o
  .debug_rnglists
-                0x00000000000017b8       0x1b ./miniBotRTS-Firmware/components/algorithm/mahony_ahrs.o
+                0x00000000000017b9       0x1b ./miniBotRTS-Firmware/components/algorithm/mahony_ahrs.o
  .debug_rnglists
-                0x00000000000017d3       0x2c ./miniBotRTS-Firmware/components/algorithm/pid.o
+                0x00000000000017d4       0x2c ./miniBotRTS-Firmware/components/algorithm/pid.o
  .debug_rnglists
-                0x00000000000017ff       0x1b ./miniBotRTS-Firmware/components/algorithm/skid_steer.o
+                0x0000000000001800       0x1b ./miniBotRTS-Firmware/components/algorithm/skid_steer.o
  .debug_rnglists
-                0x000000000000181a       0x49 ./miniBotRTS-Firmware/components/controller/controller.o
+                0x000000000000181b       0x49 ./miniBotRTS-Firmware/components/controller/controller.o
  .debug_rnglists
-                0x0000000000001863       0x25 ./miniBotRTS-Firmware/components/controller/pid_controller.o
+                0x0000000000001864       0x25 ./miniBotRTS-Firmware/components/controller/pid_controller.o
  .debug_rnglists
-                0x0000000000001888       0x1f ./miniBotRTS-Firmware/components/devices/device.o
+                0x0000000000001889       0x1f ./miniBotRTS-Firmware/components/devices/device.o
  .debug_rnglists
-                0x00000000000018a7       0x4d ./miniBotRTS-Firmware/components/devices/motor.o
+                0x00000000000018a8       0x4d ./miniBotRTS-Firmware/components/devices/motor.o
  .debug_rnglists
-                0x00000000000018f4       0x5a ./miniBotRTS-Firmware/components/modules/chassis.o
+                0x00000000000018f5       0x5a ./miniBotRTS-Firmware/components/modules/chassis.o
  .debug_rnglists
-                0x000000000000194e       0x3e ./miniBotRTS-Firmware/components/object/object.o
+                0x000000000000194f       0x3e ./miniBotRTS-Firmware/components/object/object.o
  .debug_rnglists
-                0x000000000000198c       0x1f ./miniBotRTS-Firmware/components/object/sys.o
+                0x000000000000198d       0x1f ./miniBotRTS-Firmware/components/object/sys.o
  .debug_rnglists
-                0x00000000000019ab       0xca ./miniBotRTS-Firmware/components/support/fifo.o
+                0x00000000000019ac       0xca ./miniBotRTS-Firmware/components/support/fifo.o
  .debug_rnglists
-                0x0000000000001a75       0x31 ./miniBotRTS-Firmware/components/support/soft_timer.o
+                0x0000000000001a76       0x31 ./miniBotRTS-Firmware/components/support/soft_timer.o
  .debug_rnglists
-                0x0000000000001aa6       0x56 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
+                0x0000000000001aa7       0x56 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
 
 .debug_macro    0x0000000000000000    0x2fe83
  .debug_macro   0x0000000000000000      0x21f ./Core/Src/can.o
@@ -14510,7 +14511,7 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_macro   0x000000000002f9df      0x494 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
  .debug_macro   0x000000000002fe73       0x10 ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
 
-.debug_line     0x0000000000000000    0x3631a
+.debug_line     0x0000000000000000    0x3648d
  .debug_line    0x0000000000000000      0x86c ./Core/Src/can.o
  .debug_line    0x000000000000086c      0x756 ./Core/Src/dma.o
  .debug_line    0x0000000000000fc2      0xa4c ./Core/Src/freertos.o
@@ -14551,28 +14552,28 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_line    0x0000000000022523      0xafb ./USB_DEVICE/App/usbd_desc.o
  .debug_line    0x000000000002301e      0xe18 ./USB_DEVICE/Target/usbd_conf.o
  .debug_line    0x0000000000023e36      0xae7 ./miniBotRTS-Firmware/application/blinky_task.o
- .debug_line    0x000000000002491d      0xf32 ./miniBotRTS-Firmware/application/chassis_task.o
- .debug_line    0x000000000002584f      0xe34 ./miniBotRTS-Firmware/application/imu_task.o
- .debug_line    0x0000000000026683      0xec0 ./miniBotRTS-Firmware/application/init.o
- .debug_line    0x0000000000027543      0xcd2 ./miniBotRTS-Firmware/application/mb_protocol_task.o
- .debug_line    0x0000000000028215      0xaea ./miniBotRTS-Firmware/application/timer_task.o
- .debug_line    0x0000000000028cff      0x89f ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
- .debug_line    0x000000000002959e      0xbb5 ./miniBotRTS-Firmware/boards/drv_can.o
- .debug_line    0x000000000002a153     0x113f ./miniBotRTS-Firmware/boards/drv_imu.o
- .debug_line    0x000000000002b292      0xd91 ./miniBotRTS-Firmware/components/algorithm/madgwick_ahrs.o
- .debug_line    0x000000000002c023      0x9fe ./miniBotRTS-Firmware/components/algorithm/mahony_ahrs.o
- .debug_line    0x000000000002ca21      0xc5e ./miniBotRTS-Firmware/components/algorithm/pid.o
- .debug_line    0x000000000002d67f      0x6f2 ./miniBotRTS-Firmware/components/algorithm/skid_steer.o
- .debug_line    0x000000000002dd71      0xd01 ./miniBotRTS-Firmware/components/controller/controller.o
- .debug_line    0x000000000002ea72      0xc4f ./miniBotRTS-Firmware/components/controller/pid_controller.o
- .debug_line    0x000000000002f6c1      0xbc4 ./miniBotRTS-Firmware/components/devices/device.o
- .debug_line    0x0000000000030285      0xf03 ./miniBotRTS-Firmware/components/devices/motor.o
- .debug_line    0x0000000000031188      0xf13 ./miniBotRTS-Firmware/components/modules/chassis.o
- .debug_line    0x000000000003209b      0xd23 ./miniBotRTS-Firmware/components/object/object.o
- .debug_line    0x0000000000032dbe      0xb54 ./miniBotRTS-Firmware/components/object/sys.o
- .debug_line    0x0000000000033912     0x12a5 ./miniBotRTS-Firmware/components/support/fifo.o
- .debug_line    0x0000000000034bb7      0x977 ./miniBotRTS-Firmware/components/support/soft_timer.o
- .debug_line    0x000000000003552e      0xdec ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
+ .debug_line    0x000000000002491d     0x109c ./miniBotRTS-Firmware/application/chassis_task.o
+ .debug_line    0x00000000000259b9      0xe34 ./miniBotRTS-Firmware/application/imu_task.o
+ .debug_line    0x00000000000267ed      0xec0 ./miniBotRTS-Firmware/application/init.o
+ .debug_line    0x00000000000276ad      0xcd2 ./miniBotRTS-Firmware/application/mb_protocol_task.o
+ .debug_line    0x000000000002837f      0xaea ./miniBotRTS-Firmware/application/timer_task.o
+ .debug_line    0x0000000000028e69      0x89f ./miniBotRTS-Firmware/application/mb_protocol/mb_protocol.o
+ .debug_line    0x0000000000029708      0xbb5 ./miniBotRTS-Firmware/boards/drv_can.o
+ .debug_line    0x000000000002a2bd     0x113f ./miniBotRTS-Firmware/boards/drv_imu.o
+ .debug_line    0x000000000002b3fc      0xd91 ./miniBotRTS-Firmware/components/algorithm/madgwick_ahrs.o
+ .debug_line    0x000000000002c18d      0x9fe ./miniBotRTS-Firmware/components/algorithm/mahony_ahrs.o
+ .debug_line    0x000000000002cb8b      0xc5e ./miniBotRTS-Firmware/components/algorithm/pid.o
+ .debug_line    0x000000000002d7e9      0x6fb ./miniBotRTS-Firmware/components/algorithm/skid_steer.o
+ .debug_line    0x000000000002dee4      0xd01 ./miniBotRTS-Firmware/components/controller/controller.o
+ .debug_line    0x000000000002ebe5      0xc4f ./miniBotRTS-Firmware/components/controller/pid_controller.o
+ .debug_line    0x000000000002f834      0xbc4 ./miniBotRTS-Firmware/components/devices/device.o
+ .debug_line    0x00000000000303f8      0xf03 ./miniBotRTS-Firmware/components/devices/motor.o
+ .debug_line    0x00000000000312fb      0xf13 ./miniBotRTS-Firmware/components/modules/chassis.o
+ .debug_line    0x000000000003220e      0xd23 ./miniBotRTS-Firmware/components/object/object.o
+ .debug_line    0x0000000000032f31      0xb54 ./miniBotRTS-Firmware/components/object/sys.o
+ .debug_line    0x0000000000033a85     0x12a5 ./miniBotRTS-Firmware/components/support/fifo.o
+ .debug_line    0x0000000000034d2a      0x977 ./miniBotRTS-Firmware/components/support/soft_timer.o
+ .debug_line    0x00000000000356a1      0xdec ./miniBotRTS-Firmware/components/support/usb_vcp_extension.o
 
 .debug_str      0x0000000000000000    0xed9c1
  .debug_str     0x0000000000000000    0xd5d31 ./Core/Src/can.o
@@ -14655,13 +14656,13 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
                                       0xdb031 (size before relaxing)
  .debug_str     0x00000000000eaac1       0x6e ./miniBotRTS-Firmware/application/blinky_task.o
                                       0xdcdea (size before relaxing)
- .debug_str     0x00000000000eab2f      0x6de ./miniBotRTS-Firmware/application/chassis_task.o
-                                      0xe1ead (size before relaxing)
- .debug_str     0x00000000000eb20d       0xdb ./miniBotRTS-Firmware/application/imu_task.o
+ .debug_str     0x00000000000eab2f      0x714 ./miniBotRTS-Firmware/application/chassis_task.o
+                                      0xe1ee9 (size before relaxing)
+ .debug_str     0x00000000000eb243       0xb9 ./miniBotRTS-Firmware/application/imu_task.o
                                       0xe0f78 (size before relaxing)
- .debug_str     0x00000000000eb2e8      0x10a ./miniBotRTS-Firmware/application/init.o
+ .debug_str     0x00000000000eb2fc      0x10a ./miniBotRTS-Firmware/application/init.o
                                       0xe152d (size before relaxing)
- .debug_str     0x00000000000eb3f2       0xe8 ./miniBotRTS-Firmware/application/mb_protocol_task.o
+ .debug_str     0x00000000000eb406       0xd4 ./miniBotRTS-Firmware/application/mb_protocol_task.o
                                       0xe06f7 (size before relaxing)
  .debug_str     0x00000000000eb4da       0x8f ./miniBotRTS-Firmware/application/timer_task.o
                                       0xdc8dd (size before relaxing)

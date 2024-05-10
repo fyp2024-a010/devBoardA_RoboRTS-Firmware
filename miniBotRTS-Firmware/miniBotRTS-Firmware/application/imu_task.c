@@ -10,7 +10,7 @@ int32_t imu_update() {
   struct ahrs_sensor mpu_sensor;
   struct attitude mahony_atti;
   mpu_get_data(&mpu_sensor);
-  mahony_ahrs_updateIMU(&mpu_sensor, &mahony_atti);
+  mahony_ahrs_update(&mpu_sensor, &mahony_atti);
 
   // Convert euler angle to quaternion
   float roll = mahony_atti.roll / RADIAN_COEF;

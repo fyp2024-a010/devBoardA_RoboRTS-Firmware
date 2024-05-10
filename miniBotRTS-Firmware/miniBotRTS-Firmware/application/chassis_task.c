@@ -67,12 +67,34 @@ void chassis_task(void const *argument) {
   for (;;) {
     float linear_x = cmd_twist.linear.x * 1000.0f;
     float angular_z = cmd_twist.angular.z * 1000.0f;
-    // float linear_x = 1000;
-    // float angular_z = 0;
 
     chassis_set_speed(pchassis, linear_x, angular_z);
 
     chassis_execute(pchassis);
+    robot_odom.point.x = pchassis->skid_steer.position.position_x_mm / 1000.0f;
+    robot_odom.point.y = pchassis->skid_steer.position.position_y_mm / 1000.0f;
+
+    float yaw = pchassis->skid_steer.position.angle_deg / RADIAN_COEF;
+    float pitch = 0.0;
+    float roll = 0.0;
+    float cy = cos(yaw * 0.5);
+    float sy = sin(yaw * 0.5);
+    float cp = cos(pitch * 0.5);
+    float sp = sin(pitch * 0.5);
+    float cr = cos(roll * 0.5);
+    float sr = sin(roll * 0.5);
+    float qx = sr * cp * cy - cr * sp * sy;
+    float qy = cr * sp * cy + sr * cp * sy;
+    float qz = cr * cp * sy - sr * sp * cy;
+    float qw = cr * cp * cy + sr * sp * sy;
+    robot_odom.quaternion.x = qx;
+    robot_odom.quaternion.y = qy;
+    robot_odom.quaternion.z = qz;
+    robot_odom.quaternion.w = qw;
+
+    robot_odom.linear.x = pchassis->skid_steer.position.v_x_mm / 1000.0f;
+    robot_odom.angular.z = pchassis->skid_steer.position.rate_deg / RADIAN_COEF;
+
     osDelayUntil(&period, 1);
   }
 }
